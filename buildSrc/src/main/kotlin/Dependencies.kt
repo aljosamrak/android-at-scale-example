@@ -25,12 +25,20 @@ object Libraries {
         const val jetpack = "1.0.0-beta01"
         const val constraintLayout = "1.1.2"
         const val ktx = "1.1.0-alpha05"
+        const val compose = "0.1.0-dev02"
     }
 
-    const val kotlinStdLib     = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
-    const val appCompat        = "androidx.appcompat:appcompat:${Versions.jetpack}"
-    const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
-    const val ktxCore          = "androidx.core:core-ktx:${Versions.ktx}"
+    const val kotlinStdLib          = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
+    const val appCompat             = "androidx.appcompat:appcompat:${Versions.jetpack}"
+    const val constraintLayout      = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
+    const val ktxCore               = "androidx.core:core-ktx:${Versions.ktx}"
+
+    const val androidxUiFramework   = "androidx.ui:ui-framework:${Versions.compose}"
+    const val androidxUiLayout      = "androidx.ui:ui-layout:${Versions.compose}"
+    const val androidxUiMaterial    = "androidx.ui:ui-material:${Versions.compose}"
+    const val androidxUiTooling     = "androidx.ui:ui-tooling:${Versions.compose}"
+
+    const val composeRuntime        = "androidx.compose:compose-runtime:${Versions.compose}"
 }
 
 object TestLibraries {

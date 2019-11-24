@@ -23,6 +23,10 @@ android {
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
+
+    buildFeatures {
+        compose = true
+    }
 }
 
 dependencies {
@@ -30,6 +34,13 @@ dependencies {
     implementation(Libraries.appCompat)
     implementation(Libraries.ktxCore)
     implementation(Libraries.constraintLayout)
+
+    implementation(Libraries.androidxUiFramework)
+    implementation(Libraries.androidxUiLayout)
+    implementation(Libraries.androidxUiMaterial)
+    implementation(Libraries.androidxUiTooling)
+
+    implementation(Libraries.composeRuntime)
 
     testImplementation (TestLibraries.junit4)
     androidTestImplementation (TestLibraries.testRunner)
