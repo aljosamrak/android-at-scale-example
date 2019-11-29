@@ -2,6 +2,7 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven(Repositories.kotlinEap)
     }
     dependencies {
         classpath (BuildPlugins.androidGradlePlugin)
@@ -13,6 +14,7 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven(Repositories.kotlinEap)
     }
 }
 
