@@ -1,5 +1,6 @@
 rootProject.name = "Android At Scale"
 
 include(
-    "app"
+    "app",
+    "library"
 )
