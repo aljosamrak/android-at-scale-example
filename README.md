@@ -13,3 +13,14 @@ Verification and testing process to keep the code maintainable and to find bugs 
 How to use popular tools while keeping in mind other platforms and systems (Firebase, Google Play services, force updates, push...)
 Building and testing are only the first steps. Integration, documentation, informing other teams, ... is as important as the product if not more.
 Ensuring API consistency between different platforms (iOS-Android) and different systems (client-backend)
+
+
+## Use buildSrc to abstract imperative logic
+https://docs.gradle.org/current/userguide/organizing_gradle_projects.html#sec:build_sources 
+Complex build logic is usually a good candidate for being encapsulated either as custom task or binary plugin. Custom task and plugin implementations should not live in the build script. It is very convenient to use buildSrc for that purpose as long as the code does not need to be shared among multiple, independent projects.
+
+The directory buildSrc is treated as an included build. Upon discovery of the directory, Gradle automatically compiles and tests this code and puts it in the classpath of your build script. For multi-project builds there can be only one buildSrc directory, which has to sit in the root project directory. buildSrc should be preferred over script plugins as it is easier to maintain, refactor and test the code.
+
+buildSrc uses the same source code conventions applicable to Java and Groovy projects. It also provides direct access to the Gradle API. Additional dependencies can be declared in a dedicated build.gradle under buildSrc.
+
+Example: https://proandroiddev.com/migrate-to-gradle-kotlin-dsl-in-4-steps-f3e3b27e1f4d
