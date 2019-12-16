@@ -43,6 +43,12 @@ object Libraries {
     const val composeRuntime        = "androidx.compose:compose-runtime:${Versions.compose}"
 }
 
+object Logging {
+    private const val kotlinLoggingVersion = "1.7.7"
+
+    const val kotlinLogging         = "io.github.microutils:kotlin-logging:$kotlinLoggingVersion"
+}
+
 object TestLibraries {
     private object Versions {
         const val junit4 = "4.12"

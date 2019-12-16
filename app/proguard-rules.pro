@@ -19,3 +19,23 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+# io.github.microutils:kotlin-logging
+# Remove all logging related code. Logger declaration will be removed if minified enabled
+#-assumenosideeffects class mu.KLogging* {
+#    public *;
+#}
+
+# io.github.microutils:kotlin-logging
+# Keep error level logs
+-assumenosideeffects class mu.KLogging* {
+    public static *** trace(...);
+    public static *** debug(...);
+    public static *** info(...);
+    public static *** warn(...);
+
+    public static *** entry(...);
+    public static *** exit(...);
+    public static *** catching(...);
+    public static *** throwing(...);
+}
