@@ -5,21 +5,26 @@ jobs:
       # use circle ci container image, the same as target API
       - image: circleci/android:api-29
 
-#    working_directory: ~/repo
+    # This is the directory into which our code will be checked out, and this path will be used as the default working directory for the rest of the job
+    working_directory: ~/repo
 
     environment:
-      # Customize the JVM maximum heap limit.
+      # customize the JVM maximum heap limit.
       JVM_OPTS: -Xmx3200m
       TERM: dumb
 
     steps:
       - checkout
 
-      # Download and cache dependencies
+      # generate a checksum over all build.gradle files and buildSrc folder
+      - run:
+          name: Generate cache key
+          command: ./checksum.sh /tmp/checksum.txt
+
+      # download and cache dependencies
       - restore_cache:
-#TODO          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
-          keys:
-            - v1-dependencies-{{ checksum "build.gradle" }}
+          key:
+            - gradle-{{ checksum "/tmp/checksum.txt" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
@@ -31,11 +36,9 @@ jobs:
 
       - save_cache:
           paths:
-            - ~/.gradle
-          key: v1-dependencies-{{ checksum "build.gradle" }}
-          #          paths:
-          #            - ~/.gradle
-          #          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+            - ~/.gradle/caches
+            - ~/.gradle/wrapper
+            key: gradle-{{ checksum "/tmp/checksum.txt" }}
 
       # run tests!
       - run:
