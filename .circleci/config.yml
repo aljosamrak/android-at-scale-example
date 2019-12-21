@@ -35,10 +35,10 @@ jobs:
           command: ./gradlew dependencies
 
       - save_cache:
+          key: gradle-{{ checksum "/tmp/checksum.txt" }}
           paths:
             - ~/.gradle/caches
             - ~/.gradle/wrapper
-            key: gradle-{{ checksum "/tmp/checksum.txt" }}
 
       # run tests!
       - run:
