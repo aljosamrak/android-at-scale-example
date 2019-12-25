@@ -4,11 +4,6 @@ orbs:
   # https://circleci.com/orbs/registry/orb/circleci/slack
   slack: circleci/slack@3.4.1
 
-parameters:
-  build_amazon:
-    type: boolean
-    default: false
-
 workflows:
   version: 2
   build-test-deploy:
@@ -67,26 +62,16 @@ workflows:
             - integration_test
             - automatic_test
             - espresso_test
-      - manual_test_amazon:
-          when: << pipeline.parameters.build_amazon >>
-          type: approval
-          requires:
-            - deploy_internal
       - manual_test_gplay:
           type: approval
           requires:
             - deploy_internal
-      - ready_to_deploy_amazon:
-          type: approval
-          requires:
-            - manual_test_amazon
       - ready_to_deploy_gplay:
           type: approval
           requires:
             - manual_test_gplay
       - archive:
           requires:
-            - ready_to_deploy_amazon
             - ready_to_deploy_gplay
       - stage_roll_out:
           requires:
@@ -100,7 +85,6 @@ workflows:
           type: approval
           requires:
             - stage_roll_out
-            - ready_to_deploy_amazon
       - full_release:
           requires:
             - ready_to_full_release
@@ -144,8 +128,6 @@ jobs:
       - run:
             name: Build
             command: ./gradlew assemble
-      - when:
-          condition: << pipeline.parameters.build_amazon >>
 
   unit_test:
     steps:
@@ -177,12 +159,6 @@ jobs:
   deploy_internal:
     steps:
 
-  manual_test_amazon:
-    steps:
-      - slack/approval-notification:
-          message: Pending approval
-          webhook: webhook
-
   manual_test_gplay:
     steps:
 
@@ -200,9 +176,6 @@ jobs:
 #    - run:
 #        name: Publish to Google Play Console
 #        command: ./gradlew publishGoogleBundle -Dfsfadspfkasoš
-
-  ready_to_deploy_amazon:
-    steps:
 
   ready_to_deploy_gplay:
     steps:
