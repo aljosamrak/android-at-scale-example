@@ -1,13 +1,15 @@
-defaults: &DEFAULT
-  working_directory: ~/app
-  docker:
-    - image: circleci/android:api-29
-
 version: 2.1
 
 orbs:
   # https://circleci.com/orbs/registry/orb/circleci/slack
   slack: circleci/slack@3.4.1
+
+
+executors:
+  my-executor:
+    docker:
+      - image: circleci/android:api-29
+    working_directory: ~/app
 
 workflows:
   version: 2
@@ -109,17 +111,20 @@ jobs:
       - run:
           name: ls
           command: ls -la
+      - persist_to_workspace:
+          root: .
+          paths: *
   precondition_check:
-    <<: *DEFAULT
+    executor: my-executor
     steps:
       - attach_workspace:
-          at: ~/circleci-demo-workflows
+          at: .
       - run: echo "precondition_check"
   download_dependencies:
-    <<: *DEFAULT
+    executor: my-executor
     steps:
       - attach_workspace:
-          at: ~/circleci-demo-workflows
+          at: .
       - run:
           name: Pwd
           command: pwd
@@ -151,79 +156,79 @@ jobs:
             - ~/.gradle/caches
             - ~/.gradle/wrapper
   build:
-    <<: *DEFAULT
+    executor: my-executor
     steps:
       - attach_workspace:
-          at: ~/circleci-demo-workflows
+          at: .
       - run:
             name: Build
             command: ./gradlew assemble
 
   unit_test:
-    <<: *DEFAULT
+    executor: my-executor
     steps:
       - attach_workspace:
-          at: ~/circleci-demo-workflows
+          at: .
       - run:
           name: Run Unit Tests
           command: ./gradlew test
 
   instrumentation_test:
-    <<: *DEFAULT
+    executor: my-executor
     steps:
       - attach_workspace:
-          at: ~/circleci-demo-workflows
+          at: .
       - run:
           name: Run Unit Tests
           command: ./gradlew connectedAndroidTest
 
   integration_test:
-    <<: *DEFAULT
+    executor: my-executor
     steps:
       - attach_workspace:
-          at: ~/circleci-demo-workflows
+          at: .
       - run: echo "integration_test"
 
   automatic_test:
-    <<: *DEFAULT
+    executor: my-executor
     steps:
       - attach_workspace:
-          at: ~/circleci-demo-workflows
+          at: .
       - run: echo "automatic_test"
 
   lint:
-    <<: *DEFAULT
+    executor: my-executor
     steps:
       - attach_workspace:
-          at: ~/circleci-demo-workflows
+          at: .
       - run: echo "lint"
 
   sonar_qube:
-    <<: *DEFAULT
+    executor: my-executor
     steps:
       - attach_workspace:
-          at: ~/circleci-demo-workflows
+          at: .
       - run: echo "sonar_qube"
 
   espresso_test:
-    <<: *DEFAULT
+    executor: my-executor
     steps:
       - attach_workspace:
-          at: ~/circleci-demo-workflows
+          at: .
       - run: echo "espresso_test"
 
   deploy_internal:
-    <<: *DEFAULT
+    executor: my-executor
     steps:
       - attach_workspace:
-          at: ~/circleci-demo-workflows
+          at: .
       - run: echo "deploy_internal"
 
   manual_test_gplay:
-    <<: *DEFAULT
+    executor: my-executor
     steps:
       - attach_workspace:
-          at: ~/circleci-demo-workflows
+          at: .
 
       # Specified persons only can approve the workflow
       # approve via Slack
@@ -232,17 +237,17 @@ jobs:
           webhook: webhook
 
   archive:
-    <<: *DEFAULT
+    executor: my-executor
     steps:
       - attach_workspace:
-          at: ~/circleci-demo-workflows
+          at: .
       - run: echo "archive"
 
   stage_roll_out:
-    <<: *DEFAULT
+    executor: my-executor
     steps:
       - attach_workspace:
-          at: ~/circleci-demo-workflows
+          at: .
       - run: echo "stage_roll_out"
     # publish to stage roll-out
 #    - run:
@@ -250,22 +255,22 @@ jobs:
 #        command: ./gradlew publishGoogleBundle -Dfsfadspfkasoš
 
   ready_to_deploy_gplay:
-    <<: *DEFAULT
+    executor: my-executor
     steps:
       - attach_workspace:
-          at: ~/circleci-demo-workflows
+          at: .
       - run: echo "ready_to_deploy_gplay"
 
   ready_to_full_release:
-    <<: *DEFAULT
+    executor: my-executor
     steps:
       - attach_workspace:
-          at: ~/circleci-demo-workflows
+          at: .
       - run: echo "ready_to_full_release"
 
   full_release:
-    <<: *DEFAULT
+    executor: my-executor
     steps:
       - attach_workspace:
-          at: ~/circleci-demo-workflows
+          at: .
       - run: echo "full_release"
