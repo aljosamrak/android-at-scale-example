@@ -1,21 +1,123 @@
-version: 2
+version: 2.0
+
+orbs:
+  # https://circleci.com/orbs/registry/orb/circleci/slack
+  slack: circleci/slack@3.4.1
+
+parameters:
+  build_amazon:
+    type: boolean
+    default: false
+
+workflows:
+  version: 2
+  build-test-deploy:
+    jobs:
+      - checkout
+      - precondition_check:
+          requires:
+            - checkout
+      - download_dependencies:
+          requires:
+            - checkout
+      - build:
+          requires:
+            - precondition_check
+            - download_dependencies
+      - sonar_qube:
+          requires:
+            - precondition_check
+      - lint:
+          requires:
+            - precondition_check
+      - unit_test:
+          requires:
+            - build
+            - lint
+            - sonar_qube
+      - instrumentation_test:
+          requires:
+            - build
+            - lint
+            - sonar_qube
+      - integration_test:
+          requires:
+            - build
+            - lint
+            - sonar_qube
+      - automatic_test:
+          requires:
+            - build
+            - lint
+            - sonar_qube
+      - espresso_test:
+          requires:
+            - build
+            - lint
+            - sonar_qube
+          filters:
+            branches:
+              only:
+                - master
+                - develop
+      - deploy_internal:
+          requires:
+            - unit_test
+            - instrumentation_test
+            - integration_test
+            - automatic_test
+            - espresso_test
+      - manual_test_amazon:
+          when: << pipeline.parameters.build_amazon >>
+          type: approval
+          requires:
+            - deploy_internal
+      - manual_test_gplay:
+          type: approval
+          requires:
+            - deploy_internal
+      - ready_to_deploy_amazon:
+          type: approval
+          requires:
+            - manual_test_amazon
+      - ready_to_deploy_gplay:
+          type: approval
+          requires:
+            - manual_test_gplay
+      - archive:
+          requires:
+            - ready_to_deploy_amazon
+            - ready_to_deploy_gplay
+      - stage_roll_out:
+          requires:
+            - ready_to_deploy_gplay
+          filters:
+            branches:
+              only:
+                - master
+                - release
+      - ready_to_full_release:
+          type: approval
+          requires:
+            - stage_roll_out
+            - ready_to_deploy_amazon
+      - full_release:
+          requires:
+            - ready_to_full_release
+          filters:
+            branches:
+              only:
+                - master
+                - release
+
 jobs:
-  build:
-    docker:
-      # use circle ci container image, the same as target API
-      - image: circleci/android:api-29
-
-    # This is the directory into which our code will be checked out, and this path will be used as the default working directory for the rest of the job
-    working_directory: ~/repo
-
-    environment:
-      # customize the JVM maximum heap limit.
-      JVM_OPTS: -Xmx3200m
-      TERM: dumb
-
+  checkout:
     steps:
       - checkout
-
+  precondition_check:
+    steps:
+  download_dependencies:
+    steps:
       # generate a checksum over all build.gradle files and buildSrc folder
       - run:
           name: Generate cache key
@@ -31,58 +133,82 @@ jobs:
           name: Download Dependencies
           command: ./gradlew dependencies
 
+      # save cache
       - save_cache:
           key: gradle-{{ checksum "/tmp/checksum.txt" }}
           paths:
             - ~/.gradle/caches
             - ~/.gradle/wrapper
-
-      # run tests!
+  build:
+    steps:
       - run:
-          name: Run Tests
-          command: ./gradlew lint test
-#      - store_artifacts: # for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
-#          path: app/build/reports
-#          destination: reports
-#      - store_test_results: # for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
-#          path: app/build/test-results
-      # See https://circleci.com/docs/2.0/deployment-integrations/ for deploy examples
+            name: Build
+            command: ./gradlew assemble
+      - when:
+          condition: << pipeline.parameters.build_amazon >>
 
-
+  unit_test:
+    steps:
       - run:
-          name: Save test results
-          command: |
-            mkdir -p ~/test-results/junit/
-            find . -type f -regex ".*/build/test-results/.*xml" -exec cp {} ~/test-results/junit/ \;
-          when: always
-      - store_test_results:
-          path: ~/test-results
-      - store_artifacts:
-          path: ~/test-results/junit
+          name: Run Unit Tests
+          command: ./gradlew test
 
+  instrumentation_test:
+    steps:
+      - run:
+          name: Run Unit Tests
+          command: ./gradlew connectedAndroidTest
 
-#      - run:
-#          name: Build debug APK and release APK
-#          command: |
-#              ./gradlew :app:assembleDebug
-#              ./gradlew :app:assembleDebugAndroidTest
-#      - run:
-#          name: Store Google Service Account
-#          command: echo $GCLOUD_SERVICE_KEY > ${HOME}/gcloud-service-key.json
-#      - run:
-#          name: Authorize gcloud and set config defaults
-#          command: |
-#            sudo gcloud auth activate-service-account --key-file=${HOME}/gcloud-service-key.json
-#            sudo gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
-#      - run:
-#          name: Test with Firebase Test Lab
-#          command: >
-#            sudo gcloud firebase test android run \
-#              --app <local_server_path>/<app_apk>.apk \
-#              --test <local_server_path>/<app_test_apk>.apk \
-#              --results-bucket cloud-test-${GOOGLE_PROJECT_ID}
-#      - run:
-#          name: Install gsutil dependency and copy test results data
-#          command: |
-#            sudo pip install -U crcmod
-#            sudo gsutil -m cp -r -U `sudo gsutil ls gs://[BUCKET_NAME]/[OBJECT_NAME] | tail -1` ${CIRCLE_ARTIFACTS}/ | true
+  integration_test:
+    steps:
+
+  automatic_test:
+    steps:
+
+  lint:
+    steps:
+
+  sonar_qube:
+    steps:
+
+  espresso_test:
+    steps:
+
+  deploy_internal:
+    steps:
+
+  manual_test_amazon:
+    steps:
+      - slack/approval-notification:
+          message: Pending approval
+          webhook: webhook
+
+  manual_test_gplay:
+    steps:
+
+      # Specified persons only can approve the workflow
+      # approve via Slack
+      - slack/approval-notification:
+          message: Pending approval
+          webhook: webhook
+
+  archive:
+    steps:
+
+  stage_roll_out:
+    # publish to stage roll-out
+#    - run:
+#        name: Publish to Google Play Console
+#        command: ./gradlew publishGoogleBundle -Dfsfadspfkasoš
+
+  ready_to_deploy_amazon:
+    steps:
+
+  ready_to_deploy_gplay:
+    steps:
+
+  ready_to_full_release:
+    steps:
+
+  full_release:
+    steps:
