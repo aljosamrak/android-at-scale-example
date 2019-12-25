@@ -100,6 +100,9 @@ jobs:
       - image: circleci/android:api-29
     steps:
       - checkout
+      - run:
+          name: ls
+          command: ls -la
   precondition_check:
     docker:
       - image: circleci/android:api-29
