@@ -142,22 +142,16 @@ jobs:
           command: ./gradlew connectedAndroidTest
 
   integration_test:
-    steps:
 
   automatic_test:
-    steps:
 
   lint:
-    steps:
 
   sonar_qube:
-    steps:
 
   espresso_test:
-    steps:
 
   deploy_internal:
-    steps:
 
   manual_test_gplay:
     steps:
@@ -169,19 +163,12 @@ jobs:
           webhook: webhook
 
   archive:
-    steps:
 
   stage_roll_out:
     # publish to stage roll-out
-#    - run:
-#        name: Publish to Google Play Console
-#        command: ./gradlew publishGoogleBundle -Dfsfadspfkasoš
 
   ready_to_deploy_gplay:
-    steps:
 
   ready_to_full_release:
-    steps:
 
   full_release:
-    steps:
