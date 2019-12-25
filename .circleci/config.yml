@@ -1,3 +1,8 @@
+defaults: &DEFAULT
+  working_directory: ~/app
+  docker:
+    - image: circleci/android:api-29
+
 version: 2.1
 
 orbs:
@@ -96,21 +101,18 @@ workflows:
 
 jobs:
   checkout:
-    docker:
-      - image: circleci/android:api-29
+    <<: *DEFAULT
     steps:
       - checkout
       - run:
           name: ls
           command: ls -la
   precondition_check:
-    docker:
-      - image: circleci/android:api-29
+    <<: *DEFAULT
     steps:
       - run: echo "precondition_check"
   download_dependencies:
-    docker:
-      - image: circleci/android:api-29
+    <<: *DEFAULT
     steps:
       - run:
           name: Pwd
@@ -143,68 +145,58 @@ jobs:
             - ~/.gradle/caches
             - ~/.gradle/wrapper
   build:
-    docker:
-      - image: circleci/android:api-29
+    <<: *DEFAULT
     steps:
       - run:
             name: Build
             command: ./gradlew assemble
 
   unit_test:
-    docker:
-      - image: circleci/android:api-29
+    <<: *DEFAULT
     steps:
       - run:
           name: Run Unit Tests
           command: ./gradlew test
 
   instrumentation_test:
-    docker:
-      - image: circleci/android:api-29
+    <<: *DEFAULT
     steps:
       - run:
           name: Run Unit Tests
           command: ./gradlew connectedAndroidTest
 
   integration_test:
-    docker:
-      - image: circleci/android:api-29
+    <<: *DEFAULT
     steps:
       - run: echo "integration_test"
 
   automatic_test:
-    docker:
-      - image: circleci/android:api-29
+    <<: *DEFAULT
     steps:
       - run: echo "automatic_test"
 
   lint:
-    docker:
-      - image: circleci/android:api-29
+    <<: *DEFAULT
     steps:
       - run: echo "lint"
 
   sonar_qube:
-    docker:
-      - image: circleci/android:api-29
+    <<: *DEFAULT
     steps:
       - run: echo "sonar_qube"
 
   espresso_test:
-    docker:
-      - image: circleci/android:api-29
+    <<: *DEFAULT
     steps:
       - run: echo "espresso_test"
 
   deploy_internal:
-    docker:
-      - image: circleci/android:api-29
+    <<: *DEFAULT
     steps:
       - run: echo "deploy_internal"
 
   manual_test_gplay:
-    docker:
-      - image: circleci/android:api-29
+    <<: *DEFAULT
     steps:
 
       # Specified persons only can approve the workflow
@@ -214,14 +206,12 @@ jobs:
           webhook: webhook
 
   archive:
-    docker:
-      - image: circleci/android:api-29
+    <<: *DEFAULT
     steps:
       - run: echo "archive"
 
   stage_roll_out:
-    docker:
-      - image: circleci/android:api-29
+    <<: *DEFAULT
     steps:
       - run: echo "stage_roll_out"
     # publish to stage roll-out
@@ -230,19 +220,16 @@ jobs:
 #        command: ./gradlew publishGoogleBundle -Dfsfadspfkasoš
 
   ready_to_deploy_gplay:
-    docker:
-      - image: circleci/android:api-29
+    <<: *DEFAULT
     steps:
       - run: echo "ready_to_deploy_gplay"
 
   ready_to_full_release:
-    docker:
-      - image: circleci/android:api-29
+    <<: *DEFAULT
     steps:
       - run: echo "ready_to_full_release"
 
   full_release:
-    docker:
-      - image: circleci/android:api-29
+    <<: *DEFAULT
     steps:
       - run: echo "full_release"
