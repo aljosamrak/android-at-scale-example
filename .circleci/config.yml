@@ -62,10 +62,10 @@ references:
     persist_to_workspace:
       root: *workspace
       paths:
-        - collect_app/build/outputs/androidTest-results
-        - collect_app/build/outputs/apk
-        - collect_app/build/outputs/code-coverage
-        - collect_app/build/test-results
+        - \\*/build/outputs/androidTest-results
+        - \\*/build/outputs/apk
+        - \\*/build/outputs/code-coverage
+        - \\*/build/test-results
   attach_firebase_workspace: &attach_firebase_workspace
     attach_workspace:
       at: *workspace
