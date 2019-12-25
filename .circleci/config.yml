@@ -92,7 +92,7 @@ references:
 jobs:
 
   ## Build APK and instrumented test APK
-  build_debug:
+  build:
     <<: *android_config
     environment:
       #       Runtime configuration build tests
@@ -110,6 +110,7 @@ jobs:
       GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xms128m -Xmx1024m -XX:+HeapDumpOnOutOfMemoryError" -DpreDexEnable=false'
     steps:
       - checkout
+      # TODO
       - run:
           name: Check Precondition
           command: echo "precondition_check"
@@ -127,7 +128,7 @@ jobs:
       - run:
           name: Assemble build
           command: |
-            ./gradlew assemble -PdisablePreDex
+            ./gradlew -si assemble -PdisablePreDex
       - run:
           name: Assemble test build
           command: |
@@ -246,7 +247,7 @@ workflows:
   workflow:
     jobs:
       #       This job will run on every commit on any branch
-      - build_debug
+      - build
       #       Unit tests should only start after a successful build. Or vice versa?
       - test_unit:
           #         Although the unit testing task could run in parallel with build task,
@@ -254,7 +255,7 @@ workflows:
           #         any change in the .gradle script files.
           #         Hence,
           requires:
-            - build_debug
+            - build
       # Instrumentation tests should only start after unit tests complete gracefully. Or vice versa?
       - test_instrumented:
           requires:
