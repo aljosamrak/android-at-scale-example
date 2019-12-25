@@ -101,7 +101,9 @@ workflows:
 
 jobs:
   checkout:
-    <<: *DEFAULT
+    working_directory: ~/app
+    docker:
+      - image: circleci/android:api-29
     steps:
       - checkout
       - run:
@@ -110,10 +112,14 @@ jobs:
   precondition_check:
     <<: *DEFAULT
     steps:
+      - attach_workspace:
+          at: ~/circleci-demo-workflows
       - run: echo "precondition_check"
   download_dependencies:
     <<: *DEFAULT
     steps:
+      - attach_workspace:
+          at: ~/circleci-demo-workflows
       - run:
           name: Pwd
           command: pwd
@@ -147,6 +153,8 @@ jobs:
   build:
     <<: *DEFAULT
     steps:
+      - attach_workspace:
+          at: ~/circleci-demo-workflows
       - run:
             name: Build
             command: ./gradlew assemble
@@ -154,6 +162,8 @@ jobs:
   unit_test:
     <<: *DEFAULT
     steps:
+      - attach_workspace:
+          at: ~/circleci-demo-workflows
       - run:
           name: Run Unit Tests
           command: ./gradlew test
@@ -161,6 +171,8 @@ jobs:
   instrumentation_test:
     <<: *DEFAULT
     steps:
+      - attach_workspace:
+          at: ~/circleci-demo-workflows
       - run:
           name: Run Unit Tests
           command: ./gradlew connectedAndroidTest
@@ -168,36 +180,50 @@ jobs:
   integration_test:
     <<: *DEFAULT
     steps:
+      - attach_workspace:
+          at: ~/circleci-demo-workflows
       - run: echo "integration_test"
 
   automatic_test:
     <<: *DEFAULT
     steps:
+      - attach_workspace:
+          at: ~/circleci-demo-workflows
       - run: echo "automatic_test"
 
   lint:
     <<: *DEFAULT
     steps:
+      - attach_workspace:
+          at: ~/circleci-demo-workflows
       - run: echo "lint"
 
   sonar_qube:
     <<: *DEFAULT
     steps:
+      - attach_workspace:
+          at: ~/circleci-demo-workflows
       - run: echo "sonar_qube"
 
   espresso_test:
     <<: *DEFAULT
     steps:
+      - attach_workspace:
+          at: ~/circleci-demo-workflows
       - run: echo "espresso_test"
 
   deploy_internal:
     <<: *DEFAULT
     steps:
+      - attach_workspace:
+          at: ~/circleci-demo-workflows
       - run: echo "deploy_internal"
 
   manual_test_gplay:
     <<: *DEFAULT
     steps:
+      - attach_workspace:
+          at: ~/circleci-demo-workflows
 
       # Specified persons only can approve the workflow
       # approve via Slack
@@ -208,11 +234,15 @@ jobs:
   archive:
     <<: *DEFAULT
     steps:
+      - attach_workspace:
+          at: ~/circleci-demo-workflows
       - run: echo "archive"
 
   stage_roll_out:
     <<: *DEFAULT
     steps:
+      - attach_workspace:
+          at: ~/circleci-demo-workflows
       - run: echo "stage_roll_out"
     # publish to stage roll-out
 #    - run:
@@ -222,14 +252,20 @@ jobs:
   ready_to_deploy_gplay:
     <<: *DEFAULT
     steps:
+      - attach_workspace:
+          at: ~/circleci-demo-workflows
       - run: echo "ready_to_deploy_gplay"
 
   ready_to_full_release:
     <<: *DEFAULT
     steps:
+      - attach_workspace:
+          at: ~/circleci-demo-workflows
       - run: echo "ready_to_full_release"
 
   full_release:
     <<: *DEFAULT
     steps:
+      - attach_workspace:
+          at: ~/circleci-demo-workflows
       - run: echo "full_release"
