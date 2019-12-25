@@ -100,6 +100,7 @@ jobs:
       - checkout
   precondition_check:
     steps:
+      - run: echo "precondition_check"
   download_dependencies:
     steps:
       # generate a checksum over all build.gradle files and buildSrc folder
@@ -142,16 +143,28 @@ jobs:
           command: ./gradlew connectedAndroidTest
 
   integration_test:
+    steps:
+      - run: echo "integration_test"
 
   automatic_test:
+    steps:
+      - run: echo "automatic_test"
 
   lint:
+    steps:
+      - run: echo "lint"
 
   sonar_qube:
+    steps:
+      - run: echo "sonar_qube"
 
   espresso_test:
+    steps:
+      - run: echo "espresso_test"
 
   deploy_internal:
+    steps:
+      - run: echo "deploy_internal"
 
   manual_test_gplay:
     steps:
@@ -163,12 +176,25 @@ jobs:
           webhook: webhook
 
   archive:
+    steps:
+      - run: echo "archive"
 
   stage_roll_out:
+    steps:
+      - run: echo "stage_roll_out"
     # publish to stage roll-out
+#    - run:
+#        name: Publish to Google Play Console
+#        command: ./gradlew publishGoogleBundle -Dfsfadspfkasoš
 
   ready_to_deploy_gplay:
+    steps:
+      - run: echo "ready_to_deploy_gplay"
 
   ready_to_full_release:
+    steps:
+      - run: echo "ready_to_full_release"
 
   full_release:
+    steps:
+      - run: echo "full_release"
