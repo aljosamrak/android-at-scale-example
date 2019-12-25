@@ -112,6 +112,12 @@ jobs:
       - run:
           name: Pwd
           command: pwd
+      - run:
+          name: ls
+          command: ls -la
+      - run:
+          name: ls ci
+          command: ls -la .circleci
       # generate a checksum over all build.gradle files and buildSrc folder
       - run:
           name: Generate cache key
