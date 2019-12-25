@@ -129,10 +129,15 @@ jobs:
           name: Assemble build
           command: |
             ./gradlew -si assemble -PdisablePreDex
-      - run:
-          name: Assemble test build
-          command: |
-            ./gradlew assembleDebugAndroidTest -PdisablePreDex
+
+      - store_artifacts:
+          path: app/build/outputs/apk/
+          destination: apks/
+
+#      - run:
+#          name: Assemble test build
+#          command: |
+#            ./gradlew assembleDebugAndroidTest -PdisablePreDex
 #      - run:
 #          name: Run code quality checks
 #          #           When running the plain lint target, it will execute by default for all flavors.
@@ -140,9 +145,9 @@ jobs:
 #          #           Instead, using lintDebug it's running only once, for the 'debug' flavor that we are building here
 #          #           This means ~3x faster for the lint task.
 #          command: ./gradlew checkCode
-      - store_artifacts:
-          path: collect_app/build/reports
-          destination: reports
+#      - store_artifacts:
+#          path: collect_app/build/reports
+#          destination: reports
       #         Since the other workflow are only triggered after this job is successful, caching the build outputs for them can be the last task.
       #         Otherwise we only persist something that will never be used.
       - *persist_debug_workspace
