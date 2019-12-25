@@ -113,7 +113,8 @@ jobs:
           command: ls -la
       - persist_to_workspace:
           root: .
-          paths: *
+          paths:
+            - *
   precondition_check:
     executor: my-executor
     steps:
