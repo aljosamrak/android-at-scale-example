@@ -114,6 +114,12 @@ jobs:
       - run:
           name: Check Precondition
           command: echo "precondition_check"
+      - run:
+          name: PWD
+          command : pwd
+      - run:
+          name: LS
+          command : ls -la
       - *generate_cache_key
       - *restore_cache
       - *accept_licenses
