@@ -12,7 +12,7 @@ import mu.KLogging
 
 class MainActivity : AppCompatActivity() {
 
-    companion object : KLogging()
+//    companion object : KLogging()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
