@@ -131,7 +131,7 @@ jobs:
             ./gradlew -si assemble
 
       - store_artifacts:
-          path: ./*/build/outputs/apk/
+          path: ./app/build/outputs/apk/
           destination: apks/
 
       - run:
@@ -140,8 +140,12 @@ jobs:
             ./gradlew assembleAndroidTest -PdisablePreDex
 
       - store_artifacts:
-          path: -/*/build/reports/tests/
-          destination: tests_reports/
+          path: ./app/build/reports/tests/
+          destination: tests_reports/app
+
+      - store_artifacts:
+          path: ./library/build/reports/tests/
+          destination: tests_reports/library
 
 #      - store_test_results:
 #          path: ./*/build/test-results
@@ -153,9 +157,15 @@ jobs:
           #           Instead, using lintDebug it's running only once, for the 'debug' flavor that we are building here
           #           This means ~3x faster for the lint task.
           command: ./gradlew checkCode
+
       - store_artifacts:
-          path: ./*/build/reports
-          destination: reports
+          path: ./app/build/reports
+          destination: reports/app
+
+      - store_artifacts:
+          path: ./library/build/reports
+          destination: reports/library
+
       #         Since the other workflow are only triggered after this job is successful, caching the build outputs for them can be the last task.
       #         Otherwise we only persist something that will never be used.
       - *persist_workspace
