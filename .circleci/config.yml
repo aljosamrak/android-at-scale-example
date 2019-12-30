@@ -1,11 +1,11 @@
 # from: https://github.com/opendatakit/collect/blob/master/.circleci/config.yml
 version: 2.1
 
-
 orbs:
   # https://circleci.com/orbs/registry/orb/circleci/slack
   slack: circleci/slack@3.4.1
-
+  # https://circleci.com/orbs/registry/orb/circleci/build-tools
+  build-tools: circleci/build-tools@2.6.3
 
 references:
 
@@ -26,7 +26,9 @@ references:
           find buildSrc -type f -not -path "*/build/*" -not -path "*/.gradle/*"; } | \
           sort | \
           xargs shasum > /tmp/checksum.txt
+
         cat /tmp/checksum.txt
+
         # Output the current date in order to prevent a very stale cache
         date +"%Y/%m/%d" > date.txt
 
@@ -118,17 +120,29 @@ jobs:
       GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xms128m -Xmx1024m -XX:+HeapDumpOnOutOfMemoryError" -DpreDexEnable=false'
     steps:
       - checkout
+
+      # Save information about the job environment, to be stored as artifacts and inspected later
+      - diagnostic-orb:
+          data-dir: diagnostic-report/env-info
+      - diagnostic-orb/store-report:
+          data-dir: diagnostic-report
+
       # TODO
       - run:
           name: Check Precondition
           command: echo "precondition_check"
+
       - *generate_cache_key
       - *restore_cache
+
       - *accept_licenses
+
       - run:
           name: Download dependencies
           command: ./gradlew androidDependencies
+
       - *save_cache
+
       #       It's faster if we build before running the quality checks, because quality checks depend on build output anyway.
       #       Also, while running gradle on daemon mode, we can even run build targets individually without impacting runtime ramp-up time.
       #       This also implies that we can also observe per-target build timings, instead of just the total execution time from a single command.
@@ -145,40 +159,38 @@ jobs:
       - run:
           name: Assemble test build
           command: |
-            ./gradlew assembleAndroidTest -PdisablePreDex
+            ./gradlew -si assembleAndroidTest -PdisablePreDex
 
-      - store_artifacts:
-          path: ./app/build/reports/tests/
-          destination: tests_reports/app
-
-      - store_artifacts:
-          path: ./library/build/reports/tests/
-          destination: tests_reports/library
-
-#      - store_test_results:
-#          path: ./*/build/test-results
-
-      - run:
-          name: Run code quality checks
-          #           When running the plain lint target, it will execute by default for all flavors.
-          #           This implies building the release and test flavors as well, which are out of scope for this job.
-          #           Instead, using lintDebug it's running only once, for the 'debug' flavor that we are building here
-          #           This means ~3x faster for the lint task.
-          command: ./gradlew checkCode
-
-      - store_artifacts:
-          path: ./app/build/reports
-          destination: reports/app
-
-      - store_artifacts:
-          path: ./library/build/reports
-          destination: reports/library
-
-      #         Since the other workflow are only triggered after this job is successful, caching the build outputs for them can be the last task.
-      #         Otherwise we only persist something that will never be used.
+      # Since the other workflow are only triggered after this job is successful, caching the build outputs for them can be the last task.
+      # Otherwise we only persist something that will never be used.
       - *persist_workspace
 
-
+#      - store_artifacts:
+#          path: ./app/build/reports/tests/
+#          destination: tests_reports/app
+#
+#      - store_artifacts:
+#          path: ./library/build/reports/tests/
+#          destination: tests_reports/library
+#
+#      - store_test_results:
+#          path: ./*/build/test-results
+#
+#      - run:
+#          name: Run code quality checks
+#          #           When running the plain lint target, it will execute by default for all flavors.
+#          #           This implies building the release and test flavors as well, which are out of scope for this job.
+#          #           Instead, using lintDebug it's running only once, for the 'debug' flavor that we are building here
+#          #           This means ~3x faster for the lint task.
+#          command: ./gradlew checkCode
+#
+#      - store_artifacts:
+#          path: ./app/build/reports
+#          destination: reports/app
+#
+#      - store_artifacts:
+#          path: ./library/build/reports
+#          destination: reports/library
   ## Run unit tests
   test_unit:
     <<: *android_config
@@ -272,14 +284,25 @@ jobs:
           path: collect_app/build/reports/
           destination: /reports/
 
+  sonar-cube:
+    description: Detect bugs and vulnerabilities
+    docker:
+      - image: 'circleci/openjdk:11-jdk'
+    steps:
+      - checkout
+      - run:
+          name: Analyze on SonarCloud
+          command: ./gradlew sonarqube
 
 workflows:
   version: 2
   workflow:
     jobs:
-      #       This job will run on every commit on any branch
+      # This job will run on every commit on any branch
       - build
-      #       Unit tests should only start after a successful build. Or vice versa?
+      # Run sonarCube quality gate check
+      - sonar-cube
+      # Unit tests should only start after a successful build. Or vice versa?
       - test_unit:
           #         Although the unit testing task could run in parallel with build task,
           #         in such case, it would not benefit from the previous caching in the event of
