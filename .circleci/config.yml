@@ -20,13 +20,21 @@ references:
   generate_cache_key: &generate_cache_key
     run:
       name: Generate cache key
-      command: .circleci/checksum.sh /tmp/checksum.txt
+      command: |
+        # Find all file in buildSrc and all .gradle or .gradle.kts files
+        { find . -regextype posix-extended -regex '.*gradle(.kts)?' -type f & \
+          find buildSrc -type f -not -path "*/build/*" -not -path "*/.gradle/*"; } | \
+          sort | \
+          xargs shasum > /tmp/checksum.txt
+        cat /tmp/checksum.txt
+        # Output the current date in order to prevent a very stale cache
+        date +"%Y/%m/%d" > date.txt
 
   cache_key: &cache_key
-    key: gradle-{{ checksum "/tmp/checksum.txt" }}
+    key: gradle-{{ checksum "gradle/wrapper/gradle-wrapper.properties" }}-{{ checksum "/tmp/checksum.txt" }}-{{ checksum "date.txt" }}
 
   cache_tests_key: &cache_tests_key
-    key: test-gradle-{{ checksum "/tmp/checksum.txt" }}
+    key: test-gradle-{{ checksum "gradle/wrapper/gradle-wrapper.properties" }}-{{ checksum "/tmp/checksum.txt" }}-{{ checksum "date.txt" }}
 
   restore_cache: &restore_cache
     restore_cache:
