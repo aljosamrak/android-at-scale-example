@@ -4,8 +4,8 @@ version: 2.1
 orbs:
   # https://circleci.com/orbs/registry/orb/circleci/slack
   slack: circleci/slack@3.4.1
-  # https://circleci.com/orbs/registry/orb/circleci/build-tools
-  build-tools: circleci/build-tools@2.6.3
+  # https://circleci.com/orbs/registry/orb/circleci/diagnostic-orb
+  diagnostic-orb: circleci/diagnostic-orb@1.0.0
 
 references:
 
