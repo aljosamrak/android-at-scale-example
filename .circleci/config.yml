@@ -122,7 +122,7 @@ jobs:
       - checkout
 
       # Save information about the job environment, to be stored as artifacts and inspected later
-      - diagnostic-orb:
+      - diagnostic-orb/env-info:
           data-dir: diagnostic-report/env-info
       - diagnostic-orb/store-report:
           data-dir: diagnostic-report
