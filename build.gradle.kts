@@ -65,7 +65,7 @@ subprojects {
 }
 
 
-val rootProperties = readProperties(File(project.rootDir, "../local.properties"))
+val rootProperties = readProperties(File(project.rootDir, "local.properties"))
 
 //https://sonarcloud.io/dashboard?id=aljosamrak_android-at-scale-example
 sonarqube {
@@ -73,7 +73,7 @@ sonarqube {
         property("sonar.projectKey", "aljosamrak_android-at-scale-example")
         property("sonar.organization", "aljosamrak")
         property("sonar.host.url", "https://sonarcloud.io")
-        property("sonar.login", "${rootProperties.sonarQubeKey}")
+        property("sonar.login", rootProperties.getProperty("sonarQubeKey"))
     }
 }
 
@@ -106,7 +106,7 @@ tasks.register("clean").configure {
 //    }
 //}
 
-fun readProperties(propertiesFile: File) = Properties().apply {
+fun readProperties(propertiesFile: File) = java.util.Properties().apply {
     propertiesFile.inputStream().use { fis ->
         load(fis)
     }
