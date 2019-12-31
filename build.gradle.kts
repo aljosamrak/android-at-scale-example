@@ -1,3 +1,12 @@
+import org.jetbrains.kotlin.konan.properties.hasProperty
+
+/**
+ * The buildscript block is where you configure the repositories and
+ * dependencies for Gradle itself—meaning, you should not include dependencies
+ * for your modules here. For example, this block includes the Android plugin for
+ * Gradle as a dependency because it provides the additional instructions Gradle
+ * needs to build Android app modules.
+ */
 buildscript {
     repositories {
         google()
