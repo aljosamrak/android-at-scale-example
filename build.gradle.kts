@@ -73,7 +73,9 @@ sonarqube {
         property("sonar.projectKey", "aljosamrak_android-at-scale-example")
         property("sonar.organization", "aljosamrak")
         property("sonar.host.url", "https://sonarcloud.io")
-        property("sonar.login", rootProperties.getProperty("sonarQubeKey"))
+        if (rootProperties.hasProperty("sonarQubeKey")) {
+            property("sonar.login", rootProperties.getProperty("sonarQubeKey"))
+        }
     }
 }
 
@@ -107,7 +109,9 @@ tasks.register("clean").configure {
 //}
 
 fun readProperties(propertiesFile: File) = java.util.Properties().apply {
-    propertiesFile.inputStream().use { fis ->
-        load(fis)
+    if (propertiesFile.exists()) {
+        propertiesFile.inputStream().use { fis ->
+            load(fis)
+        }
     }
 }
