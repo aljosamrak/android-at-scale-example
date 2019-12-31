@@ -285,9 +285,8 @@ jobs:
           destination: /reports/
 
   sonar-cube:
+    <<: *android_config
     description: Detect bugs and vulnerabilities
-    docker:
-      - image: 'circleci/openjdk:11-jdk'
     steps:
       - checkout
       - run:
