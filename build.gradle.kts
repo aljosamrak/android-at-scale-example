@@ -11,11 +11,17 @@ buildscript {
     repositories {
         google()
         jcenter()
+        mavenCentral()
         maven(Repositories.kotlinEap)
     }
     dependencies {
         classpath (BuildPlugins.androidGradlePlugin)
         classpath (BuildPlugins.kotlinGradlePlugin)
+
+        // https://jeremylong.github.io/DependencyCheck/dependency-check-gradle/index.html
+        classpath("org.owasp:dependency-check-gradle:5.3.1") {
+            because("dependencycheck plugin - provides monitoring of the projects dependent libraries")
+        }
     }
 }
 
@@ -25,6 +31,9 @@ buildscript {
 plugins {
 //    base
 //    kotlin("jvm") version "1.3.21" apply false
+
+    // provides monitoring of the projects dependent libraries; creating a report of known vulnerable components that are included in the build.
+    id("org.owasp.dependencycheck") version "5.3.1" apply true
 
 // https://developer.android.com/studio/test/command-line#multi-module-reports TODO
 //    id("android-reporting")
@@ -48,6 +57,35 @@ allprojects {
         jcenter()
         maven(Repositories.kotlinEap)
     }
+
+    apply(plugin = "org.owasp.dependencycheck")
+
+    dependencyCheck {
+        quickQueryTimestamp = false    // when set to false, it means use HTTP GET method to query timestamp. (default value is true)
+        failBuildOnCVSS = 5.0f
+        failOnError = true
+        suppressionFile = "config/dependencyCheck/suppressions.xml"
+        analyzers(closureOf<org.owasp.dependencycheck.gradle.extension.AnalyzerExtension> {
+            experimentalEnabled = true
+            archiveEnabled = true
+            jarEnabled = true
+            centralEnabled = true
+            nexusEnabled = true
+            pyDistributionEnabled = false
+            pyPackageEnabled = false
+            rubygemsEnabled = false
+            opensslEnabled = false
+            nuspecEnabled = false
+            assemblyEnabled = false
+            cmakeEnabled = false
+            autoconfEnabled = true
+            composerEnabled = false
+            nodeEnabled = true
+            cocoapodsEnabled = false
+            swiftEnabled = false
+        })
+    }
+    tasks.findByName("check")?.dependsOn("dependencyCheckAnalyze")
 }
 
 subprojects {
