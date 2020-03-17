@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.konan.properties.hasProperty
-
 /**
  * The buildscript block is where you configure the repositories and
  * dependencies for Gradle itself—meaning, you should not include dependencies
@@ -18,9 +16,8 @@ buildscript {
         classpath (BuildPlugins.androidGradlePlugin)
         classpath (BuildPlugins.kotlinGradlePlugin)
 
-        // https://jeremylong.github.io/DependencyCheck/dependency-check-gradle/index.html
-        classpath("org.owasp:dependency-check-gradle:5.3.1") {
-            because("dependencycheck plugin - provides monitoring of the projects dependent libraries")
+        classpath(plugin.Plugins.DependencyCheck.classPath) {
+            because(plugin.Plugins.DependencyCheck.because)
         }
     }
 }
@@ -32,8 +29,7 @@ plugins {
 //    base
 //    kotlin("jvm") version "1.3.21" apply false
 
-    // provides monitoring of the projects dependent libraries; creating a report of known vulnerable components that are included in the build.
-    id("org.owasp.dependencycheck") version "5.3.1" apply true
+    id(plugin.Plugins.DependencyCheck.plugin) version plugin.Plugins.DependencyCheck.version apply true
 
 // https://developer.android.com/studio/test/command-line#multi-module-reports TODO
 //    id("android-reporting")
@@ -58,7 +54,7 @@ allprojects {
         maven(Repositories.kotlinEap)
     }
 
-    apply(plugin = "org.owasp.dependencycheck")
+    apply(plugin = plugin.Plugins.DependencyCheck.plugin)
 
     dependencyCheck {
         quickQueryTimestamp = false    // when set to false, it means use HTTP GET method to query timestamp. (default value is true)
