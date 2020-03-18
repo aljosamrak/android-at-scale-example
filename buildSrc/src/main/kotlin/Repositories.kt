@@ -3,4 +3,5 @@
  */
 object Repositories {
     const val kotlinEap = "http://dl.bintray.com/kotlin/kotlin-eap"
+    const val kotlinx = "https://kotlin.bintray.com/kotlinx"
 }

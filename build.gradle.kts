@@ -16,12 +16,24 @@ buildscript {
         classpath (BuildPlugins.androidGradlePlugin)
         classpath (BuildPlugins.kotlinGradlePlugin)
 
+        // kotlin serialization
+        classpath(plugin.Plugins.KotlinSerialization.classPath) {
+            because(plugin.Plugins.KotlinSerialization.because)
+        }
+
+        // benchmark lock clock
+        classpath(plugin.Plugins.Benchmark.classPath) {
+            because(plugin.Plugins.Benchmark.because)
+        }
+
+        // check dependency vulnerability
         classpath(plugin.Plugins.DependencyCheck.classPath) {
             because(plugin.Plugins.DependencyCheck.because)
         }
 
+        // check dependency version upgrade
         classpath(plugin.Plugins.Versions.classPath) {
-            because(plugin.Plugins.DependencyCheck.because)
+            because(plugin.Plugins.Versions.because)
         }
     }
 }
@@ -33,6 +45,10 @@ plugins {
 //    base
 //    kotlin("jvm") version "1.3.21" apply false
 
+    // kotlin serialization
+    kotlin(plugin.Plugins.KotlinSerialization.plugin) version plugin.Plugins.KotlinSerialization.version apply false
+
+    // gradle version plugins
     id(plugin.Plugins.DependencyCheck.plugin) version plugin.Plugins.DependencyCheck.version apply true
     id(plugin.Plugins.Versions.plugin) version plugin.Plugins.Versions.version apply true
 
@@ -57,6 +73,7 @@ allprojects {
         google()
         jcenter()
         maven(Repositories.kotlinEap)
+        maven(Repositories.kotlinx)
     }
 
 

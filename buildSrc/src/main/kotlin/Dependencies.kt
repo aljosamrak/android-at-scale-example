@@ -1,4 +1,6 @@
-const val kotlinVersion = "1.3.70"
+object Kotlin {
+    const val kotlinVersion = "1.3.61"  // 1.3.70 not working - problem with kotlin serialization
+}
 
 object BuildPlugins {
 
@@ -7,7 +9,7 @@ object BuildPlugins {
     }
 
     const val androidGradlePlugin = "com.android.tools.build:gradle:${Versions.buildToolsVersion}"
-    const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+    const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Kotlin.kotlinVersion}"
     const val androidApplication = "com.android.application"
     const val androidLibrary = "com.android.library"
     const val kotlinAndroid = "kotlin-android"
@@ -30,7 +32,7 @@ object Libraries {
         const val compose = "0.1.0-dev06"
     }
 
-    const val kotlinStdLib          = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
+    const val kotlinStdLib          = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Kotlin.kotlinVersion}"
     const val appCompat             = "androidx.appcompat:appcompat:${Versions.jetpack}"
     const val constraintLayout      = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     const val ktxCore               = "androidx.core:core-ktx:${Versions.ktx}"
@@ -41,6 +43,21 @@ object Libraries {
     const val androidxUiTooling     = "androidx.ui:ui-tooling:${Versions.compose}"
 
     const val composeRuntime        = "androidx.compose:compose-runtime:${Versions.compose}"
+}
+
+object Json {
+    private object Versions {
+        const val gson                  = "2.8.6"
+        const val jackson               = "2.10.2"
+        const val moshi                 = "1.9.2"
+        const val kotlinSerialization   = "0.11.0"
+    }
+
+    const val gson                  = "com.google.code.gson:gson:${Versions.gson}"
+    const val jackson               = "com.fasterxml.jackson.module:jackson-module-kotlin:${Versions.jackson}"
+    const val kotlinSerialization   = "org.jetbrains.kotlinx:kotlinx-serialization-runtime:${Versions.kotlinSerialization}"
+    const val moshi                 = "com.squareup.moshi:moshi-kotlin:${Versions.moshi}"
+    const val moshiCodegen          = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshi}"
 }
 
 object Logging {
