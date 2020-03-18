@@ -24,3 +24,11 @@ The directory buildSrc is treated as an included build. Upon discovery of the di
 buildSrc uses the same source code conventions applicable to Java and Groovy projects. It also provides direct access to the Gradle API. Additional dependencies can be declared in a dedicated build.gradle under buildSrc.
 
 Example: https://proandroiddev.com/migrate-to-gradle-kotlin-dsl-in-4-steps-f3e3b27e1f4d
+
+
+## Benchmark
+Android Jetpack provides a very good library for performance testing on the device. There are very good blogs and official documentation written about this.
+
+[Official documentation](https://developer.android.com/studio/profile/benchmark)
+[A really good blog](https://tech.olx.com/android-jetpack-benchmark-json-parsers-performance-1e76031a296b) [with am accomaning github repo](https://github.com/mootazltaief/android-json-benchmark)
+[A bit older but more detailed blog](https://blog.mindorks.com/improving-android-app-performance-with-benchmarking)
