@@ -19,6 +19,10 @@ buildscript {
         classpath(plugin.Plugins.DependencyCheck.classPath) {
             because(plugin.Plugins.DependencyCheck.because)
         }
+
+        classpath(plugin.Plugins.Versions.classPath) {
+            because(plugin.Plugins.DependencyCheck.because)
+        }
     }
 }
 
@@ -30,6 +34,7 @@ plugins {
 //    kotlin("jvm") version "1.3.21" apply false
 
     id(plugin.Plugins.DependencyCheck.plugin) version plugin.Plugins.DependencyCheck.version apply true
+    id(plugin.Plugins.Versions.plugin) version plugin.Plugins.Versions.version apply true
 
 // https://developer.android.com/studio/test/command-line#multi-module-reports TODO
 //    id("android-reporting")
@@ -53,6 +58,9 @@ allprojects {
         jcenter()
         maven(Repositories.kotlinEap)
     }
+
+
+    apply(plugin = plugin.Plugins.Versions.plugin)
 
     apply(plugin = plugin.Plugins.DependencyCheck.plugin)
 
@@ -111,16 +119,16 @@ subprojects {
 val rootProperties = readProperties(File(project.rootDir, "local.properties"))
 
 //https://sonarcloud.io/dashboard?id=aljosamrak_android-at-scale-example
-sonarqube {
-    properties {
-        property("sonar.projectKey", "aljosamrak_android-at-scale-example")
-        property("sonar.organization", "aljosamrak")
-        property("sonar.host.url", "https://sonarcloud.io")
-        if (rootProperties.hasProperty("sonarQubeKey")) {
-            property("sonar.login", rootProperties.getProperty("sonarQubeKey"))
-        }
-    }
-}
+//sonarqube {
+//    properties {
+//        property("sonar.projectKey", "aljosamrak_android-at-scale-example")
+//        property("sonar.organization", "aljosamrak")
+//        property("sonar.host.url", "https://sonarcloud.io")
+//        if (rootProperties.hasProperty("sonarQubeKey")) {
+//            property("sonar.login", rootProperties.getProperty("sonarQubeKey"))
+//        }
+//    }
+//}
 
 tasks.register("clean").configure {
     delete("build")
