@@ -1,4 +1,4 @@
-const val kotlinVersion = "1.3.60"
+const val kotlinVersion = "1.3.70"
 
 object BuildPlugins {
 
@@ -24,10 +24,10 @@ object AndroidSdk {
 
 object Libraries {
     private object Versions {
-        const val jetpack = "1.0.0-beta01"
-        const val constraintLayout = "1.1.2"
-        const val ktx = "1.1.0-alpha05"
-        const val compose = "0.1.0-dev02"
+        const val jetpack = "1.2.0-alpha03"
+        const val constraintLayout = "2.0.0-beta4"
+        const val ktx = "1.3.0-alpha02"
+        const val compose = "0.1.0-dev06"
     }
 
     const val kotlinStdLib          = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
@@ -44,16 +44,16 @@ object Libraries {
 }
 
 object Logging {
-    private const val kotlinLoggingVersion = "1.7.7"
+    private const val kotlinLoggingVersion = "1.7.8"
 
     const val kotlinLogging         = "io.github.microutils:kotlin-logging:$kotlinLoggingVersion"
 }
 
 object TestLibraries {
     private object Versions {
-        const val junit4 = "4.12"
-        const val testRunner = "1.1.0-alpha4"
-        const val espresso = "3.1.0-alpha4"
+        const val junit4 = "4.13"
+        const val testRunner = "1.3.0-alpha5"
+        const val espresso = "3.3.0-alpha5"
     }
     const val junit4     = "junit:junit:${Versions.junit4}"
     const val testRunner = "androidx.test:runner:${Versions.testRunner}"
