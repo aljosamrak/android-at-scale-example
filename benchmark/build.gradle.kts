@@ -2,9 +2,9 @@ plugins {
     id(BuildPlugins.androidLibrary)
     id(BuildPlugins.kotlinAndroid)
     id(BuildPlugins.kotlinAndroidExtensions)
-    id(plugin.Plugins.Benchmark.plugin)
-    kotlin(plugin.Plugins.KotlinSerialization.plugin)
-    kotlin(plugin.Plugins.Kapt.plugin)
+    id(Plugins.Benchmark.plugin)
+    kotlin(Plugins.KotlinSerialization.plugin)
+    kotlin(Plugins.Kapt.plugin)
 }
 
 android {

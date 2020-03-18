@@ -1,5 +1,3 @@
-package plugin
-
 /**
  * Created by Aljoša Mrak on 17.3.2020.
  */

@@ -17,23 +17,23 @@ buildscript {
         classpath (BuildPlugins.kotlinGradlePlugin)
 
         // kotlin serialization
-        classpath(plugin.Plugins.KotlinSerialization.classPath) {
-            because(plugin.Plugins.KotlinSerialization.because)
+        classpath(Plugins.KotlinSerialization.classPath) {
+            because(Plugins.KotlinSerialization.because)
         }
 
         // benchmark lock clock
-        classpath(plugin.Plugins.Benchmark.classPath) {
-            because(plugin.Plugins.Benchmark.because)
+        classpath(Plugins.Benchmark.classPath) {
+            because(Plugins.Benchmark.because)
         }
 
         // check dependency vulnerability
-        classpath(plugin.Plugins.DependencyCheck.classPath) {
-            because(plugin.Plugins.DependencyCheck.because)
+        classpath(Plugins.DependencyCheck.classPath) {
+            because(Plugins.DependencyCheck.because)
         }
 
         // check dependency version upgrade
-        classpath(plugin.Plugins.Versions.classPath) {
-            because(plugin.Plugins.Versions.because)
+        classpath(Plugins.Versions.classPath) {
+            because(Plugins.Versions.because)
         }
     }
 }
@@ -46,11 +46,11 @@ plugins {
 //    kotlin("jvm") version "1.3.21" apply false
 
     // kotlin serialization
-    kotlin(plugin.Plugins.KotlinSerialization.plugin) version plugin.Plugins.KotlinSerialization.version apply false
+    kotlin(Plugins.KotlinSerialization.plugin) version Plugins.KotlinSerialization.version apply false
 
     // gradle version plugins
-    id(plugin.Plugins.DependencyCheck.plugin) version plugin.Plugins.DependencyCheck.version apply true
-    id(plugin.Plugins.Versions.plugin) version plugin.Plugins.Versions.version apply true
+    id(Plugins.DependencyCheck.plugin) version Plugins.DependencyCheck.version apply true
+    id(Plugins.Versions.plugin) version Plugins.Versions.version apply true
 
 // https://developer.android.com/studio/test/command-line#multi-module-reports TODO
 //    id("android-reporting")
@@ -77,9 +77,10 @@ allprojects {
     }
 
 
-    apply(plugin = plugin.Plugins.Versions.plugin)
 
-    apply(plugin = plugin.Plugins.DependencyCheck.plugin)
+    apply(plugin = Plugins.Versions.plugin)
+
+    apply(plugin = Plugins.DependencyCheck.plugin)
 
     dependencyCheck {
         quickQueryTimestamp = false    // when set to false, it means use HTTP GET method to query timestamp. (default value is true)
