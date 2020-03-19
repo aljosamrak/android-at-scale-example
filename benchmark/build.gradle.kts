@@ -20,6 +20,10 @@ android {
         testInstrumentationRunner = TestInstrumentationRunner.benchmark
     }
 
+    sourceSets {
+        getByName("main").java.srcDirs("src/main/kotlin")
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -42,6 +46,10 @@ android {
 
 dependencies {
     implementation(Libraries.kotlinStdLib)
+
+    implementation(IoLibrary.apache)
+    implementation(IoLibrary.guava)
+    implementation(IoLibrary.okio)
 
     androidTestImplementation(TestLibraries.androidxBenchmark)
     androidTestImplementation(TestLibraries.testRunner)
