@@ -14,7 +14,7 @@ import java.util.stream.Collectors
 
 class JavaTextFileRead {
 
-    fun concatReadFile0(inputStream: InputStream): String {
+    fun byLineConcatBufferedReaderReadFile(inputStream: InputStream): String {
         var result = ""
         BufferedReader(InputStreamReader(inputStream)).use { source ->
             var mLine = source.readLine()
@@ -29,7 +29,7 @@ class JavaTextFileRead {
         return result
     }
 
-    fun concatReadFile1(inputStream: InputStream): String {
+    fun collectionsConcatBufferedReaderReadFile(inputStream: InputStream): String {
         BufferedReader(InputStreamReader(inputStream)).use { source ->
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                 return source.lines().collect(Collectors.joining("\n"))
@@ -38,17 +38,17 @@ class JavaTextFileRead {
         return ""
     }
 
-    fun concatReadFile2(inputStream: InputStream): String {
+    fun useReadTextConcatBufferedReaderReadFile(inputStream: InputStream): String {
         return inputStream.bufferedReader().use(BufferedReader::readText)
     }
 
-    fun concatReadFile3(inputStream: InputStream): String {
+    fun useLinesConcatBufferedReaderReadFile(inputStream: InputStream): String {
         return inputStream.bufferedReader().useLines {
             it.reduce { acc, line -> acc + "\n" + line }
         }
     }
 
-    fun concatReadFile4(inputStream: InputStream): String {
+    fun forEachLineConcatBufferedReaderReadFile(inputStream: InputStream): String {
         var result = ""
         inputStream.bufferedReader().forEachLine {
             if (result.isNotEmpty()) {
@@ -59,7 +59,7 @@ class JavaTextFileRead {
         return result
     }
 
-    fun concatReadFile5(fileName: String, context: Context): String {
+    fun byteBufferFileChannelReadFile(fileName: String, context: Context): String {
         try {
             val length = context.assets.openFd(fileName).length
 
@@ -78,7 +78,7 @@ class JavaTextFileRead {
         }
     }
 
-    fun concatReadFile6(fileName: String, context: Context): String {
+    fun byteArrayBufferedReaderReadFile(fileName: String, context: Context): String {
         val length = context.assets.openFd(fileName).length
         val buf = ByteArray(length.toInt())
         var cnt = 0
@@ -93,7 +93,7 @@ class JavaTextFileRead {
         return String(buf, StandardCharsets.UTF_8)
     }
 
-    fun concatReadFile7(inputStream: InputStream): String {
+    fun byLineScannerReadFile(inputStream: InputStream): String {
         var sc: Scanner? = null
         var result = ""
         try {
@@ -115,7 +115,7 @@ class JavaTextFileRead {
         return result
     }
 
-    fun concatReadFile8(inputStream: InputStream): String {
+    fun wholeScannerReadFile(inputStream: InputStream): String {
         var sc: Scanner? = null
         val result: String
         try {
@@ -135,7 +135,7 @@ class JavaTextFileRead {
         return result
     }
 
-    fun stringBuilderReadFile1(inputStream: InputStream): String {
+    fun byLineStringBuilderBufferedReaderReadFile(inputStream: InputStream): String {
         val stringBuilder = StringBuilder()
         BufferedReader(InputStreamReader(inputStream)).use { source ->
             var mLine: String?
@@ -149,7 +149,7 @@ class JavaTextFileRead {
         return stringBuilder.toString()
     }
 
-    fun stringBuilderReadFile3(inputStream: InputStream): String {
+    fun usesLineStringBuilderBufferedReaderReadFile(inputStream: InputStream): String {
         val stringBuilder = StringBuilder()
         inputStream.bufferedReader().useLines {
             it.forEach { line ->
@@ -164,7 +164,7 @@ class JavaTextFileRead {
         return stringBuilder.toString()
     }
 
-    fun stringBuilderReadFile4(inputStream: InputStream): String {
+    fun forEachLineStringBuilderBufferedReaderReadFile(inputStream: InputStream): String {
         val stringBuilder = StringBuilder()
         inputStream.bufferedReader().forEachLine {
             if (stringBuilder.isNotEmpty()) {
@@ -175,7 +175,7 @@ class JavaTextFileRead {
         return stringBuilder.toString()
     }
 
-    fun stringBuilderReadFile7(inputStream: InputStream): String {
+    fun byLineStringBuilderScannerReadFile(inputStream: InputStream): String {
         var sc: Scanner? = null
         val stringBuilder = StringBuffer()
         try {
@@ -197,7 +197,7 @@ class JavaTextFileRead {
         return stringBuilder.toString()
     }
 
-    fun stringBufferReadFile1(inputStream: InputStream): String {
+    fun byLineStringBufferBufferedReaderReadFile(inputStream: InputStream): String {
         val stringBuffer = StringBuffer()
         BufferedReader(InputStreamReader(inputStream)).use { source ->
             var mLine: String?
@@ -211,7 +211,7 @@ class JavaTextFileRead {
         return stringBuffer.toString()
     }
 
-    fun stringBufferReadFile3(inputStream: InputStream): String {
+    fun useLinesStringBufferBufferedReaderReadFile(inputStream: InputStream): String {
         val stringBuffer = StringBuffer()
         inputStream.bufferedReader().useLines {
             it.forEach { line ->
@@ -226,7 +226,7 @@ class JavaTextFileRead {
         return stringBuffer.toString()
     }
 
-    fun stringBufferReadFile4(inputStream: InputStream): String {
+    fun forEachLineStringBufferBufferedReaderReadFile(inputStream: InputStream): String {
         val stringBuffer = StringBuffer()
         inputStream.bufferedReader().forEachLine {
             if (stringBuffer.isNotEmpty()) {
@@ -237,7 +237,7 @@ class JavaTextFileRead {
         return stringBuffer.toString()
     }
 
-    fun stringBufferReadFile7(inputStream: InputStream): String {
+    fun byLineStringBufferScannerReadFile(inputStream: InputStream): String {
         var sc: Scanner? = null
         val stringBuffer = StringBuffer()
         try {

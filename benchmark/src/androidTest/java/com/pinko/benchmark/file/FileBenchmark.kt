@@ -32,122 +32,122 @@ class FileBenchmark {
     private val file1Content = appContext.assets.open(file1).bufferedReader().use{ it.readText() }
 
     @Test
-    fun javaConcatReadFile0() = benchmarkRule.measureRepeated {
-        assertThat(javaTextFileRead.concatReadFile0(appContext.assets.open(file1))).isEqualTo(file1Content)
+    fun javaByLineConcatBufferedReaderReadFile() = benchmarkRule.measureRepeated {
+        assertThat(javaTextFileRead.byLineConcatBufferedReaderReadFile(appContext.assets.open(file1))).isEqualTo(file1Content)
     }
 
     @Test
-    fun javaConcatReadFile1() = benchmarkRule.measureRepeated {
-        assertThat(javaTextFileRead.concatReadFile1(appContext.assets.open(file1))).isEqualTo(file1Content)
+    fun javaCollectionsConcatBufferedReaderReadFile() = benchmarkRule.measureRepeated {
+        assertThat(javaTextFileRead.collectionsConcatBufferedReaderReadFile(appContext.assets.open(file1))).isEqualTo(file1Content)
     }
 
     @Test
-    fun javaConcatReadFile2() = benchmarkRule.measureRepeated {
-        assertThat(javaTextFileRead.concatReadFile2(appContext.assets.open(file1))).isEqualTo(file1Content)
+    fun javaUseReadTextConcatBufferedReaderReadFile() = benchmarkRule.measureRepeated {
+        assertThat(javaTextFileRead.useReadTextConcatBufferedReaderReadFile(appContext.assets.open(file1))).isEqualTo(file1Content)
     }
 
     @Test
-    fun javaConcatReadFile3() = benchmarkRule.measureRepeated {
-        assertThat(javaTextFileRead.concatReadFile3(appContext.assets.open(file1))).isEqualTo(file1Content)
+    fun javaUseLinesConcatBufferedReaderReadFile() = benchmarkRule.measureRepeated {
+        assertThat(javaTextFileRead.useLinesConcatBufferedReaderReadFile(appContext.assets.open(file1))).isEqualTo(file1Content)
     }
 
     @Test
-    fun javaConcatReadFile4() = benchmarkRule.measureRepeated {
-        assertThat(javaTextFileRead.concatReadFile4(appContext.assets.open(file1))).isEqualTo(file1Content)
+    fun javaForEachLineConcatBufferedReaderReadFile() = benchmarkRule.measureRepeated {
+        assertThat(javaTextFileRead.forEachLineConcatBufferedReaderReadFile(appContext.assets.open(file1))).isEqualTo(file1Content)
     }
 
     @Test
-    fun javaConcatReadFile5() = benchmarkRule.measureRepeated {
-        assertThat(javaTextFileRead.concatReadFile5(file1, appContext)).isEqualTo(file1Content)
+    fun javaByteBufferFileChannelReadFile() = benchmarkRule.measureRepeated {
+        assertThat(javaTextFileRead.byteBufferFileChannelReadFile(file1, appContext)).isEqualTo(file1Content)
     }
 
     @Test
-    fun javaConcatReadFile6() = benchmarkRule.measureRepeated {
-        assertThat(javaTextFileRead.concatReadFile6(file1, appContext)).isEqualTo(file1Content)
+    fun javaByteArrayBufferedReaderReadFile() = benchmarkRule.measureRepeated {
+        assertThat(javaTextFileRead.byteArrayBufferedReaderReadFile(file1, appContext)).isEqualTo(file1Content)
     }
 
     @Test
-    fun javaConcatReadFile7() = benchmarkRule.measureRepeated {
-        assertThat(javaTextFileRead.concatReadFile7(appContext.assets.open(file1))).isEqualTo(file1Content)
+    fun javaByLineScannerReadFile() = benchmarkRule.measureRepeated {
+        assertThat(javaTextFileRead.byLineScannerReadFile(appContext.assets.open(file1))).isEqualTo(file1Content)
     }
 
     @Test
-    fun javaConcatReadFile8() = benchmarkRule.measureRepeated {
-        assertThat(javaTextFileRead.concatReadFile8(appContext.assets.open(file1))).isEqualTo(file1Content)
+    fun javaWholeScannerReadFile() = benchmarkRule.measureRepeated {
+        assertThat(javaTextFileRead.wholeScannerReadFile(appContext.assets.open(file1))).isEqualTo(file1Content)
     }
 
     @Test
-    fun javaStringBuilderReadFile1() = benchmarkRule.measureRepeated {
-        assertThat(javaTextFileRead.stringBuilderReadFile1(appContext.assets.open(file1))).isEqualTo(file1Content)
+    fun javaByLineStringBuilderBufferedReaderReadFile() = benchmarkRule.measureRepeated {
+        assertThat(javaTextFileRead.byLineStringBuilderBufferedReaderReadFile(appContext.assets.open(file1))).isEqualTo(file1Content)
     }
 
     @Test
-    fun javaStringBuilderReadFile3() = benchmarkRule.measureRepeated {
-        assertThat(javaTextFileRead.stringBuilderReadFile3(appContext.assets.open(file1))).isEqualTo(file1Content)
+    fun javaUsesLineStringBuilderBufferedReaderReadFile() = benchmarkRule.measureRepeated {
+        assertThat(javaTextFileRead.usesLineStringBuilderBufferedReaderReadFile(appContext.assets.open(file1))).isEqualTo(file1Content)
     }
 
     @Test
-    fun javaStringBuilderReadFile4() = benchmarkRule.measureRepeated {
-        assertThat(javaTextFileRead.stringBuilderReadFile4(appContext.assets.open(file1))).isEqualTo(file1Content)
+    fun javaForEachLineStringBuilderBufferedReaderReadFile() = benchmarkRule.measureRepeated {
+        assertThat(javaTextFileRead.forEachLineStringBuilderBufferedReaderReadFile(appContext.assets.open(file1))).isEqualTo(file1Content)
     }
 
     @Test
-    fun javaStringBuilderReadFile7() = benchmarkRule.measureRepeated {
-        assertThat(javaTextFileRead.stringBuilderReadFile7(appContext.assets.open(file1))).isEqualTo(file1Content)
+    fun javaByLineStringBuilderScannerReadFile() = benchmarkRule.measureRepeated {
+        assertThat(javaTextFileRead.byLineStringBuilderScannerReadFile(appContext.assets.open(file1))).isEqualTo(file1Content)
     }
 
     @Test
-    fun javaStringBufferReadFile1() = benchmarkRule.measureRepeated {
-        assertThat(javaTextFileRead.stringBufferReadFile1(appContext.assets.open(file1))).isEqualTo(file1Content)
+    fun javaByLineStringBufferBufferedReaderReadFile() = benchmarkRule.measureRepeated {
+        assertThat(javaTextFileRead.byLineStringBufferBufferedReaderReadFile(appContext.assets.open(file1))).isEqualTo(file1Content)
     }
 
     @Test
-    fun javaStringBufferReadFile3() = benchmarkRule.measureRepeated {
-        assertThat(javaTextFileRead.stringBufferReadFile3(appContext.assets.open(file1))).isEqualTo(file1Content)
+    fun javaUseLinesStringBufferBufferedReaderReadFile() = benchmarkRule.measureRepeated {
+        assertThat(javaTextFileRead.useLinesStringBufferBufferedReaderReadFile(appContext.assets.open(file1))).isEqualTo(file1Content)
     }
 
     @Test
-    fun javaStringBufferReadFile4() = benchmarkRule.measureRepeated {
-        assertThat(javaTextFileRead.stringBufferReadFile4(appContext.assets.open(file1))).isEqualTo(file1Content)
+    fun javaForEachLineStringBufferBufferedReaderReadFile() = benchmarkRule.measureRepeated {
+        assertThat(javaTextFileRead.forEachLineStringBufferBufferedReaderReadFile(appContext.assets.open(file1))).isEqualTo(file1Content)
     }
 
     @Test
-    fun javaStringBufferReadFile7() = benchmarkRule.measureRepeated {
-        assertThat(javaTextFileRead.stringBufferReadFile7(appContext.assets.open(file1))).isEqualTo(file1Content)
+    fun javaByLineStringBufferScannerReadFile() = benchmarkRule.measureRepeated {
+        assertThat(javaTextFileRead.byLineStringBufferScannerReadFile(appContext.assets.open(file1))).isEqualTo(file1Content)
     }
 
     @Test
-    fun okioConcatReadFile1() = benchmarkRule.measureRepeated {
-        assertThat(okioTextFileRead.concatReadFile1(appContext.assets.open(file1))).isEqualTo(file1Content)
+    fun okioByLineConcatReadFile() = benchmarkRule.measureRepeated {
+        assertThat(okioTextFileRead.byLineConcatReadFile(appContext.assets.open(file1))).isEqualTo(file1Content)
     }
 
     @Test
-    fun okioConcatReadFile2() = benchmarkRule.measureRepeated {
-        assertThat(okioTextFileRead.concatReadFile2(appContext.assets.open(file1))).isEqualTo(file1Content)
+    fun okioByLineStringBufferReadFile() = benchmarkRule.measureRepeated {
+        assertThat(okioTextFileRead.byLineStringBufferReadFile(appContext.assets.open(file1))).isEqualTo(file1Content)
     }
 
     @Test
-    fun okioStringBufferReadFile1() = benchmarkRule.measureRepeated {
-        assertThat(okioTextFileRead.stringBufferReadFile1(appContext.assets.open(file1))).isEqualTo(file1Content)
+    fun okioByLineStringBuilderReadFile() = benchmarkRule.measureRepeated {
+        assertThat(okioTextFileRead.byLineStringBuilderReadFile(appContext.assets.open(file1))).isEqualTo(file1Content)
     }
 
     @Test
-    fun okioStringBufferReadFile2() = benchmarkRule.measureRepeated {
-        assertThat(okioTextFileRead.stringBufferReadFile2(appContext.assets.open(file1))).isEqualTo(file1Content)
+    fun apacheWholeReadFile() = benchmarkRule.measureRepeated {
+        assertThat(apacheTextFileRead.wholeReadFile(appContext.assets.open(file1))).isEqualTo(file1Content)
     }
 
     @Test
-    fun okioStringBuilderReadFile1() = benchmarkRule.measureRepeated {
-        assertThat(okioTextFileRead.stringBuilderReadFile1(appContext.assets.open(file1))).isEqualTo(file1Content)
+    fun apacheByLineConcatReadFile() = benchmarkRule.measureRepeated {
+        assertThat(apacheTextFileRead.byLineConcatReadFile(appContext.assets.open(file1))).isEqualTo(file1Content)
     }
 
     @Test
-    fun okioStringBuilderReadFile2() = benchmarkRule.measureRepeated {
-        assertThat(okioTextFileRead.stringBuilderReadFile2(appContext.assets.open(file1))).isEqualTo(file1Content)
+    fun apacheByLineStringBuilderReadFile() = benchmarkRule.measureRepeated {
+        assertThat(apacheTextFileRead.byLineStringBuilderReadFile(appContext.assets.open(file1))).isEqualTo(file1Content)
     }
 
     @Test
-    fun apacheReadFile1() = benchmarkRule.measureRepeated {
-        assertThat(apacheTextFileRead.readStringFile1(appContext.assets.open(file1))).isEqualTo(file1Content)
+    fun apacheByLineStringBufferReadFile() = benchmarkRule.measureRepeated {
+        assertThat(apacheTextFileRead.byLineStringBufferReadFile(appContext.assets.open(file1))).isEqualTo(file1Content)
     }
 }

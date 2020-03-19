@@ -63,10 +63,4 @@ dependencies {
     androidTestImplementation(TestLibraries.androidxJunit)
     androidTestImplementation(TestLibraries.junit4)
     androidTestImplementation(TestLibraries.assertj)
-
-    androidTestImplementation(Json.gson)
-    androidTestImplementation(Json.kotlinSerialization)
-    androidTestImplementation(Json.jackson)
-    androidTestImplementation(Json.moshi)
-    kapt(Json.moshiCodegen)
 }
