@@ -1,10 +1,10 @@
-package com.pinko.benchmark.json.implementations
+package com.pinko.benchmark.io.json.implementations
 
 import android.content.Context
 import com.fasterxml.jackson.databind.ObjectMapper
-import com.pinko.benchmark.json.Utils
-import com.pinko.benchmark.json.models.jackson.Photos
-import com.pinko.benchmark.json.models.jackson.User
+import com.pinko.benchmark.io.json.Utils
+import com.pinko.benchmark.io.json.models.jackson.Photos
+import com.pinko.benchmark.io.json.models.jackson.User
 
 /**
  * From: https://github.com/mootazltaief/android-json-benchmark

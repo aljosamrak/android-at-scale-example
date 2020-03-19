@@ -103,17 +103,4 @@ class OkioTextFileRead {
         }
         return stringBuffer.toString()
     }
-
-//    fun benchmarkOkioWriteStringFile() {
-//        Okio.sink(File("tmpTestFile.txt")).use { fileSink ->
-//            Okio.buffer(fileSink).use { bufferedSink ->
-//                for ((key, value) in System.getenv()) {
-//                    bufferedSink.writeUtf8(key)
-//                    bufferedSink.writeUtf8("=")
-//                    bufferedSink.writeUtf8(value)
-//                    bufferedSink.writeUtf8("\n")
-//                }
-//            }
-//        }
-//    }
 }

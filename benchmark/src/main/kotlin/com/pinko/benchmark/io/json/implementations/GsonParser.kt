@@ -1,11 +1,11 @@
-package com.pinko.benchmark.json.implementations
+package com.pinko.benchmark.io.json.implementations
 
 import android.content.Context
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.pinko.benchmark.json.Utils
-import com.pinko.benchmark.json.models.gson.Photos
-import com.pinko.benchmark.json.models.gson.User
+import com.pinko.benchmark.io.json.Utils
+import com.pinko.benchmark.io.json.models.gson.Photos
+import com.pinko.benchmark.io.json.models.gson.User
 
 /**
  * From: https://github.com/mootazltaief/android-json-benchmark

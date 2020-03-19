@@ -1,4 +1,4 @@
-package com.pinko.benchmark.json.models.jackson
+package com.pinko.benchmark.io.json.models.jackson
 
 
 import com.fasterxml.jackson.annotation.JsonProperty

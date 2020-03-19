@@ -1,9 +1,9 @@
-package com.pinko.benchmark.json.implementations
+package com.pinko.benchmark.io.json.implementations
 
 import android.content.Context
-import com.pinko.benchmark.json.Utils
-import com.pinko.benchmark.json.models.moshi.Photos
-import com.pinko.benchmark.json.models.moshi.User
+import com.pinko.benchmark.io.json.Utils
+import com.pinko.benchmark.io.json.models.moshi.Photos
+import com.pinko.benchmark.io.json.models.moshi.User
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types.newParameterizedType
@@ -21,7 +21,7 @@ class MoshiParser(context: Context) {
     private val sample3 =
         Utils.loadJSONFromAsset(context, "sample3.json")
 
-    val moshi = Moshi
+    private val moshi: Moshi = Moshi
         .Builder()
         .add(KotlinJsonAdapterFactory())
         .build()

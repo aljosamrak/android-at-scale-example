@@ -4,10 +4,10 @@ import androidx.benchmark.junit4.BenchmarkRule
 import androidx.benchmark.junit4.measureRepeated
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.pinko.benchmark.json.implementations.GsonParser
-import com.pinko.benchmark.json.implementations.JacksonParser
-import com.pinko.benchmark.json.implementations.KotlinParser
-import com.pinko.benchmark.json.implementations.MoshiParser
+import com.pinko.benchmark.io.json.implementations.GsonParser
+import com.pinko.benchmark.io.json.implementations.JacksonParser
+import com.pinko.benchmark.io.json.implementations.KotlinParser
+import com.pinko.benchmark.io.json.implementations.MoshiParser
 import kotlinx.serialization.UnstableDefault
 import org.junit.Rule
 import org.junit.Test

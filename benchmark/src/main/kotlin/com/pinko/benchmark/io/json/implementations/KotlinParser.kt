@@ -1,9 +1,9 @@
-package com.pinko.benchmark.json.implementations
+package com.pinko.benchmark.io.json.implementations
 
 import android.content.Context
-import com.pinko.benchmark.json.Utils
-import com.pinko.benchmark.json.models.kotlin.Photos
-import com.pinko.benchmark.json.models.kotlin.User
+import com.pinko.benchmark.io.json.Utils
+import com.pinko.benchmark.io.json.models.kotlin.Photos
+import com.pinko.benchmark.io.json.models.kotlin.User
 import kotlinx.serialization.UnstableDefault
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.list

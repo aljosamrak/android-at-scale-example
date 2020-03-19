@@ -1,4 +1,4 @@
-package com.pinko.benchmark.json.models.moshi
+package com.pinko.benchmark.io.json.models.moshi
 
 
 import com.squareup.moshi.Json

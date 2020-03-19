@@ -1,4 +1,4 @@
-package com.pinko.benchmark.json.models.gson
+package com.pinko.benchmark.io.json.models.gson
 
 
 import com.google.gson.annotations.SerializedName

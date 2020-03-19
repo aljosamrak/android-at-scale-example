@@ -45,7 +45,19 @@ object Libraries {
     const val composeRuntime        = "androidx.compose:compose-runtime:${Versions.compose}"
 }
 
-object Json {
+object IoLibrary {
+    private object Versions {
+        const val apache    = "1.3.2"
+        const val guava     = "r03"
+        const val okio      = "1.16.0"
+    }
+
+    const val apache        = "org.apache.commons:commons-io:${Versions.apache}"
+    const val guava         = "com.google.guava:guava-io:${Versions.guava}"
+    const val okio          = "com.squareup.okio:okio:${Versions.okio}"
+}
+
+object JsonLibrary {
     private object Versions {
         const val gson                  = "2.8.6"
         const val jackson               = "2.10.2"
@@ -71,8 +83,18 @@ object TestLibraries {
         const val junit4 = "4.13"
         const val testRunner = "1.3.0-alpha5"
         const val espresso = "3.3.0-alpha5"
+        const val benchmark = "1.0.0"
+        const val androidxJunit = "1.1.1"
+        const val assertj = "3.11.1"
     }
-    const val junit4     = "junit:junit:${Versions.junit4}"
-    const val testRunner = "androidx.test:runner:${Versions.testRunner}"
-    const val espresso   = "androidx.test.espresso:espresso-core:${Versions.espresso}"
+    const val junit4            = "junit:junit:${Versions.junit4}"
+    const val testRunner        = "androidx.test:runner:${Versions.testRunner}"
+    const val espresso          = "androidx.test.espresso:espresso-core:${Versions.espresso}"
+    const val androidxBenchmark = "androidx.benchmark:benchmark-junit4:${Versions.benchmark}"
+    const val androidxJunit     = "androidx.test.ext:junit:${Versions.androidxJunit}"
+    const val assertj           = "org.assertj:assertj-core:${Versions.assertj}"
+}
+
+object TestInstrumentationRunner {
+    const val benchmark = "androidx.benchmark.junit4.AndroidBenchmarkRunner"
 }

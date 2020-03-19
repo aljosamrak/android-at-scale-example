@@ -39,7 +39,6 @@ android {
             // it must be done in a manifest - see src/androidTest/AndroidManifest.xml
             minifyEnabled(true)
             proguardFiles("proguard-android-optimize.txt", "benchmark-proguard-rules.pro")
-            testProguardFiles("proguard-android-optimize.txt", "benchmark-proguard-rules.pro")
         }
     }
 }
@@ -47,14 +46,23 @@ android {
 dependencies {
     implementation(Libraries.kotlinStdLib)
 
+    // file
     implementation(IoLibrary.apache)
     implementation(IoLibrary.guava)
     implementation(IoLibrary.okio)
+
+    // json
+    implementation(JsonLibrary.gson)
+    implementation(JsonLibrary.kotlinSerialization)
+    implementation(JsonLibrary.jackson)
+    implementation(JsonLibrary.moshi)
+    kapt(JsonLibrary.moshiCodegen)
 
     androidTestImplementation(TestLibraries.androidxBenchmark)
     androidTestImplementation(TestLibraries.testRunner)
     androidTestImplementation(TestLibraries.androidxJunit)
     androidTestImplementation(TestLibraries.junit4)
+    androidTestImplementation(TestLibraries.assertj)
 
     androidTestImplementation(Json.gson)
     androidTestImplementation(Json.kotlinSerialization)

@@ -1,4 +1,4 @@
-package com.pinko.benchmark.json.models.kotlin
+package com.pinko.benchmark.io.json.models.kotlin
 
 import kotlinx.serialization.Serializable
 

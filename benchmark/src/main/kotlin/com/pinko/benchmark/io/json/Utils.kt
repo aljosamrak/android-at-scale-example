@@ -1,4 +1,4 @@
-package com.pinko.benchmark.json
+package com.pinko.benchmark.io.json
 
 import android.content.Context
 
