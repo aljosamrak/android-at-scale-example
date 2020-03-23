@@ -1,0 +1,40 @@
+site:
+  about:
+    siteName: 'Android At Scale'
+    subtitle: 'A showcase of building Android application at a larger scale'
+    siteDescription: 'An example of less common practices, ways, and frameworks that benefit when building Android application at a larges scale'
+    avatar: '/assets/media/logo.png'
+
+theme:
+  primaryColor: '#3DDC84'
+
+  social:
+    github: 'aljosamrak'
+
+  extraCss:
+    - 'assets/css/pygments.scss'
+  legacySearch: false
+  metaComponents:
+    - type: orchidSearch
+
+  menu:
+    - type: 'link'
+      title: 'Home'
+      url: '/'
+
+    - type: "latestPosts"
+
+    - type: "wikiSections"
+
+    - type: 'page'
+      itemId: 'Changelog'
+
+    - type: 'page'
+      itemId: 'Licence'
+
+    - type: 'separator'
+      title: 'API Docs'
+
+    - type: 'kotlindocPackages'
+    - type: 'kotlindocClasses'
+    - type: 'kotlindocClassLinks'

@@ -1,0 +1,3 @@
+stages:
+  - type: 'githubPages'
+    repo: 'aljosamrak/android-at-scale-example'

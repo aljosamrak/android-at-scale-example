@@ -98,3 +98,23 @@ object TestLibraries {
 object TestInstrumentationRunner {
     const val benchmark = "androidx.benchmark.junit4.AndroidBenchmarkRunner"
 }
+
+object Orchid {
+    const val version           = "0.19.0"
+
+    const val plugin            = "com.eden.orchidPlugin"
+    const val core              = "io.github.javaeden.orchid:OrchidCore:$version"
+    const val posts             = "io.github.javaeden.orchid:OrchidPosts:$version"
+    const val pages             = "io.github.javaeden.orchid:OrchidPages:$version"
+    const val wiki              = "io.github.javaeden.orchid:OrchidWiki:$version"
+    const val docs              = "io.github.javaeden.orchid:OrchidDocs:$version"
+    const val pluginDocs        = "io.github.javaeden.orchid:OrchidPluginDocs:$version"
+    const val kotlinDoc         = "io.github.javaeden.orchid:OrchidKotlindoc:$version"
+    const val search            = "io.github.javaeden.orchid:OrchidSearch:$version"
+    const val writerBlocks      = "io.github.javaeden.orchid:OrchidWritersBlocks:$version"
+    const val syntaxHighlighter = "io.github.javaeden.orchid:OrchidSyntaxHighlighter:$version"
+    const val editorialTheme    = "io.github.javaeden.orchid:OrchidEditorial:$version"
+    const val diagrams          = "io.github.javaeden.orchid:OrchidDiagrams:$version"
+    const val github            = "io.github.javaeden.orchid:OrchidGithub:$version"
+    const val changelog         = "io.github.javaeden.orchid:OrchidChangelog:$version"
+}

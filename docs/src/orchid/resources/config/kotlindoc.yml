@@ -1,0 +1,21 @@
+sourceDirs:
+  - './../../../../app/src/main/java'
+  - './../../../../buildSrc/src/main/kotlin'
+  - './../../../../benchmark/src/main/kotlin'
+  - './../../../../library/src/main/kotlin'
+#pages:
+##  extraCss:
+##    - 'assets/css/orchidKotlindoc.scss'
+##  menu:
+##    - type: "sourcedocPageLinks"
+##      includeItems: true
+#
+#  modules:
+#    - name: 'Module One'
+##      moduleGroup: 'group-one'
+#      sourceDirs: ['../app/src/main/java', './../../../../app/src/main/java']
+#    - name: 'benchmark'
+#      sourceDirs: ['../benchmark/src/main/kotlin', './../../../../benchmark/src/main/kotlin']
+#
+#
+
