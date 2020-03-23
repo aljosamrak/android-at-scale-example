@@ -311,7 +311,7 @@ workflows:
       # This job will run on every commit on any branch
       - build
       # Run sonarCube quality gate check
-      - sonar-cube
+      - sonar-cube:
         requires:
           - build
       # Generate and publish documentation
