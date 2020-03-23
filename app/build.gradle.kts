@@ -43,7 +43,4 @@ dependencies {
     implementation(Libraries.androidxUiTooling)
 
     implementation(Libraries.composeRuntime)
-
-    testImplementation (TestLibraries.junit4)
-    androidTestImplementation (TestLibraries.testRunner)
 }
