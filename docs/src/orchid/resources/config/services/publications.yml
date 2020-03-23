@@ -1,4 +1,5 @@
 stages:
   - type: 'githubPages'
     username: 'aljosamrak'
+    commitMessage: "Deploy to GitHub Pages from Orchid.\n\n[ci skip]"
     repo: 'aljosamrak/android-at-scale-example'
