@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.konan.properties.hasProperty
+
 /**
  * The buildscript block is where you configure the repositories and
  * dependencies for Gradle itself—meaning, you should not include dependencies
@@ -126,27 +128,28 @@ subprojects {
 //        }
 //    }
 
-//    sonarqube {
-//        properties {
-//            property("sonar.sources", "src")
-//        }
-//    }
+    sonarqube {
+        properties {
+            property("sonar.sources", "src")
+        }
+    }
 }
 
 
 val rootProperties = readProperties(File(project.rootDir, "local.properties"))
 
 //https://sonarcloud.io/dashboard?id=aljosamrak_android-at-scale-example
-//sonarqube {
-//    properties {
-//        property("sonar.projectKey", "aljosamrak_android-at-scale-example")
-//        property("sonar.organization", "aljosamrak")
-//        property("sonar.host.url", "https://sonarcloud.io")
-//        if (rootProperties.hasProperty("sonarQubeKey")) {
-//            property("sonar.login", rootProperties.getProperty("sonarQubeKey"))
-//        }
-//    }
-//}
+sonarqube {
+    properties {
+        property("sonar.sourceEncoding", "UTF-8")
+        property("sonar.projectKey", "aljosamrak_android-at-scale-example")
+        property("sonar.organization", "aljosamrak")
+        property("sonar.host.url", "https://sonarcloud.io")
+        if (rootProperties.hasProperty("sonarQubeKey")) {
+            property("sonar.login", rootProperties.getProperty("sonarQubeKey"))
+        }
+    }
+}
 
 tasks.register("clean").configure {
     delete("build")
