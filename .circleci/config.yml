@@ -67,10 +67,10 @@ references:
 
   workspace: &workspace
                ~/work
-  attach_workspace: &attach_workspace
+  attach_output_workspace: &attach_workspace
     attach_workspace:
       at: *workspace
-  persist_workspace: &persist_workspace
+  persist_output_workspace: &persist_workspace
     persist_to_workspace:
       root: *workspace
       paths:
@@ -194,7 +194,7 @@ jobs:
 #          path: ./library/build/reports
 #          destination: reports/library
   ## Run unit tests
-  test_unit:
+  test:
     <<: *android_config
     steps:
       - checkout
@@ -208,7 +208,7 @@ jobs:
           command: ./gradlew androidDependencies
       - run:
           name: Run unit tests
-          command: ./gradlew testUnitTest
+          command: ./gradlew test
       - *save_tests_cache
       - *persist_workspace
       - store_artifacts:
@@ -290,7 +290,7 @@ jobs:
     <<: *android_config
     description: Detect bugs and vulnerabilities
     steps:
-      - *attach_workspace
+      - checkout    # TODO attach prebuild from build task
       - run:
           name: Analyze on SonarCloud
           command: ./gradlew sonarqube
