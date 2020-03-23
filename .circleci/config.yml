@@ -25,7 +25,7 @@ references:
         { find . -regextype posix-extended -regex '.*gradle(.kts)?' -type f & \
           find buildSrc -type f -not -path "*/build/*" -not -path "*/.gradle/*"; } | \
           sort | \
-          xargs shasum > /tmp/checksum.txt
+          xargs -d '\n' shasum > /tmp/checksum.txt
 
         cat /tmp/checksum.txt
 
@@ -62,6 +62,8 @@ references:
       command: yes | sdkmanager --licenses || true
 
   ## Workspace
+
+#TODO benchmark https://developer.android.com/studio/profile/run-benchmarks-in-ci
 
   workspace: &workspace
                ~/work
