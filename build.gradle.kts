@@ -78,7 +78,9 @@ allprojects {
         maven(Repositories.kotlinx)
     }
 
-
+    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+        kotlinOptions.jvmTarget = "1.8"
+    }
 
     apply(plugin = Plugins.Versions.plugin)
 

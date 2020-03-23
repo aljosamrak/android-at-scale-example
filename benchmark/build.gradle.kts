@@ -29,10 +29,6 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
-
     buildTypes {
         getByName("debug") {
             // Since debuggable can't be modified by gradle for library modules,
