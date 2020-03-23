@@ -290,7 +290,7 @@ jobs:
     <<: *android_config
     description: Detect bugs and vulnerabilities
     steps:
-      - checkout
+      - *attach_workspace
       - run:
           name: Analyze on SonarCloud
           command: ./gradlew sonarqube
@@ -312,6 +312,7 @@ workflows:
       - build
       # Run sonarCube quality gate check
       - sonar-cube
+        requires: build
       # Generate and publish documentation
       - documentation                       # TODO should depend on dokka
       # Unit tests should only start after a successful build. Or vice versa?
