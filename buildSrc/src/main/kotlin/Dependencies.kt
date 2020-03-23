@@ -81,8 +81,8 @@ object Logging {
 object TestLibraries {
     private object Versions {
         const val junit4 = "4.13"
-        const val testRunner = "1.3.0-alpha5"
-        const val espresso = "3.3.0-alpha5"
+        const val testRunner = "1.2.0"
+        const val espresso = "3.2.0"
         const val benchmark = "1.0.0"
         const val androidxJunit = "1.1.1"
         const val assertj = "3.11.1"
