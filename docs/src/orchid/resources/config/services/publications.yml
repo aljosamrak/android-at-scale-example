@@ -1,3 +1,4 @@
 stages:
   - type: 'githubPages'
+    username: 'aljosamrak'
     repo: 'aljosamrak/android-at-scale-example'
