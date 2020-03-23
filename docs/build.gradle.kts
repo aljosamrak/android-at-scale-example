@@ -32,5 +32,5 @@ orchid {
         else -> "http://localhost:8080"
     }
 
-    githubToken = envOrProperty("githubToken", required = true)
+    githubToken = envOrProperty("GITHUB_TOKEN", required = true)
 }
