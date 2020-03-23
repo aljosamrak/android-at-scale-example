@@ -317,7 +317,7 @@ workflows:
       # Generate and publish documentation
       - documentation                       # TODO should depend on dokka
       # Unit tests should only start after a successful build. Or vice versa?
-      - test_unit:
+      - test:
           #         Although the unit testing task could run in parallel with build task,
           #         in such case, it would not benefit from the previous caching in the event of
           #         any change in the .gradle script files.
@@ -327,14 +327,14 @@ workflows:
       # Instrumentation tests should only start after unit tests complete gracefully. Or vice versa?
       - test_instrumented:
           requires:
-            - test_unit
+            - test
           # We'd like to also filter by username and remove the if/fi above, but username filtering is not supported in CircleCI
           filters:
             branches:
               only: master
       - report_coverage:
           requires:
-            - test_unit
+            - test
             - test_instrumented
           # We'd like to also filter by username and remove the if/fi above, but username filtering is not supported in CircleCI
           filters:
