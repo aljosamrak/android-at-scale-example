@@ -58,7 +58,8 @@ plugins {
 //    id("android-reporting")
 //    jacoco
 //    id("com.gradle.build-scan") version Config.Versions.buildScanVersion
-    id("org.sonarqube") version "2.8"
+
+    id(Plugins.SonarQube.plugin) version Plugins.SonarQube.version apply true
 }
 
 /**
@@ -133,6 +134,7 @@ subprojects {
     sonarqube {
         properties {
             property("sonar.sources", "src")
+            property("sonar.tests", "")
         }
     }
 }

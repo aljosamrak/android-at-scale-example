@@ -59,4 +59,9 @@ object Plugins {
         const val because: String = "this plugin provides a task to determine which dependencies have updates. Additionally, the plugin checks for updates to Gradle itself."
         const val plugin: String = "com.github.ben-manes.versions"
     }
+
+    object SonarQube {
+        const val version: String = "2.7"
+        const val plugin: String = "org.sonarqube"
+    }
 }
