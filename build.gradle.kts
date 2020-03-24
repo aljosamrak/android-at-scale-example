@@ -130,13 +130,6 @@ subprojects {
 //            csv.enabled = false
 //        }
 //    }
-
-    sonarqube {
-        properties {
-            property("sonar.sources", "src")
-            property("sonar.tests", "")
-        }
-    }
 }
 
 
