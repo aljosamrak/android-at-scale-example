@@ -145,7 +145,6 @@ val rootProperties = readProperties(File(project.rootDir, "local.properties"))
 //https://sonarcloud.io/dashboard?id=aljosamrak_android-at-scale-example
 sonarqube {
     properties {
-        property("sonar.sourceEncoding", "UTF-8")
         property("sonar.projectKey", "aljosamrak_android-at-scale-example")
         property("sonar.organization", "aljosamrak")
         property("sonar.host.url", "https://sonarcloud.io")
