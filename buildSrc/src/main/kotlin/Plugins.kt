@@ -61,7 +61,7 @@ object Plugins {
     }
 
     object SonarQube {
-        const val version: String = "2.7"
+        const val version: String = "2.8"
         const val plugin: String = "org.sonarqube"
     }
 }
