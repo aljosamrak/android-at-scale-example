@@ -1,10 +1,12 @@
 plugins {
     id("java-library")
     kotlin("jvm")
+    jacoco
 }
 
 dependencies {
     implementation(Libraries.kotlinStdLib)
+    testImplementation (TestLibraries.junit4)
 }
 
 configurations {

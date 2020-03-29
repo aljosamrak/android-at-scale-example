@@ -54,9 +54,8 @@ plugins {
     id(Plugins.DependencyCheck.plugin) version Plugins.DependencyCheck.version apply true
     id(Plugins.Versions.plugin) version Plugins.Versions.version apply true
 
-// https://developer.android.com/studio/test/command-line#multi-module-reports TODO
-//    id("android-reporting")
-//    jacoco
+    jacoco apply true
+
 //    id("com.gradle.build-scan") version Config.Versions.buildScanVersion
 
     id(Plugins.SonarQube.plugin) version Plugins.SonarQube.version apply true
@@ -119,17 +118,6 @@ subprojects {
 //    dependencies {
 //        testCompile 'junit:junit:4.11'
 //    }
-//
-//    jacocoTestReport {
-//        additionalSourceDirs = files(sourceSets.main.allSource.srcDirs)
-//        sourceDirectories = files(sourceSets.main.allSource.srcDirs)
-//        classDirectories =  files(sourceSets.main.output)
-//        reports {
-//            html.enabled = true
-//            xml.enabled = true
-//            csv.enabled = false
-//        }
-//    }
 }
 
 
@@ -159,21 +147,6 @@ tasks.register("clean").configure {
 //    ~/.*\/buildSrc\/.*\.gradle/,
 //    ~/.*\/TestUI\/.*\.gradle/,
 //    ]
-//}
-
-
-// https://gist.github.com/aalmiray/e6f54aa4b3803be0bcac
-//task jacocoRootReport(type: org.gradle.testing.jacoco.tasks.JacocoReport) {
-//    dependsOn = subprojects.test
-//    additionalSourceDirs = files(subprojects.sourceSets.main.allSource.srcDirs)
-//    sourceDirectories = files(subprojects.sourceSets.main.allSource.srcDirs)
-//    classDirectories =  files(subprojects.sourceSets.main.output)
-//    executionData = files(subprojects.jacocoTestReport.executionData)
-//    reports {
-//        html.enabled = true
-//        xml.enabled = true
-//        csv.enabled = false
-//    }
 //}
 
 fun readProperties(propertiesFile: File) = java.util.Properties().apply {

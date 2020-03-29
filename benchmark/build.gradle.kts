@@ -36,6 +36,14 @@ android {
             minifyEnabled(true)
             proguardFiles("proguard-android-optimize.txt", "benchmark-proguard-rules.pro")
         }
+
+        getByName("release") {
+            // Since debuggable can't be modified by gradle for library modules,
+            // it must be done in a manifest - see src/androidTest/AndroidManifest.xml
+            minifyEnabled(true)
+            isTestCoverageEnabled = true
+            proguardFiles("proguard-android-optimize.txt", "benchmark-proguard-rules.pro")
+        }
     }
 }
 
