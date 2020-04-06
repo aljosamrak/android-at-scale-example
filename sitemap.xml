@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd"
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <sitemap>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/sitemap-assets.xml</loc>
+        <lastmod>2020-04-06</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/sitemap-external.xml</loc>
+        <lastmod>2020-04-06</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/sitemap-changelog.xml</loc>
+        <lastmod>2020-04-06</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/sitemap-forms.xml</loc>
+        <lastmod>2020-04-06</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/sitemap-home.xml</loc>
+        <lastmod>2020-04-06</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/sitemap-kotlindoc.xml</loc>
+        <lastmod>2020-04-06</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/sitemap-pages.xml</loc>
+        <lastmod>2020-04-06</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/sitemap-posts.xml</loc>
+        <lastmod>2020-04-06</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/sitemap-wiki.xml</loc>
+        <lastmod>2020-04-06</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/sitemap-sitemap.xml</loc>
+        <lastmod>2020-04-06</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/sitemap-feeds.xml</loc>
+        <lastmod>2020-04-06</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/sitemap-indices.xml</loc>
+        <lastmod>2020-04-06</lastmod>
+    </sitemap>
+    
+</sitemapindex>

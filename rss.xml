@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <id>https://aljosamrak.github.io/android-at-scale-example</id>
+        <title>Android At Scale</title>
+        <link>https://aljosamrak.github.io/android-at-scale-example</link>
+        <atom:link href="https://aljosamrak.github.io/android-at-scale-example/rss.xml" rel="self" type="application/rss+xml"/>
+        <description>An example of less common practices, ways, and frameworks that benefit when building Android application at a larges scale</description>
+        <item>
+            <title>Author Two</title>
+            <guid>https://aljosamrak.github.io/android-at-scale-example/authors/author-two</guid>
+            <link>https://aljosamrak.github.io/android-at-scale-example/authors/author-two</link>
+            <description></description>
+        </item>
+        
+    </channel>
+</rss>

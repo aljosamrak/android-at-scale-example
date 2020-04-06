@@ -1,0 +1,895 @@
+<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.19.0-SNAPSHOT"/>
+<link rel="icon" href="https://aljosamrak.github.io/android-at-scale-example/favicon.ico">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>Home</title>
+
+
+<meta name="description" content="An example of less common practices, ways, and frameworks that benefit when building Android application at a larges scale">
+
+
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.19.0-SNAPSHOT","baseUrl":"https://aljosamrak.github.io/android-at-scale-example","environment":"production","version":"0.1.0"};
+</script>
+
+
+
+
+    <!-- start:inject meta-components -->
+    
+        
+            
+        
+    
+    <!-- end:inject meta-components -->
+
+
+
+    <!-- start:inject meta-components -->
+    
+    <!-- end:inject meta-components -->
+
+
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="https://aljosamrak.github.io/android-at-scale-example/Editorial/4bb66ee4/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://aljosamrak.github.io/android-at-scale-example/Editorial/4bb66ee4/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://aljosamrak.github.io/android-at-scale-example/Editorial/4bb66ee4/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://aljosamrak.github.io/android-at-scale-example/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://aljosamrak.github.io/android-at-scale-example/assets/css/orchidSearch.css"  />
+<!-- end:inject styles -->
+
+</head>
+<body class="is-loading">
+
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            
+                <header id="header">
+    <a href="https://aljosamrak.github.io/android-at-scale-example" class="logo">Android At Scale</a>
+    <ul class="icons">
+    
+    
+        <li>
+            <a href="https://github.com/aljosamrak" class="icon fa-github">
+                <span class="label">github</span>
+            </a>
+        </li>
+    
+    
+    </ul>
+</header>
+            
+            
+            
+            
+                <section id="pageContent">
+                    <header class="major"><h2>Home</h2></header>
+                    <article>
+                        
+    <!-- start:inject components -->
+    
+        
+            
+                
+                    
+                        
+                    
+                
+            
+        
+            
+                
+                    
+                        <div class="component component-readme component-order-0">
+                            <p>[![CircleCI][circleCiStatusBadge]][circleCiUrl]     [![GitHub release (latest SemVer including pre-releases)][gitHubRelease]][gitHubReleaseUrl]       [![Maintenance][isMaintained]][gitHubActivityUrl]      [![alert_status][alertStatusBadge]][sonarCloudUrl]     [![GitHub commit activity][gitHubActivityBadge]][gitHubActivityUrl]     [![License: GPL v3][licenceBadge]][licenceUrl]      [![Website][websiteBadge]][websiteUrl]</p>
+<h1 id="android-at-scale-example"><a href="#android-at-scale-example" id="android-at-scale-example" class="anchor"></a>Android at scale example</h1>
+<p>An example/template/framework for building Android applications at scale.</p>
+<p>This example will contain some ideas practices, tools, libraries, frameworks, proposed practices, ... for buildings large mantainable, stable, scalable apps that will support variety or markets, and platforms.</p>
+<p>When you build an application for billion users it mist be maintainable and scalable. The code/implementation is not the only goal and objective. The testability, scalability, reusability and build process become gain a lot of weight.</p>
+<p>This is an example, not an example of how can you achieve this. It is not a silver bullet and will definitely not solve all of the problems but it might give some ideas on how to solve some.</p>
+<p>Some topics that I will try to cover.
+Building at scale CI/CD for large-scale application that needs to support different stores, platforms and of course can be easily scalable to multiple apps (Jenkins, Gradle, ...)
+Verification and testing process to keep the code maintainable and to find bugs as soon as possible (Custom lint rules, SonarQube, unit and integration testing, automation testing, artifact verification
+How to use popular tools while keeping in mind other platforms and systems (Firebase, Google Play services, force updates, push...)
+Building and testing are only the first steps. Integration, documentation, informing other teams, ... is as important as the product if not more.
+Ensuring API consistency between different platforms (iOS-Android) and different systems (client-backend)</p>
+<h3 id="build-status"><a href="#build-status" id="build-status" class="anchor"></a>Build status</h3>
+<p>| master | develop |
+|--|--|
+| [![CircleCI][circleCiMasterStatus]][circleCiMaster] | [![CircleCI][circleCiDevelopStatus]][CircleCiDevelop] |
+| [![TravisCI][travisCiMasterStatus]][travisCiMaster] | [![TravisCI][travisCiDevelopStatus]][travisCiDevelop] |</p>
+<h3 id="repository-status"><a href="#repository-status" id="repository-status" class="anchor"></a>Repository status</h3>
+<p><img src="https://img.shields.io/github/hacktoberfest/2019/aljosamrak/android-at-scale-example?logo=GitHub&amp;style=plastic" alt="GitHub Hacktoberfest combined status (suggestion label override)" />
+<img src="https://img.shields.io/github/issues/aljosamrak/android-at-scale-example?style=plastic" alt="GitHub issues" />
+<a href="http://isitmaintained.com/project/aljosamrak/android-at-scale-example" title="Average time to resolve an issue"><img src="http://isitmaintained.com/badge/resolution/aljosamrak/android-at-scale-example.svg" alt="Average time to resolve an issue" /></a>
+<a href="http://isitmaintained.com/project/aljosamrak/android-at-scale-example" title="Percentage of issues still open"><img src="http://isitmaintained.com/badge/open/aljosamrak/android-at-scale-example.svg" alt="Percentage of issues still open" /></a></p>
+<h3 id="code-quality"><a href="#code-quality" id="code-quality" class="anchor"></a>Code quality</h3>
+<p>[![alert_status][alertStatusBadge]][sonarCloudUrl]
+[![sqale_rating][sqaleRatingBadge]][sonarCloudUrl]
+[![reliability_rating][reliabilityRatingBadge]][sonarCloudUrl]
+[![security_rating][securityRatingBadge]][sonarCloudUrl]
+[![coverage][coverageBadge]][sonarCloudUrl]
+[![code_smells][codeSmellsBadge]][sonarCloudUrl]
+[![sqale_index][sqaleIndexBadge]][sonarCloudUrl]
+[![bugs][bugsBadge]][sonarCloudUrl]
+[![vulnerabilities][vulnerabilitiesBadge]][sonarCloudUrl]
+[![ncloc][nclocBadge]][sonarCloudUrl]
+[![duplicated_lines_density][duplicatedLinesDensityBadge]][sonarCloudUrl]</p>
+<h2 id="support"><a href="#support" id="support" class="anchor"></a>Support</h2>
+<p><strong>Bugs and requests</strong>: submit them through the project's issues tracker.<br>
+[<img src="http://img.shields.io/github/issues/USER/REPO.svg" alt="Issues" />][gitHubIssuesUrl]</p>
+<h2 id="git-commit-format"><a href="#git-commit-format" id="git-commit-format" class="anchor"></a>Git commit format</h2>
+<p>Git commit format (source: https://www.conventionalcommits.org/en/v1.0.0/)</p>
+<pre><code>&lt;type&gt;[optional scope]: &lt;description&gt;
+
+[optional body]
+
+[optional footer(s)]
+</code></pre>
+<p>Issue tags/ids should be in the footer. Like <code>Fixes #468</code></p>
+<p>https://www.datree.io/resources/git-commit-message
+https://www.regextester.com/97567</p>
+<p>Git message regex:</p>
+<p><code>^((fixup! |squash! )?(\w+)(?:\(([^\)\s]+)\))?: (.+))(?:\n|$){0,2}?((?:^.+(\n|$))+(?:\n|$){0,2}?)+((?:^.+(\n|$))+)+</code></p>
+<p>https://hackernoon.com/on-git-commit-messages-and-issue-trackers-f700f3cbb5a7
+https://dev.to/puritanic/how-are-you-writing-a-commit-message-1ih7
+https://nitayneeman.com/posts/understanding-semantic-commit-messages-using-git-and-angular/</p>
+<h2 id="use-buildsrc-to-abstract-imperative-logic"><a href="#use-buildsrc-to-abstract-imperative-logic" id="use-buildsrc-to-abstract-imperative-logic" class="anchor"></a>Use buildSrc to abstract imperative logic</h2>
+<p>https://docs.gradle.org/current/userguide/organizing_gradle_projects.html#sec:build_sources
+Complex build logic is usually a good candidate for being encapsulated either as custom task or binary plugin. Custom task and plugin implementations should not live in the build script. It is very convenient to use buildSrc for that purpose as long as the code does not need to be shared among multiple, independent projects.</p>
+<p>The directory buildSrc is treated as an included build. Upon discovery of the directory, Gradle automatically compiles and tests this code and puts it in the classpath of your build script. For multi-project builds there can be only one buildSrc directory, which has to sit in the root project directory. buildSrc should be preferred over script plugins as it is easier to maintain, refactor and test the code.</p>
+<p>buildSrc uses the same source code conventions applicable to Java and Groovy projects. It also provides direct access to the Gradle API. Additional dependencies can be declared in a dedicated build.gradle under buildSrc.</p>
+<p>Example: https://proandroiddev.com/migrate-to-gradle-kotlin-dsl-in-4-steps-f3e3b27e1f4d</p>
+<h1 id="httpscirclecicomorbsregistryorbmizotakeunity-ci"><a href="#httpscirclecicomorbsregistryorbmizotakeunity-ci" id="httpscirclecicomorbsregistryorbmizotakeunity-ci" class="anchor"></a>https://circleci.com/orbs/registry/orb/mizotake/unity-ci</h1>
+<h2 id="logging-framework"><a href="#logging-framework" id="logging-framework" class="anchor"></a>Logging framework</h2>
+<p>http://logback.qos.ch/manual/mdc.html</p>
+<h2 id="code-optimizations"><a href="#code-optimizations" id="code-optimizations" class="anchor"></a>Code optimizations</h2>
+<h3 id="size-optimization"><a href="#size-optimization" id="size-optimization" class="anchor"></a>Size optimization</h3>
+<p>https://imageoptim.com/mac</p>
+<h2 id="debug-utils"><a href="#debug-utils" id="debug-utils" class="anchor"></a>Debug Utils</h2>
+<p>TODO test/debug activity before the real app??? or debug drawer</p>
+<h3 id="debug-drawer"><a href="#debug-drawer" id="debug-drawer" class="anchor"></a>Debug Drawer</h3>
+<h3 id="android-debug-tools"><a href="#android-debug-tools" id="android-debug-tools" class="anchor"></a>Android-Debug-Tools</h3>
+<h3 id="stetho"><a href="#stetho" id="stetho" class="anchor"></a>Stetho</h3>
+<h3 id="android-debug-database"><a href="#android-debug-database" id="android-debug-database" class="anchor"></a>Android Debug Database</h3>
+<h3 id="leak-cannary"><a href="#leak-cannary" id="leak-cannary" class="anchor"></a>Leak cannary</h3>
+<h2 id="testing-environment"><a href="#testing-environment" id="testing-environment" class="anchor"></a>Testing environment</h2>
+<h3 id="spek"><a href="#spek" id="spek" class="anchor"></a>Spek</h3>
+<h3 id="assertj"><a href="#assertj" id="assertj" class="anchor"></a>AssertJ</h3>
+<h3 id="mockk"><a href="#mockk" id="mockk" class="anchor"></a>MockK</h3>
+<h2 id="analysis-tools"><a href="#analysis-tools" id="analysis-tools" class="anchor"></a>Analysis tools</h2>
+<h3 id="android-lint"><a href="#android-lint" id="android-lint" class="anchor"></a>Android Lint</h3>
+<h3 id="custom-lint"><a href="#custom-lint" id="custom-lint" class="anchor"></a>Custom lint</h3>
+<h3 id="sonarcube"><a href="#sonarcube" id="sonarcube" class="anchor"></a>SonarCube</h3>
+<h2 id="build-pipeline"><a href="#build-pipeline" id="build-pipeline" class="anchor"></a>Build pipeline</h2>
+<h3 id="verify-preconditions"><a href="#verify-preconditions" id="verify-preconditions" class="anchor"></a>Verify preconditions</h3>
+<h3 id="build"><a href="#build" id="build" class="anchor"></a>Build</h3>
+<h3 id="test"><a href="#test" id="test" class="anchor"></a>Test</h3>
+<h4 id="unit-tests"><a href="#unit-tests" id="unit-tests" class="anchor"></a>Unit tests</h4>
+<p>https://www.vogella.com/tutorials/AndroidTesting/article.html</p>
+<p>70-80 % unit tests to ensure stability of your code basis</p>
+<p>20-30 % functional tests to ensure that the application really works</p>
+<p>some cross functional tests if your application integrates intensively with other Application components</p>
+<h4 id="integration-tests"><a href="#integration-tests" id="integration-tests" class="anchor"></a>Integration tests</h4>
+<h4 id="automation-tests"><a href="#automation-tests" id="automation-tests" class="anchor"></a>Automation tests</h4>
+<h3 id="verify"><a href="#verify" id="verify" class="anchor"></a>Verify</h3>
+<h3 id="verify-artefact"><a href="#verify-artefact" id="verify-artefact" class="anchor"></a>Verify artefact</h3>
+<ul>
+<li>compare with previous artefact (permission, certificake, features, activites, ...)</li>
+<li>verify constraints (size, ...)</li>
+</ul>
+<h2 id="publish"><a href="#publish" id="publish" class="anchor"></a>Publish</h2>
+<h2 id="publish-documentation"><a href="#publish-documentation" id="publish-documentation" class="anchor"></a>Publish documentation</h2>
+<h2 id="notify"><a href="#notify" id="notify" class="anchor"></a>Notify</h2>
+<h2 id="monitoring"><a href="#monitoring" id="monitoring" class="anchor"></a>Monitoring</h2>
+<h3 id="crashlitics"><a href="#crashlitics" id="crashlitics" class="anchor"></a>Crashlitics</h3>
+<h2 id="build-features-"><a href="#build-features-" id="build-features-" class="anchor"></a>Build Features ??</h2>
+<h3 id="api-keys"><a href="#api-keys" id="api-keys" class="anchor"></a>API keys</h3>
+<p>Build src -&gt; build config</p>
+<p>TODO - some thing on qa to manifest metadata - can be read from APK without lanching</p>
+<h3 id="verified-timestamp"><a href="#verified-timestamp" id="verified-timestamp" class="anchor"></a>Verified timestamp</h3>
+<h2 id="features"><a href="#features" id="features" class="anchor"></a>Features</h2>
+<h3 id="push"><a href="#push" id="push" class="anchor"></a>Push</h3>
+<h3 id="user-support"><a href="#user-support" id="user-support" class="anchor"></a>User support</h3>
+<h1 id="httpscirclecicomorbsregistryorbmizotakeunity-ci-1"><a href="#httpscirclecicomorbsregistryorbmizotakeunity-ci-1" id="httpscirclecicomorbsregistryorbmizotakeunity-ci-1" class="anchor"></a>https://circleci.com/orbs/registry/orb/mizotake/unity-ci</h1>
+<h2 id="logging-framework-1"><a href="#logging-framework-1" id="logging-framework-1" class="anchor"></a>Logging framework</h2>
+<p>http://logback.qos.ch/manual/mdc.html</p>
+<h2 id="code-optimizations-1"><a href="#code-optimizations-1" id="code-optimizations-1" class="anchor"></a>Code optimizations</h2>
+<h3 id="size-optimization-1"><a href="#size-optimization-1" id="size-optimization-1" class="anchor"></a>Size optimization</h3>
+<p>https://imageoptim.com/mac</p>
+<h2 id="debug-utils-1"><a href="#debug-utils-1" id="debug-utils-1" class="anchor"></a>Debug Utils</h2>
+<p>TODO test/debug activity before the real app??? or debug drawer</p>
+<h3 id="debug-drawer-1"><a href="#debug-drawer-1" id="debug-drawer-1" class="anchor"></a>Debug Drawer</h3>
+<h3 id="android-debug-tools-1"><a href="#android-debug-tools-1" id="android-debug-tools-1" class="anchor"></a>Android-Debug-Tools</h3>
+<h3 id="stetho-1"><a href="#stetho-1" id="stetho-1" class="anchor"></a>Stetho</h3>
+<h3 id="android-debug-database-1"><a href="#android-debug-database-1" id="android-debug-database-1" class="anchor"></a>Android Debug Database</h3>
+<h3 id="leak-cannary-1"><a href="#leak-cannary-1" id="leak-cannary-1" class="anchor"></a>Leak cannary</h3>
+<h2 id="testing-environment-1"><a href="#testing-environment-1" id="testing-environment-1" class="anchor"></a>Testing environment</h2>
+<h3 id="spek-1"><a href="#spek-1" id="spek-1" class="anchor"></a>Spek</h3>
+<h3 id="assertj-1"><a href="#assertj-1" id="assertj-1" class="anchor"></a>AssertJ</h3>
+<h3 id="mockk-1"><a href="#mockk-1" id="mockk-1" class="anchor"></a>MockK</h3>
+<h2 id="analysis-tools-1"><a href="#analysis-tools-1" id="analysis-tools-1" class="anchor"></a>Analysis tools</h2>
+<h3 id="android-lint-1"><a href="#android-lint-1" id="android-lint-1" class="anchor"></a>Android Lint</h3>
+<h3 id="custom-lint-1"><a href="#custom-lint-1" id="custom-lint-1" class="anchor"></a>Custom lint</h3>
+<h3 id="sonarcube-1"><a href="#sonarcube-1" id="sonarcube-1" class="anchor"></a>SonarCube</h3>
+<h2 id="build-pipeline-1"><a href="#build-pipeline-1" id="build-pipeline-1" class="anchor"></a>Build pipeline</h2>
+<h3 id="verify-preconditions-1"><a href="#verify-preconditions-1" id="verify-preconditions-1" class="anchor"></a>Verify preconditions</h3>
+<h3 id="build-1"><a href="#build-1" id="build-1" class="anchor"></a>Build</h3>
+<h3 id="test-1"><a href="#test-1" id="test-1" class="anchor"></a>Test</h3>
+<h4 id="unit-tests-1"><a href="#unit-tests-1" id="unit-tests-1" class="anchor"></a>Unit tests</h4>
+<p>https://www.vogella.com/tutorials/AndroidTesting/article.html</p>
+<p>70-80 % unit tests to ensure stability of your code basis</p>
+<p>20-30 % functional tests to ensure that the application really works</p>
+<p>some cross functional tests if your application integrates intensively with other Application components</p>
+<h4 id="integration-tests-1"><a href="#integration-tests-1" id="integration-tests-1" class="anchor"></a>Integration tests</h4>
+<h4 id="automation-tests-1"><a href="#automation-tests-1" id="automation-tests-1" class="anchor"></a>Automation tests</h4>
+<h3 id="verify-1"><a href="#verify-1" id="verify-1" class="anchor"></a>Verify</h3>
+<h3 id="verify-artefact-1"><a href="#verify-artefact-1" id="verify-artefact-1" class="anchor"></a>Verify artefact</h3>
+<ul>
+<li>compare with previous artefact (permission, certificake, features, activites, ...)</li>
+<li>verify constraints (size, ...)</li>
+</ul>
+<h2 id="publish-1"><a href="#publish-1" id="publish-1" class="anchor"></a>Publish</h2>
+<h2 id="publish-documentation-1"><a href="#publish-documentation-1" id="publish-documentation-1" class="anchor"></a>Publish documentation</h2>
+<h2 id="notify-1"><a href="#notify-1" id="notify-1" class="anchor"></a>Notify</h2>
+<h2 id="monitoring-1"><a href="#monitoring-1" id="monitoring-1" class="anchor"></a>Monitoring</h2>
+<h3 id="crashlitics-1"><a href="#crashlitics-1" id="crashlitics-1" class="anchor"></a>Crashlitics</h3>
+<h2 id="build-features--1"><a href="#build-features--1" id="build-features--1" class="anchor"></a>Build Features ??</h2>
+<h3 id="api-keys-1"><a href="#api-keys-1" id="api-keys-1" class="anchor"></a>API keys</h3>
+<p>Build src -&gt; build config</p>
+<p>TODO - some thing on qa to manifest metadata - can be read from APK without lanching</p>
+<h3 id="verified-timestamp-1"><a href="#verified-timestamp-1" id="verified-timestamp-1" class="anchor"></a>Verified timestamp</h3>
+<h2 id="features-1"><a href="#features-1" id="features-1" class="anchor"></a>Features</h2>
+<h3 id="push-1"><a href="#push-1" id="push-1" class="anchor"></a>Push</h3>
+<h3 id="user-support-1"><a href="#user-support-1" id="user-support-1" class="anchor"></a>User support</h3>
+<h2 id="benchmark"><a href="#benchmark" id="benchmark" class="anchor"></a>Benchmark</h2>
+<p>Android Jetpack provides a very good library for performance testing on the device. There are very good blogs and official documentation written about this.</p>
+<p><a href="https://developer.android.com/studio/profile/benchmark">Official documentation</a>
+<a href="https://tech.olx.com/android-jetpack-benchmark-json-parsers-performance-1e76031a296b">A really good blog</a> <a href="https://github.com/mootazltaief/android-json-benchmark">with am accompanying github repo</a>
+<a href="https://blog.mindorks.com/improving-android-app-performance-with-benchmarking">A bit older but more detailed blog</a></p>
+<h2 id="plugins"><a href="#plugins" id="plugins" class="anchor"></a>Plugins</h2>
+<h3 id="dependency-check-gradle"><a href="#dependency-check-gradle" id="dependency-check-gradle" class="anchor"></a>dependency-check-gradle</h3>
+<h3 id="gradle-version-plugin"><a href="#gradle-version-plugin" id="gradle-version-plugin" class="anchor"></a>gradle-version-plugin</h3>
+<p>https://github.com/ben-manes/gradle-versions-plugin</p>
+<!--
+    Reference-style links
+-->
+<!-- CircleCi URL -->
+[circleCiUrl]: https://circleci.com/gh/aljosamrak/android-at-scale-example
+[circleCiMaster]: https://circleci.com/gh/aljosamrak/android-at-scale-example/tree/master
+[circleCiDevelop]: https://circleci.com/gh/aljosamrak/android-at-scale-example/tree/develop
+[circleCiMasterStatus]: https://circleci.com/gh/aljosamrak/android-at-scale-example/tree/master.svg?style=svg
+[circleCiDevelopStatus]: https://circleci.com/gh/aljosamrak/android-at-scale-example/tree/develop.svg?style=svg
+[circleCiStatusBadge]:  https://circleci.com/gh/aljosamrak/android-at-scale-example.svg?style=shield
+<!-- travisCi URL -->
+[travisCiUrl]: https://travis-ci.org/aljosamrak/android-at-scale-example
+[travisCiMaster]: https://travis-ci.org/github/aljosamrak/android-at-scale-example/branches/master
+[travisCiDevelop]: https://travis-ci.org/github/aljosamrak/android-at-scale-example/branches/develop
+[travisCiMasterStatus]:https://api.travis-ci.org/aljosamrak/android-at-scale-example.png?branch=master
+[travisCiDevelopStatus]: https://api.travis-ci.org/aljosamrak/android-at-scale-example.png?branch=develop
+[travisCiStatusBadge]: https://api.travis-ci.org/aljosamrak/android-at-scale-example.png
+<!-- GitHub URL -->
+[gitHubRelease]: https://img.shields.io/github/release/aljosamrak/android-at-scale-example.js.svg
+[gitHubActivityBadge]: https://img.shields.io/github/commit-activity/m/aljosamrak/android-at-scale-example
+[gitHubActivityUrl]: https://GitHub.com/aljosamrak/android-at-scale-example/graphs/commit-activity
+[gitHubReleaseUrl]: https://github.com/aljosamrak/android-at-scale-example/releases
+[gitHubIssuesUrl]: https://github.com/aljosamrak/android-at-scale-example/issues
+<!-- Sonar Cloud URL -->
+[sonarCloudUrl]: https://sonarcloud.io/dashboard?id=aljosamrak_android-at-scale-example
+<!-- Badge URLs -->
+[bugsBadge]: https://sonarcloud.io/api/project_badges/measure?project=aljosamrak_android-at-scale-example&metric=bugs
+[codeSmellsBadge]: https://sonarcloud.io/api/project_badges/measure?project=aljosamrak_android-at-scale-example&metric=code_smells
+[coverageBadge]: https://sonarcloud.io/api/project_badges/measure?project=aljosamrak_android-at-scale-example&metric=coverage
+[duplicatedLinesDensityBadge]: https://sonarcloud.io/api/project_badges/measure?project=aljosamrak_android-at-scale-example&metric=duplicated_lines_density
+[nclocBadge]: https://sonarcloud.io/api/project_badges/measure?project=aljosamrak_android-at-scale-example&metric=ncloc
+[sqaleRatingBadge]: https://sonarcloud.io/api/project_badges/measure?project=aljosamrak_android-at-scale-example&metric=sqale_rating
+[alertStatusBadge]: https://sonarcloud.io/api/project_badges/measure?project=aljosamrak_android-at-scale-example&metric=alert_status
+[reliabilityRatingBadge]: https://sonarcloud.io/api/project_badges/measure?project=aljosamrak_android-at-scale-example&metric=reliability_rating
+[securityRatingBadge]: https://sonarcloud.io/api/project_badges/measure?project=aljosamrak_android-at-scale-example&metric=security_rating
+[sqaleIndexBadge]: https://sonarcloud.io/api/project_badges/measure?project=aljosamrak_android-at-scale-example&metric=sqale_index
+[vulnerabilitiesBadge]: https://sonarcloud.io/api/project_badges/measure?project=aljosamrak_android-at-scale-example&metric=vulnerabilities
+<!--Licence references-->
+[licenceUrl]: https://www.gnu.org/licenses/gpl-3.0
+[licenceBadge]: https://img.shields.io/badge/License-GPLv3-blue.svg
+<!--Website references-->
+[websiteBadge]: https://img.shields.io/website?url=https%3A%2F%2Faljosamrak.github.io%2Fandroid-at-scale-example%2F
+[websiteUrl]: https://aljosamrak.github.io/android-at-scale-example
+<!--Is maintained reference-->
+[isMaintained]: https://img.shields.io/badge/Maintained%3F-yes-green.svg
+<!--[![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://bitbucket.org/lbesson/ansi-colors)-->
+<!--[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)-->
+
+                        </div>
+                    
+                
+            
+        
+            
+                
+                    
+                        <div class="component component-disqus component-order-0">
+                            <div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+
+    var disqus_config = function () {
+        this.page.url = 'https://aljosamrak.github.io/android-at-scale-example';
+        this.page.identifier = 'frontPage:Home';
+    };
+
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+
+        s.src = 'https://.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+<script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
+
+                        </div>
+                    
+                
+            
+        
+    
+    <!-- end:inject components -->
+
+
+                    </article>
+                </section>
+            
+        </div>
+        <hr>
+
+        <!-- Page Footer -->
+        <div class="inner">
+    <footer id="footer">
+        <div class="clearfix">
+            
+            
+        </div>
+    </footer>
+</div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+    <div class="inner">
+
+        <!-- Search -->
+        <section id="search" class="alt">
+            <form data-orchid-search="">
+                <input type="text" name="query" id="query" placeholder="Search"/>
+            </form>
+            <div class="box" id="search-results" data-orchid-search-results style="display: none;">
+                <b>Search Results</b>
+                <ul></ul>
+            </div>
+            <div class="box" id="search-progress" data-orchid-search-progress style="display: none;">
+                <div class="loader">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <nav id="siteNav" class="menu">
+            <header class="major">
+                <h2>Android At Scale</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example">Home</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/changelog">Changelog</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/licence">Licence</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">API Docs</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">All Packages</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/file">com.pinko.benchmark.io.file</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json">com.pinko.benchmark.io.json</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/implementations">com.pinko.benchmark.io.json.implementations</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/gson">com.pinko.benchmark.io.json.models.gson</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/jackson">com.pinko.benchmark.io.json.models.jackson</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/kotlin">com.pinko.benchmark.io.json.models.kotlin</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/moshi">com.pinko.benchmark.io.json.models.moshi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/myapplication">com.pinko.myapplication</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">All Classes</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/file/ApacheTextFileRead">ApacheTextFileRead</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/implementations/GsonParser">GsonParser</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/implementations/JacksonParser">JacksonParser</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/file/JavaTextFileRead">JavaTextFileRead</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/implementations/KotlinParser">KotlinParser</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/gson/Photos/Result/User/Links">Links</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/gson/Photos/Result/Links">Links</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/moshi/Photos/Result/User/Links">Links</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/moshi/Photos/Result/Links">Links</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/kotlin/Photos/Result/User/Links">Links</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/kotlin/Photos/Result/Links">Links</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/jackson/Photos/Result/User/Links">Links</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/jackson/Photos/Result/Links">Links</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/myapplication/MainActivity">MainActivity</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/implementations/MoshiParser">MoshiParser</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/file/OkioTextFileRead">OkioTextFileRead</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/gson/Photos">Photos</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/moshi/Photos">Photos</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/kotlin/Photos">Photos</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/jackson/Photos">Photos</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/gson/Photos/Result/User/ProfileImage">ProfileImage</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/moshi/Photos/Result/User/ProfileImage">ProfileImage</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/kotlin/Photos/Result/User/ProfileImage">ProfileImage</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/jackson/Photos/Result/User/ProfileImage">ProfileImage</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/gson/Photos/Result">Result</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/moshi/Photos/Result">Result</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/kotlin/Photos/Result">Result</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/jackson/Photos/Result">Result</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/gson/Photos/Result/Urls">Urls</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/moshi/Photos/Result/Urls">Urls</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/kotlin/Photos/Result/Urls">Urls</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/jackson/Photos/Result/Urls">Urls</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/gson/User">User</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/gson/Photos/Result/User">User</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/moshi/User">User</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/moshi/Photos/Result/User">User</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/kotlin/User">User</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/kotlin/Photos/Result/User">User</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/jackson/User">User</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/jackson/Photos/Result/User">User</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/Utils">Utils</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+            </ul>
+        </nav>
+        
+
+        <!-- Section -->
+        <section>
+            <p class="text-center">
+                Currently 0.1.0. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright text-center">&copy; Android At Scale. All rights reserved.<br>Design by <a href="https://html5up.net">HTML5 UP</a></p>
+        </footer>
+
+    </div>
+</div>
+
+</div>
+
+<!-- start:inject scripts -->
+<script  src="https://aljosamrak.github.io/android-at-scale-example/Editorial/4bb66ee4/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script  src="https://aljosamrak.github.io/android-at-scale-example/Editorial/4bb66ee4/ajax/libs/skel/3.0.1/skel.min.js"></script>
+<script  src="https://aljosamrak.github.io/android-at-scale-example/Editorial/4bb66ee4/assets/js/editorial_util.js"></script>
+<script  src="https://aljosamrak.github.io/android-at-scale-example/Editorial/4bb66ee4/assets/js/editorial_main.js"></script>
+<script  src="https://aljosamrak.github.io/android-at-scale-example/Editorial/4bb66ee4/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://aljosamrak.github.io/android-at-scale-example/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script  src="https://aljosamrak.github.io/android-at-scale-example/lunr/lunr.js"></script>
+<script  src="https://aljosamrak.github.io/android-at-scale-example/assets/js/orchidSearch.js"></script>
+<!-- end:inject scripts -->
+
+</body>
+</html>

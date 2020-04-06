@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/myapplication</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/myapplication/MainActivity</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/file</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/file/JavaTextFileRead</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/file/ApacheTextFileRead</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/file/OkioTextFileRead</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/implementations</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/implementations/MoshiParser</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/implementations/GsonParser</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/implementations/KotlinParser</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/implementations/JacksonParser</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/Utils</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/gson</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/gson/Photos</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/gson/Photos/Result</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/gson/Photos/Result/User</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/gson/Photos/Result/User/Links</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/gson/Photos/Result/User/ProfileImage</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/gson/Photos/Result/Links</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/gson/Photos/Result/Urls</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/gson/User</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/moshi</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/moshi/Photos</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/moshi/Photos/Result</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/moshi/Photos/Result/User</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/moshi/Photos/Result/User/Links</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/moshi/Photos/Result/User/ProfileImage</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/moshi/Photos/Result/Links</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/moshi/Photos/Result/Urls</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/moshi/User</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/kotlin</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/kotlin/Photos</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/kotlin/Photos/Result</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/kotlin/Photos/Result/User</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/kotlin/Photos/Result/User/Links</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/kotlin/Photos/Result/User/ProfileImage</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/kotlin/Photos/Result/Links</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/kotlin/Photos/Result/Urls</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/kotlin/User</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/jackson</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/jackson/Photos</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/jackson/Photos/Result</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/jackson/Photos/Result/User</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/jackson/Photos/Result/User/Links</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/jackson/Photos/Result/User/ProfileImage</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/jackson/Photos/Result/Links</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/jackson/Photos/Result/Urls</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/jackson/User</loc>
+        <lastmod>2020-04-06</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    
+</urlset>

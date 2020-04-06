@@ -1,0 +1,838 @@
+{
+  "ownKey": "kotlindoc",
+  "childrenPages": {"com": {
+    "ownKey": "com",
+    "childrenPages": {"pinko": {
+      "ownKey": "pinko",
+      "childrenPages": {
+        "myapplication": {
+          "ownKey": "myapplication",
+          "childrenPages": {"MainActivity": {
+            "ownKey": "MainActivity",
+            "ownPages": [{
+              "reference": {
+                "path": "com/pinko/myapplication",
+                "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                "fileName": "MainActivity",
+                "extension": "html",
+                "usePrettyUrl": true,
+                "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/myapplication/MainActivity"
+              },
+              "description": "",
+              "title": "MainActivity",
+              "content": "<p><init><\/p>\n<p>onCreate<\/p>\n"
+            }]
+          }},
+          "ownPages": [{
+            "reference": {
+              "path": "com/pinko",
+              "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+              "fileName": "myapplication",
+              "extension": "html",
+              "usePrettyUrl": true,
+              "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/myapplication"
+            },
+            "description": "",
+            "title": "com.pinko.myapplication",
+            "content": ""
+          }]
+        },
+        "benchmark": {
+          "ownKey": "benchmark",
+          "childrenPages": {"io": {
+            "ownKey": "io",
+            "childrenPages": {
+              "file": {
+                "ownKey": "file",
+                "childrenPages": {
+                  "ApacheTextFileRead": {
+                    "ownKey": "ApacheTextFileRead",
+                    "ownPages": [{
+                      "reference": {
+                        "path": "com/pinko/benchmark/io/file",
+                        "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                        "fileName": "ApacheTextFileRead",
+                        "extension": "html",
+                        "usePrettyUrl": true,
+                        "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/file/ApacheTextFileRead"
+                      },
+                      "description": "",
+                      "title": "ApacheTextFileRead",
+                      "content": "<p>Created by Aljoša Mrak on 19.3.2020.<init>\nCreated by Aljoša Mrak on 19.3.2020.<\/p>\n<p>wholeReadFile<\/p>\n<p>byLineConcatReadFile<\/p>\n<p>byLineStringBuilderReadFile<\/p>\n<p>byLineStringBufferReadFile<\/p>\n"
+                    }]
+                  },
+                  "JavaTextFileRead": {
+                    "ownKey": "JavaTextFileRead",
+                    "ownPages": [{
+                      "reference": {
+                        "path": "com/pinko/benchmark/io/file",
+                        "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                        "fileName": "JavaTextFileRead",
+                        "extension": "html",
+                        "usePrettyUrl": true,
+                        "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/file/JavaTextFileRead"
+                      },
+                      "description": "",
+                      "title": "JavaTextFileRead",
+                      "content": "<p><init><\/p>\n<p>byLineConcatBufferedReaderReadFile<\/p>\n<p>collectionsConcatBufferedReaderReadFile<\/p>\n<p>useReadTextConcatBufferedReaderReadFile<\/p>\n<p>useLinesConcatBufferedReaderReadFile<\/p>\n<p>forEachLineConcatBufferedReaderReadFile<\/p>\n<p>byteBufferFileChannelReadFile<\/p>\n<p>byteArrayBufferedReaderReadFile<\/p>\n<p>byLineScannerReadFile<\/p>\n<p>wholeScannerReadFile<\/p>\n<p>byLineStringBuilderBufferedReaderReadFile<\/p>\n<p>usesLineStringBuilderBufferedReaderReadFile<\/p>\n<p>forEachLineStringBuilderBufferedReaderReadFile<\/p>\n<p>byLineStringBuilderScannerReadFile<\/p>\n<p>byLineStringBufferBufferedReaderReadFile<\/p>\n<p>useLinesStringBufferBufferedReaderReadFile<\/p>\n<p>forEachLineStringBufferBufferedReaderReadFile<\/p>\n<p>byLineStringBufferScannerReadFile<\/p>\n"
+                    }]
+                  },
+                  "OkioTextFileRead": {
+                    "ownKey": "OkioTextFileRead",
+                    "ownPages": [{
+                      "reference": {
+                        "path": "com/pinko/benchmark/io/file",
+                        "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                        "fileName": "OkioTextFileRead",
+                        "extension": "html",
+                        "usePrettyUrl": true,
+                        "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/file/OkioTextFileRead"
+                      },
+                      "description": "",
+                      "title": "OkioTextFileRead",
+                      "content": "<p>Created by Aljoša Mrak on 19.3.2020.<init>\nCreated by Aljoša Mrak on 19.3.2020.<\/p>\n<p>byLineConcatReadFile<\/p>\n<p>byLineStringBuilderReadFile<\/p>\n<p>byLineStringBufferReadFile<\/p>\n"
+                    }]
+                  }
+                },
+                "ownPages": [{
+                  "reference": {
+                    "path": "com/pinko/benchmark/io",
+                    "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                    "fileName": "file",
+                    "extension": "html",
+                    "usePrettyUrl": true,
+                    "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/file"
+                  },
+                  "description": "",
+                  "title": "com.pinko.benchmark.io.file",
+                  "content": ""
+                }]
+              },
+              "json": {
+                "ownKey": "json",
+                "childrenPages": {
+                  "models": {
+                    "ownKey": "models",
+                    "childrenPages": {
+                      "jackson": {
+                        "ownKey": "jackson",
+                        "childrenPages": {
+                          "Photos": {
+                            "ownKey": "Photos",
+                            "childrenPages": {"Result": {
+                              "ownKey": "Result",
+                              "childrenPages": {
+                                "User": {
+                                  "ownKey": "User",
+                                  "childrenPages": {
+                                    "ProfileImage": {
+                                      "ownKey": "ProfileImage",
+                                      "ownPages": [{
+                                        "reference": {
+                                          "path": "com/pinko/benchmark/io/json/models/jackson/Photos/Result/User",
+                                          "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                          "fileName": "ProfileImage",
+                                          "extension": "html",
+                                          "usePrettyUrl": true,
+                                          "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/jackson/Photos/Result/User/ProfileImage"
+                                        },
+                                        "description": "",
+                                        "title": "ProfileImage",
+                                        "content": "<p><init><\/p>\n<p>large<\/p>\n<p>medium<\/p>\n<p>small<\/p>\n"
+                                      }]
+                                    },
+                                    "Links": {
+                                      "ownKey": "Links",
+                                      "ownPages": [{
+                                        "reference": {
+                                          "path": "com/pinko/benchmark/io/json/models/jackson/Photos/Result/User",
+                                          "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                          "fileName": "Links",
+                                          "extension": "html",
+                                          "usePrettyUrl": true,
+                                          "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/jackson/Photos/Result/User/Links"
+                                        },
+                                        "description": "",
+                                        "title": "Links",
+                                        "content": "<p><init><\/p>\n<p>html<\/p>\n<p>likes<\/p>\n<p>photos<\/p>\n<p>self<\/p>\n"
+                                      }]
+                                    }
+                                  },
+                                  "ownPages": [{
+                                    "reference": {
+                                      "path": "com/pinko/benchmark/io/json/models/jackson/Photos/Result",
+                                      "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                      "fileName": "User",
+                                      "extension": "html",
+                                      "usePrettyUrl": true,
+                                      "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/jackson/Photos/Result/User"
+                                    },
+                                    "description": "",
+                                    "title": "User",
+                                    "content": "<p><init><\/p>\n<p>firstName<\/p>\n<p>id<\/p>\n<p>instagramUsername<\/p>\n<p>lastName<\/p>\n<p>links<\/p>\n<p>name<\/p>\n<p>portfolioUrl<\/p>\n<p>profileImage<\/p>\n<p>twitterUsername<\/p>\n<p>username<\/p>\n"
+                                  }]
+                                },
+                                "Links": {
+                                  "ownKey": "Links",
+                                  "ownPages": [{
+                                    "reference": {
+                                      "path": "com/pinko/benchmark/io/json/models/jackson/Photos/Result",
+                                      "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                      "fileName": "Links",
+                                      "extension": "html",
+                                      "usePrettyUrl": true,
+                                      "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/jackson/Photos/Result/Links"
+                                    },
+                                    "description": "",
+                                    "title": "Links",
+                                    "content": "<p><init><\/p>\n<p>download<\/p>\n<p>html<\/p>\n<p>self<\/p>\n"
+                                  }]
+                                },
+                                "Urls": {
+                                  "ownKey": "Urls",
+                                  "ownPages": [{
+                                    "reference": {
+                                      "path": "com/pinko/benchmark/io/json/models/jackson/Photos/Result",
+                                      "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                      "fileName": "Urls",
+                                      "extension": "html",
+                                      "usePrettyUrl": true,
+                                      "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/jackson/Photos/Result/Urls"
+                                    },
+                                    "description": "",
+                                    "title": "Urls",
+                                    "content": "<p><init><\/p>\n<p>full<\/p>\n<p>raw<\/p>\n<p>regular<\/p>\n<p>small<\/p>\n<p>thumb<\/p>\n"
+                                  }]
+                                }
+                              },
+                              "ownPages": [{
+                                "reference": {
+                                  "path": "com/pinko/benchmark/io/json/models/jackson/Photos",
+                                  "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                  "fileName": "Result",
+                                  "extension": "html",
+                                  "usePrettyUrl": true,
+                                  "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/jackson/Photos/Result"
+                                },
+                                "description": "",
+                                "title": "Result",
+                                "content": "<p><init><\/p>\n<p>color<\/p>\n<p>createdAt<\/p>\n<p>description<\/p>\n<p>height<\/p>\n<p>id<\/p>\n<p>likedByUser<\/p>\n<p>likes<\/p>\n<p>links<\/p>\n<p>urls<\/p>\n<p>user<\/p>\n<p>width<\/p>\n"
+                              }]
+                            }},
+                            "ownPages": [{
+                              "reference": {
+                                "path": "com/pinko/benchmark/io/json/models/jackson",
+                                "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                "fileName": "Photos",
+                                "extension": "html",
+                                "usePrettyUrl": true,
+                                "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/jackson/Photos"
+                              },
+                              "description": "",
+                              "title": "Photos",
+                              "content": "<p>From: https://github.com/mootazltaief/android-json-benchmark<init>\nFrom: https://github.com/mootazltaief/android-json-benchmark\nresults<\/p>\n<p>total<\/p>\n<p>totalPages<\/p>\n"
+                            }]
+                          },
+                          "User": {
+                            "ownKey": "User",
+                            "ownPages": [{
+                              "reference": {
+                                "path": "com/pinko/benchmark/io/json/models/jackson",
+                                "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                "fileName": "User",
+                                "extension": "html",
+                                "usePrettyUrl": true,
+                                "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/jackson/User"
+                              },
+                              "description": "",
+                              "title": "User",
+                              "content": "<p>From: https://github.com/mootazltaief/android-json-benchmark<init>\nFrom: https://github.com/mootazltaief/android-json-benchmark\ncompany<\/p>\n<p>email<\/p>\n<p>gender<\/p>\n<p>id<\/p>\n<p>name<\/p>\n<p>phone<\/p>\n"
+                            }]
+                          }
+                        },
+                        "ownPages": [{
+                          "reference": {
+                            "path": "com/pinko/benchmark/io/json/models",
+                            "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                            "fileName": "jackson",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/jackson"
+                          },
+                          "description": "",
+                          "title": "com.pinko.benchmark.io.json.models.jackson",
+                          "content": ""
+                        }]
+                      },
+                      "moshi": {
+                        "ownKey": "moshi",
+                        "childrenPages": {
+                          "Photos": {
+                            "ownKey": "Photos",
+                            "childrenPages": {"Result": {
+                              "ownKey": "Result",
+                              "childrenPages": {
+                                "User": {
+                                  "ownKey": "User",
+                                  "childrenPages": {
+                                    "ProfileImage": {
+                                      "ownKey": "ProfileImage",
+                                      "ownPages": [{
+                                        "reference": {
+                                          "path": "com/pinko/benchmark/io/json/models/moshi/Photos/Result/User",
+                                          "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                          "fileName": "ProfileImage",
+                                          "extension": "html",
+                                          "usePrettyUrl": true,
+                                          "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/moshi/Photos/Result/User/ProfileImage"
+                                        },
+                                        "description": "",
+                                        "title": "ProfileImage",
+                                        "content": "<p><init><\/p>\n<p>large<\/p>\n<p>medium<\/p>\n<p>small<\/p>\n"
+                                      }]
+                                    },
+                                    "Links": {
+                                      "ownKey": "Links",
+                                      "ownPages": [{
+                                        "reference": {
+                                          "path": "com/pinko/benchmark/io/json/models/moshi/Photos/Result/User",
+                                          "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                          "fileName": "Links",
+                                          "extension": "html",
+                                          "usePrettyUrl": true,
+                                          "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/moshi/Photos/Result/User/Links"
+                                        },
+                                        "description": "",
+                                        "title": "Links",
+                                        "content": "<p><init><\/p>\n<p>html<\/p>\n<p>likes<\/p>\n<p>photos<\/p>\n<p>self<\/p>\n"
+                                      }]
+                                    }
+                                  },
+                                  "ownPages": [{
+                                    "reference": {
+                                      "path": "com/pinko/benchmark/io/json/models/moshi/Photos/Result",
+                                      "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                      "fileName": "User",
+                                      "extension": "html",
+                                      "usePrettyUrl": true,
+                                      "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/moshi/Photos/Result/User"
+                                    },
+                                    "description": "",
+                                    "title": "User",
+                                    "content": "<p><init><\/p>\n<p>firstName<\/p>\n<p>id<\/p>\n<p>instagramUsername<\/p>\n<p>lastName<\/p>\n<p>links<\/p>\n<p>name<\/p>\n<p>portfolioUrl<\/p>\n<p>profileImage<\/p>\n<p>twitterUsername<\/p>\n<p>username<\/p>\n"
+                                  }]
+                                },
+                                "Links": {
+                                  "ownKey": "Links",
+                                  "ownPages": [{
+                                    "reference": {
+                                      "path": "com/pinko/benchmark/io/json/models/moshi/Photos/Result",
+                                      "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                      "fileName": "Links",
+                                      "extension": "html",
+                                      "usePrettyUrl": true,
+                                      "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/moshi/Photos/Result/Links"
+                                    },
+                                    "description": "",
+                                    "title": "Links",
+                                    "content": "<p><init><\/p>\n<p>download<\/p>\n<p>html<\/p>\n<p>self<\/p>\n"
+                                  }]
+                                },
+                                "Urls": {
+                                  "ownKey": "Urls",
+                                  "ownPages": [{
+                                    "reference": {
+                                      "path": "com/pinko/benchmark/io/json/models/moshi/Photos/Result",
+                                      "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                      "fileName": "Urls",
+                                      "extension": "html",
+                                      "usePrettyUrl": true,
+                                      "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/moshi/Photos/Result/Urls"
+                                    },
+                                    "description": "",
+                                    "title": "Urls",
+                                    "content": "<p><init><\/p>\n<p>full<\/p>\n<p>raw<\/p>\n<p>regular<\/p>\n<p>small<\/p>\n<p>thumb<\/p>\n"
+                                  }]
+                                }
+                              },
+                              "ownPages": [{
+                                "reference": {
+                                  "path": "com/pinko/benchmark/io/json/models/moshi/Photos",
+                                  "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                  "fileName": "Result",
+                                  "extension": "html",
+                                  "usePrettyUrl": true,
+                                  "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/moshi/Photos/Result"
+                                },
+                                "description": "",
+                                "title": "Result",
+                                "content": "<p><init><\/p>\n<p>color<\/p>\n<p>createdAt<\/p>\n<p>description<\/p>\n<p>height<\/p>\n<p>id<\/p>\n<p>likedByUser<\/p>\n<p>likes<\/p>\n<p>links<\/p>\n<p>urls<\/p>\n<p>user<\/p>\n<p>width<\/p>\n"
+                              }]
+                            }},
+                            "ownPages": [{
+                              "reference": {
+                                "path": "com/pinko/benchmark/io/json/models/moshi",
+                                "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                "fileName": "Photos",
+                                "extension": "html",
+                                "usePrettyUrl": true,
+                                "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/moshi/Photos"
+                              },
+                              "description": "",
+                              "title": "Photos",
+                              "content": "<p>From: https://github.com/mootazltaief/android-json-benchmark<init>\nFrom: https://github.com/mootazltaief/android-json-benchmark\nresults<\/p>\n<p>total<\/p>\n<p>totalPages<\/p>\n"
+                            }]
+                          },
+                          "User": {
+                            "ownKey": "User",
+                            "ownPages": [{
+                              "reference": {
+                                "path": "com/pinko/benchmark/io/json/models/moshi",
+                                "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                "fileName": "User",
+                                "extension": "html",
+                                "usePrettyUrl": true,
+                                "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/moshi/User"
+                              },
+                              "description": "",
+                              "title": "User",
+                              "content": "<p>From: https://github.com/mootazltaief/android-json-benchmark<init>\nFrom: https://github.com/mootazltaief/android-json-benchmark\ncompany<\/p>\n<p>email<\/p>\n<p>gender<\/p>\n<p>id<\/p>\n<p>name<\/p>\n<p>phone<\/p>\n"
+                            }]
+                          }
+                        },
+                        "ownPages": [{
+                          "reference": {
+                            "path": "com/pinko/benchmark/io/json/models",
+                            "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                            "fileName": "moshi",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/moshi"
+                          },
+                          "description": "",
+                          "title": "com.pinko.benchmark.io.json.models.moshi",
+                          "content": ""
+                        }]
+                      },
+                      "kotlin": {
+                        "ownKey": "kotlin",
+                        "childrenPages": {
+                          "Photos": {
+                            "ownKey": "Photos",
+                            "childrenPages": {"Result": {
+                              "ownKey": "Result",
+                              "childrenPages": {
+                                "User": {
+                                  "ownKey": "User",
+                                  "childrenPages": {
+                                    "ProfileImage": {
+                                      "ownKey": "ProfileImage",
+                                      "ownPages": [{
+                                        "reference": {
+                                          "path": "com/pinko/benchmark/io/json/models/kotlin/Photos/Result/User",
+                                          "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                          "fileName": "ProfileImage",
+                                          "extension": "html",
+                                          "usePrettyUrl": true,
+                                          "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/kotlin/Photos/Result/User/ProfileImage"
+                                        },
+                                        "description": "",
+                                        "title": "ProfileImage",
+                                        "content": "<p><init><\/p>\n<p>large<\/p>\n<p>medium<\/p>\n<p>small<\/p>\n"
+                                      }]
+                                    },
+                                    "Links": {
+                                      "ownKey": "Links",
+                                      "ownPages": [{
+                                        "reference": {
+                                          "path": "com/pinko/benchmark/io/json/models/kotlin/Photos/Result/User",
+                                          "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                          "fileName": "Links",
+                                          "extension": "html",
+                                          "usePrettyUrl": true,
+                                          "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/kotlin/Photos/Result/User/Links"
+                                        },
+                                        "description": "",
+                                        "title": "Links",
+                                        "content": "<p><init><\/p>\n<p>html<\/p>\n<p>likes<\/p>\n<p>photos<\/p>\n<p>self<\/p>\n"
+                                      }]
+                                    }
+                                  },
+                                  "ownPages": [{
+                                    "reference": {
+                                      "path": "com/pinko/benchmark/io/json/models/kotlin/Photos/Result",
+                                      "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                      "fileName": "User",
+                                      "extension": "html",
+                                      "usePrettyUrl": true,
+                                      "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/kotlin/Photos/Result/User"
+                                    },
+                                    "description": "",
+                                    "title": "User",
+                                    "content": "<p><init><\/p>\n<p>first_name<\/p>\n<p>id<\/p>\n<p>instagram_username<\/p>\n<p>last_name<\/p>\n<p>links<\/p>\n<p>name<\/p>\n<p>portfolio_url<\/p>\n<p>profile_image<\/p>\n<p>twitter_username<\/p>\n<p>username<\/p>\n"
+                                  }]
+                                },
+                                "Links": {
+                                  "ownKey": "Links",
+                                  "ownPages": [{
+                                    "reference": {
+                                      "path": "com/pinko/benchmark/io/json/models/kotlin/Photos/Result",
+                                      "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                      "fileName": "Links",
+                                      "extension": "html",
+                                      "usePrettyUrl": true,
+                                      "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/kotlin/Photos/Result/Links"
+                                    },
+                                    "description": "",
+                                    "title": "Links",
+                                    "content": "<p><init><\/p>\n<p>download<\/p>\n<p>html<\/p>\n<p>self<\/p>\n"
+                                  }]
+                                },
+                                "Urls": {
+                                  "ownKey": "Urls",
+                                  "ownPages": [{
+                                    "reference": {
+                                      "path": "com/pinko/benchmark/io/json/models/kotlin/Photos/Result",
+                                      "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                      "fileName": "Urls",
+                                      "extension": "html",
+                                      "usePrettyUrl": true,
+                                      "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/kotlin/Photos/Result/Urls"
+                                    },
+                                    "description": "",
+                                    "title": "Urls",
+                                    "content": "<p><init><\/p>\n<p>full<\/p>\n<p>raw<\/p>\n<p>regular<\/p>\n<p>small<\/p>\n<p>thumb<\/p>\n"
+                                  }]
+                                }
+                              },
+                              "ownPages": [{
+                                "reference": {
+                                  "path": "com/pinko/benchmark/io/json/models/kotlin/Photos",
+                                  "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                  "fileName": "Result",
+                                  "extension": "html",
+                                  "usePrettyUrl": true,
+                                  "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/kotlin/Photos/Result"
+                                },
+                                "description": "",
+                                "title": "Result",
+                                "content": "<p><init><\/p>\n<p>color<\/p>\n<p>created_at<\/p>\n<p>description<\/p>\n<p>height<\/p>\n<p>id<\/p>\n<p>liked_by_user<\/p>\n<p>likes<\/p>\n<p>links<\/p>\n<p>urls<\/p>\n<p>user<\/p>\n<p>width<\/p>\n"
+                              }]
+                            }},
+                            "ownPages": [{
+                              "reference": {
+                                "path": "com/pinko/benchmark/io/json/models/kotlin",
+                                "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                "fileName": "Photos",
+                                "extension": "html",
+                                "usePrettyUrl": true,
+                                "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/kotlin/Photos"
+                              },
+                              "description": "",
+                              "title": "Photos",
+                              "content": "<p>From: https://github.com/mootazltaief/android-json-benchmark<init>\nFrom: https://github.com/mootazltaief/android-json-benchmark\nresults<\/p>\n<p>total<\/p>\n<p>total_pages<\/p>\n"
+                            }]
+                          },
+                          "User": {
+                            "ownKey": "User",
+                            "ownPages": [{
+                              "reference": {
+                                "path": "com/pinko/benchmark/io/json/models/kotlin",
+                                "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                "fileName": "User",
+                                "extension": "html",
+                                "usePrettyUrl": true,
+                                "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/kotlin/User"
+                              },
+                              "description": "",
+                              "title": "User",
+                              "content": "<p>From: https://github.com/mootazltaief/android-json-benchmark<init>\nFrom: https://github.com/mootazltaief/android-json-benchmark\ncompany<\/p>\n<p>email<\/p>\n<p>gender<\/p>\n<p>id<\/p>\n<p>name<\/p>\n<p>phone<\/p>\n"
+                            }]
+                          }
+                        },
+                        "ownPages": [{
+                          "reference": {
+                            "path": "com/pinko/benchmark/io/json/models",
+                            "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                            "fileName": "kotlin",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/kotlin"
+                          },
+                          "description": "",
+                          "title": "com.pinko.benchmark.io.json.models.kotlin",
+                          "content": ""
+                        }]
+                      },
+                      "gson": {
+                        "ownKey": "gson",
+                        "childrenPages": {
+                          "Photos": {
+                            "ownKey": "Photos",
+                            "childrenPages": {"Result": {
+                              "ownKey": "Result",
+                              "childrenPages": {
+                                "User": {
+                                  "ownKey": "User",
+                                  "childrenPages": {
+                                    "ProfileImage": {
+                                      "ownKey": "ProfileImage",
+                                      "ownPages": [{
+                                        "reference": {
+                                          "path": "com/pinko/benchmark/io/json/models/gson/Photos/Result/User",
+                                          "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                          "fileName": "ProfileImage",
+                                          "extension": "html",
+                                          "usePrettyUrl": true,
+                                          "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/gson/Photos/Result/User/ProfileImage"
+                                        },
+                                        "description": "",
+                                        "title": "ProfileImage",
+                                        "content": "<p><init><\/p>\n<p>large<\/p>\n<p>medium<\/p>\n<p>small<\/p>\n"
+                                      }]
+                                    },
+                                    "Links": {
+                                      "ownKey": "Links",
+                                      "ownPages": [{
+                                        "reference": {
+                                          "path": "com/pinko/benchmark/io/json/models/gson/Photos/Result/User",
+                                          "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                          "fileName": "Links",
+                                          "extension": "html",
+                                          "usePrettyUrl": true,
+                                          "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/gson/Photos/Result/User/Links"
+                                        },
+                                        "description": "",
+                                        "title": "Links",
+                                        "content": "<p><init><\/p>\n<p>html<\/p>\n<p>likes<\/p>\n<p>photos<\/p>\n<p>self<\/p>\n"
+                                      }]
+                                    }
+                                  },
+                                  "ownPages": [{
+                                    "reference": {
+                                      "path": "com/pinko/benchmark/io/json/models/gson/Photos/Result",
+                                      "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                      "fileName": "User",
+                                      "extension": "html",
+                                      "usePrettyUrl": true,
+                                      "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/gson/Photos/Result/User"
+                                    },
+                                    "description": "",
+                                    "title": "User",
+                                    "content": "<p><init><\/p>\n<p>firstName<\/p>\n<p>id<\/p>\n<p>instagramUsername<\/p>\n<p>lastName<\/p>\n<p>links<\/p>\n<p>name<\/p>\n<p>portfolioUrl<\/p>\n<p>profileImage<\/p>\n<p>twitterUsername<\/p>\n<p>username<\/p>\n"
+                                  }]
+                                },
+                                "Links": {
+                                  "ownKey": "Links",
+                                  "ownPages": [{
+                                    "reference": {
+                                      "path": "com/pinko/benchmark/io/json/models/gson/Photos/Result",
+                                      "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                      "fileName": "Links",
+                                      "extension": "html",
+                                      "usePrettyUrl": true,
+                                      "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/gson/Photos/Result/Links"
+                                    },
+                                    "description": "",
+                                    "title": "Links",
+                                    "content": "<p><init><\/p>\n<p>download<\/p>\n<p>html<\/p>\n<p>self<\/p>\n"
+                                  }]
+                                },
+                                "Urls": {
+                                  "ownKey": "Urls",
+                                  "ownPages": [{
+                                    "reference": {
+                                      "path": "com/pinko/benchmark/io/json/models/gson/Photos/Result",
+                                      "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                      "fileName": "Urls",
+                                      "extension": "html",
+                                      "usePrettyUrl": true,
+                                      "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/gson/Photos/Result/Urls"
+                                    },
+                                    "description": "",
+                                    "title": "Urls",
+                                    "content": "<p><init><\/p>\n<p>full<\/p>\n<p>raw<\/p>\n<p>regular<\/p>\n<p>small<\/p>\n<p>thumb<\/p>\n"
+                                  }]
+                                }
+                              },
+                              "ownPages": [{
+                                "reference": {
+                                  "path": "com/pinko/benchmark/io/json/models/gson/Photos",
+                                  "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                  "fileName": "Result",
+                                  "extension": "html",
+                                  "usePrettyUrl": true,
+                                  "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/gson/Photos/Result"
+                                },
+                                "description": "",
+                                "title": "Result",
+                                "content": "<p><init><\/p>\n<p>color<\/p>\n<p>createdAt<\/p>\n<p>description<\/p>\n<p>height<\/p>\n<p>id<\/p>\n<p>likedByUser<\/p>\n<p>likes<\/p>\n<p>links<\/p>\n<p>urls<\/p>\n<p>user<\/p>\n<p>width<\/p>\n"
+                              }]
+                            }},
+                            "ownPages": [{
+                              "reference": {
+                                "path": "com/pinko/benchmark/io/json/models/gson",
+                                "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                "fileName": "Photos",
+                                "extension": "html",
+                                "usePrettyUrl": true,
+                                "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/gson/Photos"
+                              },
+                              "description": "",
+                              "title": "Photos",
+                              "content": "<p>From: https://github.com/mootazltaief/android-json-benchmark<init>\nFrom: https://github.com/mootazltaief/android-json-benchmark\nresults<\/p>\n<p>total<\/p>\n<p>totalPages<\/p>\n"
+                            }]
+                          },
+                          "User": {
+                            "ownKey": "User",
+                            "ownPages": [{
+                              "reference": {
+                                "path": "com/pinko/benchmark/io/json/models/gson",
+                                "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                                "fileName": "User",
+                                "extension": "html",
+                                "usePrettyUrl": true,
+                                "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/gson/User"
+                              },
+                              "description": "",
+                              "title": "User",
+                              "content": "<p>From: https://github.com/mootazltaief/android-json-benchmark<init>\nFrom: https://github.com/mootazltaief/android-json-benchmark\ncompany<\/p>\n<p>email<\/p>\n<p>gender<\/p>\n<p>id<\/p>\n<p>name<\/p>\n<p>phone<\/p>\n"
+                            }]
+                          }
+                        },
+                        "ownPages": [{
+                          "reference": {
+                            "path": "com/pinko/benchmark/io/json/models",
+                            "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                            "fileName": "gson",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/models/gson"
+                          },
+                          "description": "",
+                          "title": "com.pinko.benchmark.io.json.models.gson",
+                          "content": ""
+                        }]
+                      }
+                    }
+                  },
+                  "Utils": {
+                    "ownKey": "Utils",
+                    "ownPages": [{
+                      "reference": {
+                        "path": "com/pinko/benchmark/io/json",
+                        "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                        "fileName": "Utils",
+                        "extension": "html",
+                        "usePrettyUrl": true,
+                        "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/Utils"
+                      },
+                      "description": "",
+                      "title": "Utils",
+                      "content": "<p>From: https://github.com/mootazltaief/android-json-benchmark<\/p>\n<p>loadJSONFromAsset<\/p>\n"
+                    }]
+                  },
+                  "implementations": {
+                    "ownKey": "implementations",
+                    "childrenPages": {
+                      "JacksonParser": {
+                        "ownKey": "JacksonParser",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "com/pinko/benchmark/io/json/implementations",
+                            "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                            "fileName": "JacksonParser",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/implementations/JacksonParser"
+                          },
+                          "description": "",
+                          "title": "JacksonParser",
+                          "content": "<p>From: https://github.com/mootazltaief/android-json-benchmark<init>\nFrom: https://github.com/mootazltaief/android-json-benchmark<\/p>\n<p>parseSample1<\/p>\n<p>parseSample2<\/p>\n<p>parseSample3<\/p>\n"
+                        }]
+                      },
+                      "KotlinParser": {
+                        "ownKey": "KotlinParser",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "com/pinko/benchmark/io/json/implementations",
+                            "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                            "fileName": "KotlinParser",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/implementations/KotlinParser"
+                          },
+                          "description": "",
+                          "title": "KotlinParser",
+                          "content": "<p>From: https://github.com/mootazltaief/android-json-benchmark<init>\nFrom: https://github.com/mootazltaief/android-json-benchmark<\/p>\n<p>parseSample1<\/p>\n<p>parseSample2<\/p>\n<p>parseSample3<\/p>\n"
+                        }]
+                      },
+                      "GsonParser": {
+                        "ownKey": "GsonParser",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "com/pinko/benchmark/io/json/implementations",
+                            "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                            "fileName": "GsonParser",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/implementations/GsonParser"
+                          },
+                          "description": "",
+                          "title": "GsonParser",
+                          "content": "<p>From: https://github.com/mootazltaief/android-json-benchmark<init>\nFrom: https://github.com/mootazltaief/android-json-benchmark<\/p>\n<p>parseSample1<\/p>\n<p>parseSample2<\/p>\n<p>parseSample3<\/p>\n"
+                        }]
+                      },
+                      "MoshiParser": {
+                        "ownKey": "MoshiParser",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "com/pinko/benchmark/io/json/implementations",
+                            "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                            "fileName": "MoshiParser",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/implementations/MoshiParser"
+                          },
+                          "description": "",
+                          "title": "MoshiParser",
+                          "content": "<p>From: https://github.com/mootazltaief/android-json-benchmark<init>\nFrom: https://github.com/mootazltaief/android-json-benchmark<\/p>\n<p>parseSample1<\/p>\n<p>parseSample2<\/p>\n<p>parseSample3<\/p>\n"
+                        }]
+                      }
+                    },
+                    "ownPages": [{
+                      "reference": {
+                        "path": "com/pinko/benchmark/io/json",
+                        "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                        "fileName": "implementations",
+                        "extension": "html",
+                        "usePrettyUrl": true,
+                        "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json/implementations"
+                      },
+                      "description": "",
+                      "title": "com.pinko.benchmark.io.json.implementations",
+                      "content": ""
+                    }]
+                  }
+                },
+                "ownPages": [{
+                  "reference": {
+                    "path": "com/pinko/benchmark/io",
+                    "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+                    "fileName": "json",
+                    "extension": "html",
+                    "usePrettyUrl": true,
+                    "link": "https://aljosamrak.github.io/android-at-scale-example/com/pinko/benchmark/io/json"
+                  },
+                  "description": "",
+                  "title": "com.pinko.benchmark.io.json",
+                  "content": ""
+                }]
+              }
+            }
+          }}
+        }
+      }
+    }}
+  }}
+}

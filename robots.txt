@@ -1,0 +1,8 @@
+User-agent: *
+
+Disallow: /meta/
+
+
+
+Sitemap: https://aljosamrak.github.io/android-at-scale-example/sitemap.xml
+

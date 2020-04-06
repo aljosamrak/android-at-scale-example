@@ -1,0 +1,31 @@
+{
+  "ownKey": "feeds",
+  "ownPages": [
+    {
+      "reference": {
+        "path": "",
+        "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+        "fileName": "rss",
+        "extension": "xml",
+        "usePrettyUrl": false,
+        "link": "https://aljosamrak.github.io/android-at-scale-example/rss.xml"
+      },
+      "description": "",
+      "title": "Rss",
+      "content": "<?xml version=\"1.0\"?>\n<rss version=\"2.0\" xmlns:atom=\"http://www.w3.org/2005/Atom\">\n    <channel>\n        <id>https://aljosamrak.github.io/android-at-scale-example<\/id>\n        <title>Android At Scale<\/title>\n        <link>https://aljosamrak.github.io/android-at-scale-example<\/link>\n        <atom:link href=\"https://aljosamrak.github.io/android-at-scale-example/rss.xml\" rel=\"self\" type=\"application/rss+xml\"/>\n        <description>An example of less common practices, ways, and frameworks that benefit when building Android application at a larges scale<\/description>\n        <item>\n            <title>Author Two<\/title>\n            <guid>https://aljosamrak.github.io/android-at-scale-example/authors/author-two<\/guid>\n            <link>https://aljosamrak.github.io/android-at-scale-example/authors/author-two<\/link>\n            <description><\/description>\n        <\/item>\n        \n    <\/channel>\n<\/rss>\n"
+    },
+    {
+      "reference": {
+        "path": "",
+        "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+        "fileName": "atom",
+        "extension": "xml",
+        "usePrettyUrl": false,
+        "link": "https://aljosamrak.github.io/android-at-scale-example/atom.xml"
+      },
+      "description": "",
+      "title": "Atom",
+      "content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<feed xmlns=\"http://www.w3.org/2005/Atom\">\n    <title>Android At Scale<\/title>\n    <link href=\"https://aljosamrak.github.io/android-at-scale-example\"/>\n    <link href=\"https://aljosamrak.github.io/android-at-scale-example/atom.xml\" rel=\"self\" type=\"application/rss+xml\"/>\n    <id>https://aljosamrak.github.io/android-at-scale-example<\/id>\n    <updated>2020-04-06T21:44:42.001T00:00:00Z<\/updated>\n    <entry>\n        <id>https://aljosamrak.github.io/android-at-scale-example/authors/author-two<\/id>\n        <link href=\"https://aljosamrak.github.io/android-at-scale-example/authors/author-two\"/>\n        <title>Author Two<\/title>\n        <summary><\/summary>\n        <updated>2020-04-06T21:44:42.001T00:00:00Z<\/updated>\n        <published>2020-04-06T21:44:42.001T00:00:00Z<\/published>\n    <\/entry>\n    \n<\/feed>\n"
+    }
+  ]
+}

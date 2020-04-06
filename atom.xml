@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Android At Scale</title>
+    <link href="https://aljosamrak.github.io/android-at-scale-example"/>
+    <link href="https://aljosamrak.github.io/android-at-scale-example/atom.xml" rel="self" type="application/rss+xml"/>
+    <id>https://aljosamrak.github.io/android-at-scale-example</id>
+    <updated>2020-04-06T21:44:42.001T00:00:00Z</updated>
+    <entry>
+        <id>https://aljosamrak.github.io/android-at-scale-example/authors/author-two</id>
+        <link href="https://aljosamrak.github.io/android-at-scale-example/authors/author-two"/>
+        <title>Author Two</title>
+        <summary></summary>
+        <updated>2020-04-06T21:44:42.001T00:00:00Z</updated>
+        <published>2020-04-06T21:44:42.001T00:00:00Z</published>
+    </entry>
+    
+</feed>

@@ -1,0 +1,37 @@
+{
+  "ownKey": "pages",
+  "childrenPages": {
+    "licence": {
+      "ownKey": "licence",
+      "ownPages": [{
+        "reference": {
+          "path": "",
+          "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+          "fileName": "licence",
+          "extension": "html",
+          "usePrettyUrl": true,
+          "link": "https://aljosamrak.github.io/android-at-scale-example/licence"
+        },
+        "description": "",
+        "title": "Licence",
+        "content": ""
+      }]
+    },
+    "changelog": {
+      "ownKey": "changelog",
+      "ownPages": [{
+        "reference": {
+          "path": "",
+          "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+          "fileName": "changelog",
+          "extension": "html",
+          "usePrettyUrl": true,
+          "link": "https://aljosamrak.github.io/android-at-scale-example/changelog"
+        },
+        "description": "",
+        "title": "Changelog",
+        "content": ""
+      }]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "ownKey": "posts",
+  "childrenPages": {"authors": {
+    "ownKey": "authors",
+    "childrenPages": {"author-two": {
+      "ownKey": "author-two",
+      "ownPages": [{
+        "reference": {
+          "path": "authors",
+          "baseUrl": "https://aljosamrak.github.io/android-at-scale-example",
+          "fileName": "author-two",
+          "extension": "html",
+          "usePrettyUrl": true,
+          "link": "https://aljosamrak.github.io/android-at-scale-example/authors/author-two"
+        },
+        "description": "",
+        "title": "Author Two",
+        "content": ""
+      }]
+    }}
+  }}
+}
