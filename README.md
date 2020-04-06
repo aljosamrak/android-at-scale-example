@@ -1,3 +1,5 @@
+[![CircleCI][circleCiStatusBadge]][circleCiUrl]     [![GitHub release (latest SemVer)][gitHubRelease]][gitHubUrl]       [![Maintenance][isMaintained]][gitHubActivity]      [![coverage][coverageBadge]][sonarCloudUrl]     [![GitHub commit activity][gitHubActivityBadge]][gitHubUrl]     [![License: GPL v3][licenceBadge]][licenceUrl]
+
 # Android at scale example
 An example/template/framework for building Android applications at scale.
 
@@ -32,3 +34,48 @@ Android Jetpack provides a very good library for performance testing on the devi
 [Official documentation](https://developer.android.com/studio/profile/benchmark)
 [A really good blog](https://tech.olx.com/android-jetpack-benchmark-json-parsers-performance-1e76031a296b) [with am accompanying github repo](https://github.com/mootazltaief/android-json-benchmark)
 [A bit older but more detailed blog](https://blog.mindorks.com/improving-android-app-performance-with-benchmarking)
+
+<!--
+    Reference-style links
+-->
+
+<!-- CircleCi URL -->
+[circleCiUrl]: https://circleci.com/gh/aljosamrak/android-at-scale-example
+[circleCiMaster]: https://circleci.com/gh/aljosamrak/android-at-scale-example/tree/master
+[circleCiDevelop]: https://circleci.com/gh/aljosamrak/android-at-scale-example/tree/develop
+[circleCiMasterStatus]: https://circleci.com/gh/aljosamrak/android-at-scale-example/tree/master.svg?style=svg
+[circleCiDevelopStatus]: https://circleci.com/gh/aljosamrak/android-at-scale-example/tree/develop.svg?style=svg
+[circleCiStatusBadge]:  https://circleci.com/gh/aljosamrak/android-at-scale-example.svg?style=shield
+
+<!-- GitHub URL -->
+[gitHubUrl]: https://github.com/aljosamrak/android-at-scale-example
+[gitHubRelease]: https://img.shields.io/github/release/aljosamrak/android-at-scale-example.js.svg?style=shield
+[gitHubActivityBadge]: https://img.shields.io/github/commit-activity/m/aljosamrak/android-at-scale-example?style=shield
+[gitHubActivity]: https://GitHub.com/aljosamrak/android-at-scale-example/graphs/commit-activity
+
+<!-- Sonar Cloud URL -->
+[sonarCloudUrl]: https://sonarcloud.io/dashboard?id=aljosamrak_android-at-scale-example
+
+<!-- Badge URLs -->
+[bugsBadge]: https://sonarcloud.io/api/project_badges/measure?project=aljosamrak_android-at-scale-example&metric=bugs
+[codeSmellsBadge]: https://sonarcloud.io/api/project_badges/measure?project=aljosamrak_android-at-scale-example&metric=code_smells
+[coverageBadge]: https://sonarcloud.io/api/project_badges/measure?project=aljosamrak_android-at-scale-example&metric=coverage
+[duplicatedLinesDensityBadge]: https://sonarcloud.io/api/project_badges/measure?project=aljosamrak_android-at-scale-example&metric=duplicated_lines_density
+[nclocBadge]: https://sonarcloud.io/api/project_badges/measure?project=aljosamrak_android-at-scale-example&metric=ncloc
+[sqaleRatingBadge]: https://sonarcloud.io/api/project_badges/measure?project=aljosamrak_android-at-scale-example&metric=sqale_rating
+[alertStatusBadge]: https://sonarcloud.io/api/project_badges/measure?project=aljosamrak_android-at-scale-example&metric=alert_status
+[reliabilityRatingBadge]: https://sonarcloud.io/api/project_badges/measure?project=aljosamrak_android-at-scale-example&metric=reliability_rating
+[securityRatingBadge]: https://sonarcloud.io/api/project_badges/measure?project=aljosamrak_android-at-scale-example&metric=security_rating
+[sqaleIndexBadge]: https://sonarcloud.io/api/project_badges/measure?project=aljosamrak_android-at-scale-example&metric=sqale_index
+[vulnerabilitiesBadge]: https://sonarcloud.io/api/project_badges/measure?project=aljosamrak_android-at-scale-example&metric=vulnerabilities
+
+[qualityGateBadge]: https://sonarcloud.io/api/project_badges/quality_gate?project=aljosamrak_android-at-scale-example
+
+<!--Licence references-->
+[licenceUrl]: https://www.gnu.org/licenses/gpl-3.0
+[licenceBadge]: https://img.shields.io/badge/License-GPLv3-blue.svg
+
+<!--Is maintained reference-->
+[isMaintained]: https://img.shields.io/badge/Maintained%3F-yes-green.svg
+<!--[![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://bitbucket.org/lbesson/ansi-colors)-->
+<!--[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)-->
