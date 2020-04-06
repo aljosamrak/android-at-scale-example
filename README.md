@@ -22,6 +22,7 @@ Ensuring API consistency between different platforms (iOS-Android) and different
 | master | develop |
 |--|--|
 | [![CircleCI][circleCiMasterStatus]][circleCiMaster] | [![CircleCI][circleCiDevelopStatus]][CircleCiDevelop] |
+| [![TravisCI][travisCiMasterStatus]][travisCiMaster] | [![TravisCI][travisCiDevelopStatus]][travisCiDevelop] |
 
 
 
@@ -35,19 +36,17 @@ Ensuring API consistency between different platforms (iOS-Android) and different
 
 
 ### Code quality
-| SonarQube | CodeConv |
-|--|--|
-| [![alert_status][alertStatusBadge]][sonarCloudUrl] | |
-| [![sqale_rating][sqaleRatingBadge]][sonarCloudUrl] | |
-| [![reliability_rating][reliabilityRatingBadge]][sonarCloudUrl] | |
-| [![security_rating][securityRatingBadge]][sonarCloudUrl] | |
-| [![coverage][coverageBadge]][sonarCloudUrl] | |
-| [![code_smells][codeSmellsBadge]][sonarCloudUrl] | |
-| [![sqale_index][sqaleIndexBadge]][sonarCloudUrl] | |
-| [![bugs][bugsBadge]][sonarCloudUrl] | |
-| [![vulnerabilities][vulnerabilitiesBadge]][sonarCloudUrl] | |
-| [![ncloc][nclocBadge]][sonarCloudUrl] | |
-| [![duplicated_lines_density][duplicatedLinesDensityBadge]][sonarCloudUrl] | |
+[![alert_status][alertStatusBadge]][sonarCloudUrl]
+[![sqale_rating][sqaleRatingBadge]][sonarCloudUrl]
+[![reliability_rating][reliabilityRatingBadge]][sonarCloudUrl]
+[![security_rating][securityRatingBadge]][sonarCloudUrl]
+[![coverage][coverageBadge]][sonarCloudUrl]
+[![code_smells][codeSmellsBadge]][sonarCloudUrl]
+[![sqale_index][sqaleIndexBadge]][sonarCloudUrl]
+[![bugs][bugsBadge]][sonarCloudUrl]
+[![vulnerabilities][vulnerabilitiesBadge]][sonarCloudUrl]
+[![ncloc][nclocBadge]][sonarCloudUrl]
+[![duplicated_lines_density][duplicatedLinesDensityBadge]][sonarCloudUrl]
 
 
 
@@ -57,6 +56,29 @@ __Bugs and requests__: submit them through the project's issues tracker.<br>
 [![Issues](http://img.shields.io/github/issues/USER/REPO.svg)][gitHubIssuesUrl]
 
 
+
+## Git commit format
+Git commit format (source: https://www.conventionalcommits.org/en/v1.0.0/)
+
+```
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+Issue tags/ids should be in the footer. Like `Fixes #468`
+
+https://www.datree.io/resources/git-commit-message
+https://www.regextester.com/97567
+
+Git message regex:
+
+`^((fixup! |squash! )?(\w+)(?:\(([^\)\s]+)\))?: (.+))(?:\n|$){0,2}?((?:^.+(\n|$))+(?:\n|$){0,2}?)+((?:^.+(\n|$))+)+`
+
+https://hackernoon.com/on-git-commit-messages-and-issue-trackers-f700f3cbb5a7
+https://dev.to/puritanic/how-are-you-writing-a-commit-message-1ih7
+https://nitayneeman.com/posts/understanding-semantic-commit-messages-using-git-and-angular/
 
 
 ## Use buildSrc to abstract imperative logic
@@ -70,12 +92,184 @@ buildSrc uses the same source code conventions applicable to Java and Groovy pro
 Example: https://proandroiddev.com/migrate-to-gradle-kotlin-dsl-in-4-steps-f3e3b27e1f4d
 
 
+
+
+
+  # https://circleci.com/orbs/registry/orb/mizotake/unity-ci
+
+
+
+
+
+
+
+## Logging framework
+http://logback.qos.ch/manual/mdc.html
+
+## Code optimizations
+
+### Size optimization
+https://imageoptim.com/mac
+
+## Debug Utils
+TODO test/debug activity before the real app??? or debug drawer
+### Debug Drawer
+### Android-Debug-Tools
+### Stetho
+### Android Debug Database
+### Leak cannary
+
+
+## Testing environment
+
+### Spek
+### AssertJ
+### MockK
+
+## Analysis tools
+
+### Android Lint
+### Custom lint
+### SonarCube
+
+## Build pipeline
+### Verify preconditions
+### Build
+### Test
+#### Unit tests
+https://www.vogella.com/tutorials/AndroidTesting/article.html
+
+70-80 % unit tests to ensure stability of your code basis
+
+20-30 % functional tests to ensure that the application really works
+
+some cross functional tests if your application integrates intensively with other Application components
+#### Integration tests
+#### Automation tests
+### Verify
+### Verify artefact
+- compare with previous artefact (permission, certificake, features, activites, ...)
+- verify constraints (size, ...)
+
+## Publish
+
+## Publish documentation
+
+## Notify
+
+## Monitoring
+### Crashlitics
+
+## Build Features ??
+### API keys
+Build src -> build config
+
+TODO - some thing on qa to manifest metadata - can be read from APK without lanching
+### Verified timestamp
+
+## Features
+### Push
+### User support
+
+
+
+
+
+
+
+
+
+  # https://circleci.com/orbs/registry/orb/mizotake/unity-ci
+
+
+
+
+
+
+
+## Logging framework
+http://logback.qos.ch/manual/mdc.html
+
+## Code optimizations
+
+### Size optimization
+https://imageoptim.com/mac
+
+## Debug Utils
+TODO test/debug activity before the real app??? or debug drawer
+### Debug Drawer
+### Android-Debug-Tools
+### Stetho
+### Android Debug Database
+### Leak cannary
+
+
+## Testing environment
+
+### Spek
+### AssertJ
+### MockK
+
+## Analysis tools
+
+### Android Lint
+### Custom lint
+### SonarCube
+
+## Build pipeline
+### Verify preconditions
+### Build
+### Test
+#### Unit tests
+https://www.vogella.com/tutorials/AndroidTesting/article.html
+
+70-80 % unit tests to ensure stability of your code basis
+
+20-30 % functional tests to ensure that the application really works
+
+some cross functional tests if your application integrates intensively with other Application components
+#### Integration tests
+#### Automation tests
+### Verify
+### Verify artefact
+- compare with previous artefact (permission, certificake, features, activites, ...)
+- verify constraints (size, ...)
+
+## Publish
+
+## Publish documentation
+
+## Notify
+
+## Monitoring
+### Crashlitics
+
+## Build Features ??
+### API keys
+Build src -> build config
+
+TODO - some thing on qa to manifest metadata - can be read from APK without lanching
+### Verified timestamp
+
+## Features
+### Push
+### User support
+
+
 ## Benchmark
 Android Jetpack provides a very good library for performance testing on the device. There are very good blogs and official documentation written about this.
 
 [Official documentation](https://developer.android.com/studio/profile/benchmark)
 [A really good blog](https://tech.olx.com/android-jetpack-benchmark-json-parsers-performance-1e76031a296b) [with am accompanying github repo](https://github.com/mootazltaief/android-json-benchmark)
 [A bit older but more detailed blog](https://blog.mindorks.com/improving-android-app-performance-with-benchmarking)
+
+## Plugins
+
+### dependency-check-gradle
+
+### gradle-version-plugin
+https://github.com/ben-manes/gradle-versions-plugin
+
 
 <!--
     Reference-style links
@@ -89,8 +283,15 @@ Android Jetpack provides a very good library for performance testing on the devi
 [circleCiDevelopStatus]: https://circleci.com/gh/aljosamrak/android-at-scale-example/tree/develop.svg?style=svg
 [circleCiStatusBadge]:  https://circleci.com/gh/aljosamrak/android-at-scale-example.svg?style=shield
 
+<!-- travisCi URL -->
+[travisCiUrl]: https://travis-ci.org/aljosamrak/android-at-scale-example
+[travisCiMaster]: https://travis-ci.org/github/aljosamrak/android-at-scale-example/branches/master
+[travisCiDevelop]: https://travis-ci.org/github/aljosamrak/android-at-scale-example/branches/develop
+[travisCiMasterStatus]:https://api.travis-ci.org/aljosamrak/android-at-scale-example.png?branch=master
+[travisCiDevelopStatus]: https://api.travis-ci.org/aljosamrak/android-at-scale-example.png?branch=develop
+[travisCiStatusBadge]: https://api.travis-ci.org/aljosamrak/android-at-scale-example.png
+
 <!-- GitHub URL -->
-[gitHubUrl]: https://github.com/aljosamrak/android-at-scale-example
 [gitHubRelease]: https://img.shields.io/github/release/aljosamrak/android-at-scale-example.js.svg
 [gitHubActivityBadge]: https://img.shields.io/github/commit-activity/m/aljosamrak/android-at-scale-example
 [gitHubActivityUrl]: https://GitHub.com/aljosamrak/android-at-scale-example/graphs/commit-activity
@@ -113,8 +314,6 @@ Android Jetpack provides a very good library for performance testing on the devi
 [sqaleIndexBadge]: https://sonarcloud.io/api/project_badges/measure?project=aljosamrak_android-at-scale-example&metric=sqale_index
 [vulnerabilitiesBadge]: https://sonarcloud.io/api/project_badges/measure?project=aljosamrak_android-at-scale-example&metric=vulnerabilities
 
-[qualityGateBadge]: https://sonarcloud.io/api/project_badges/quality_gate?project=aljosamrak_android-at-scale-example
-
 <!--Licence references-->
 [licenceUrl]: https://www.gnu.org/licenses/gpl-3.0
 [licenceBadge]: https://img.shields.io/badge/License-GPLv3-blue.svg
@@ -122,7 +321,6 @@ Android Jetpack provides a very good library for performance testing on the devi
 <!--Website references-->
 [websiteBadge]: https://img.shields.io/website?url=https%3A%2F%2Faljosamrak.github.io%2Fandroid-at-scale-example%2F
 [websiteUrl]: https://aljosamrak.github.io/android-at-scale-example
-
 
 <!--Is maintained reference-->
 [isMaintained]: https://img.shields.io/badge/Maintained%3F-yes-green.svg
