@@ -1,4 +1,4 @@
-[![CircleCI][circleCiStatusBadge]][circleCiUrl]     [![GitHub release (latest SemVer)][gitHubRelease]][gitHubUrl]       [![Maintenance][isMaintained]][gitHubActivity]      [![coverage][coverageBadge]][sonarCloudUrl]     [![GitHub commit activity][gitHubActivityBadge]][gitHubUrl]     [![License: GPL v3][licenceBadge]][licenceUrl]
+[![CircleCI][circleCiStatusBadge]][circleCiUrl]     [![GitHub release (latest SemVer including pre-releases)][gitHubRelease]][gitHubReleaseUrl]       [![Maintenance][isMaintained]][gitHubActivityUrl]      [![alert_status][alertStatusBadge]][sonarCloudUrl]     [![GitHub commit activity][gitHubActivityBadge]][gitHubActivityUrl]     [![License: GPL v3][licenceBadge]][licenceUrl]      [![Website][websiteBadge]][websiteUrl]
 
 # Android at scale example
 An example/template/framework for building Android applications at scale.
@@ -15,6 +15,48 @@ Verification and testing process to keep the code maintainable and to find bugs 
 How to use popular tools while keeping in mind other platforms and systems (Firebase, Google Play services, force updates, push...)
 Building and testing are only the first steps. Integration, documentation, informing other teams, ... is as important as the product if not more.
 Ensuring API consistency between different platforms (iOS-Android) and different systems (client-backend)
+
+
+
+### Build status
+| master | develop |
+|--|--|
+| [![CircleCI][circleCiMasterStatus]][circleCiMaster] | [![CircleCI][circleCiDevelopStatus]][CircleCiDevelop] |
+
+
+
+### Repository status
+
+![GitHub Hacktoberfest combined status (suggestion label override)](https://img.shields.io/github/hacktoberfest/2019/aljosamrak/android-at-scale-example?logo=GitHub&style=plastic)
+![GitHub issues](https://img.shields.io/github/issues/aljosamrak/android-at-scale-example?style=plastic)
+[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/aljosamrak/android-at-scale-example.svg)](http://isitmaintained.com/project/aljosamrak/android-at-scale-example "Average time to resolve an issue")
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/aljosamrak/android-at-scale-example.svg)](http://isitmaintained.com/project/aljosamrak/android-at-scale-example "Percentage of issues still open")
+
+
+
+### Code quality
+| SonarQube | CodeConv |
+|--|--|
+| [![alert_status][alertStatusBadge]][sonarCloudUrl] | |
+| [![sqale_rating][sqaleRatingBadge]][sonarCloudUrl] | |
+| [![reliability_rating][reliabilityRatingBadge]][sonarCloudUrl] | |
+| [![security_rating][securityRatingBadge]][sonarCloudUrl] | |
+| [![coverage][coverageBadge]][sonarCloudUrl] | |
+| [![code_smells][codeSmellsBadge]][sonarCloudUrl] | |
+| [![sqale_index][sqaleIndexBadge]][sonarCloudUrl] | |
+| [![bugs][bugsBadge]][sonarCloudUrl] | |
+| [![vulnerabilities][vulnerabilitiesBadge]][sonarCloudUrl] | |
+| [![ncloc][nclocBadge]][sonarCloudUrl] | |
+| [![duplicated_lines_density][duplicatedLinesDensityBadge]][sonarCloudUrl] | |
+
+
+
+
+##  Support
+__Bugs and requests__: submit them through the project's issues tracker.<br>
+[![Issues](http://img.shields.io/github/issues/USER/REPO.svg)][gitHubIssuesUrl]
+
+
 
 
 ## Use buildSrc to abstract imperative logic
@@ -49,9 +91,11 @@ Android Jetpack provides a very good library for performance testing on the devi
 
 <!-- GitHub URL -->
 [gitHubUrl]: https://github.com/aljosamrak/android-at-scale-example
-[gitHubRelease]: https://img.shields.io/github/release/aljosamrak/android-at-scale-example.js.svg?style=shield
-[gitHubActivityBadge]: https://img.shields.io/github/commit-activity/m/aljosamrak/android-at-scale-example?style=shield
-[gitHubActivity]: https://GitHub.com/aljosamrak/android-at-scale-example/graphs/commit-activity
+[gitHubRelease]: https://img.shields.io/github/release/aljosamrak/android-at-scale-example.js.svg
+[gitHubActivityBadge]: https://img.shields.io/github/commit-activity/m/aljosamrak/android-at-scale-example
+[gitHubActivityUrl]: https://GitHub.com/aljosamrak/android-at-scale-example/graphs/commit-activity
+[gitHubReleaseUrl]: https://github.com/aljosamrak/android-at-scale-example/releases
+[gitHubIssuesUrl]: https://github.com/aljosamrak/android-at-scale-example/issues
 
 <!-- Sonar Cloud URL -->
 [sonarCloudUrl]: https://sonarcloud.io/dashboard?id=aljosamrak_android-at-scale-example
@@ -74,6 +118,11 @@ Android Jetpack provides a very good library for performance testing on the devi
 <!--Licence references-->
 [licenceUrl]: https://www.gnu.org/licenses/gpl-3.0
 [licenceBadge]: https://img.shields.io/badge/License-GPLv3-blue.svg
+
+<!--Website references-->
+[websiteBadge]: https://img.shields.io/website?url=https%3A%2F%2Faljosamrak.github.io%2Fandroid-at-scale-example%2F
+[websiteUrl]: https://aljosamrak.github.io/android-at-scale-example
+
 
 <!--Is maintained reference-->
 [isMaintained]: https://img.shields.io/badge/Maintained%3F-yes-green.svg
