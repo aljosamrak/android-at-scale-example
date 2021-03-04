@@ -307,11 +307,12 @@ jobs:
   # Checks the dependencies with OWASP plugin
   dependecy-update:
     <<: *android_config
-    description: Check for dependency update.
+    description: Check for dependency update
     steps:
       - checkout
       - run:
-        command: ./gradlew dependencyUpdates
+          name: Check for dependency update
+          command: ./gradlew dependencyUpdates
 
 workflows:
   version: 2
