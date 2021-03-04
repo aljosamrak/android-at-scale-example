@@ -308,8 +308,6 @@ jobs:
   dependecy-update:
     description: Publish a new release tagged `vX.Y.Z`.
     executor: github-release/default
-     only:
-       - schedules
      script:
        - ./gradlew dependencyUpdates
 
