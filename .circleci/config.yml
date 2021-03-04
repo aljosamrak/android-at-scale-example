@@ -304,8 +304,29 @@ jobs:
           name: Build and publish documentation
           command: ./gradlew doc:orchidDeploy
 
+  # Checks the dependencies with OWASP plugin
+  dependecy-update:
+    description: Publish a new release tagged `vX.Y.Z`.
+    executor: github-release/default
+     only:
+       - schedules
+     script:
+       - ./gradlew dependencyUpdates
+
 workflows:
   version: 2
+  dependecy-update:
+    triggers:
+      - schedule:
+          cron: "0 0 1-7,15-21 * 3"
+          filters:
+            branches:
+              only:
+                - master
+                - develop
+    jobs:
+      - dependecy-check
+
   workflow:
     jobs:
       # This job will run on every commit on any branch
