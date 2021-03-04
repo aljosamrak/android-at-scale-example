@@ -318,7 +318,7 @@ workflows:
   dependecy-update:
     triggers:
       - schedule:
-          cron: "0 0 * * 0"
+          cron: "0 0 * * *"
           filters:
             branches:
               only:
@@ -327,7 +327,7 @@ workflows:
     jobs:
       - dependecy-update
 
-  workflow:
+  commit:
     jobs:
       # This job will run on every commit on any branch
       - build
