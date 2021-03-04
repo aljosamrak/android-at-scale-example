@@ -318,7 +318,7 @@ workflows:
   dependecy-update:
     triggers:
       - schedule:
-          cron: "0 0 1-7,15-21 * 3"
+          cron: "0 0 * * 0"
           filters:
             branches:
               only:
