@@ -1,4 +1,5 @@
-import Utils.envOrProperty
+import com.pinko.dependencies.Plugins
+import com.pinko.dependencies.Repositories
 
 /**
  * The buildscript block is where you configure the repositories and
