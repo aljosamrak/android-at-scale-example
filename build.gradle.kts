@@ -1,5 +1,6 @@
 import com.pinko.dependencies.Plugins
 import com.pinko.dependencies.Repositories
+import com.pinko.dependencies.Plugins.PluginSpec
 
 /**
  * The buildscript block is where you configure the repositories and
@@ -51,23 +52,6 @@ buildscript {
 /**
  *
  */
-plugins {
-//    base
-//    kotlin("jvm") version "1.3.21" apply false
-
-    // kotlin serialization
-    kotlin(Plugins.KotlinSerialization.plugin) version Plugins.KotlinSerialization.version apply false
-
-    // gradle version plugins
-    id(Plugins.DependencyCheck.plugin) version Plugins.DependencyCheck.version apply true
-    id(Plugins.Versions.plugin) version Plugins.Versions.version apply true
-
-    jacoco apply true
-
-//    id("com.gradle.build-scan") version Config.Versions.buildScanVersion
-
-    id(Plugins.SonarQube.plugin) version Plugins.SonarQube.version apply true
-}
 
 /**
  * The allprojects block is where you configure the repositories and
@@ -86,13 +70,13 @@ allprojects {
         maven(Repositories.kotlinx)
     }
 
-    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-        kotlinOptions.jvmTarget = "1.8"
-    }
+  tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+    kotlinOptions.jvmTarget = "1.8"
+  }
 
-    apply(plugin = Plugins.Versions.plugin)
+  apply(plugin = Plugins.Versions.plugin)
 
-    apply(plugin = Plugins.DependencyCheck.plugin)
+  apply(plugin = Plugins.DependencyCheck.plugin)
 
     dependencyCheck {
         quickQueryTimestamp = false    // when set to false, it means use HTTP GET method to query timestamp. (default value is true)
