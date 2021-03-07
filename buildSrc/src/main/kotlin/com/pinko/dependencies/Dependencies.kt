@@ -59,7 +59,7 @@ object Libraries {
     const val constraintLayout      = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     const val ktxCore               = "androidx.core:core-ktx:${Versions.ktx}"
 
-    const val androidMaterial       = "com.google.android.material:material:${Versions.compose}"
+    const val androidMaterial       = "com.google.android.material:material:${Versions.material}"
     const val androidxUiFramework   = "androidx.ui:ui-framework:${Versions.compose}"
     const val androidxUiLayout      = "androidx.ui:ui-layout:${Versions.compose}"
     const val androidxUiMaterial    = "androidx.ui:ui-material:${Versions.compose}"

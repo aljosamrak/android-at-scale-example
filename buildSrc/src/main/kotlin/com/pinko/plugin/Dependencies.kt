@@ -19,6 +19,10 @@ internal fun Project.configureDependencies() = dependencies.apply {
   // SLF4J implementation
   implementation(Logging.slf4jLogback)
 
+  // Android UI
+  implementation(Libraries.appCompat)
+  implementation(Libraries.androidMaterial)
+
   // Test contract test writing framework - Spek2
   testImplementation(TestLibraries.Spek2.jvm)
   testImplementation(TestLibraries.Spek2.runner)
