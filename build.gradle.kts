@@ -33,8 +33,6 @@ buildscript {
       ) { because(pluginSpec.because) }
 
     classpathWithBecause(com.pinko.dependencies.Plugins.AndroidPlugin)
-
-    classpathWithBecause(com.pinko.dependencies.Plugins.AndroidPlugin)
     classpathWithBecause(com.pinko.dependencies.Plugins.KotlinPlugin)
 
     // Kotlin serialization
@@ -83,6 +81,9 @@ allprojects {
   }
 
   apply(plugin = Plugins.Versions.plugin)
+  project.tasks.named<com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask>("dependencyUpdates").configure {
+    outputFormatter = "plain,json,html"
+  }
 
   apply(plugin = Plugins.DependencyCheck.plugin)
 }
