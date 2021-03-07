@@ -25,6 +25,18 @@ internal fun Project.configureDependencies() = dependencies.apply {
 
   // Spek2 requires kotlin-reflect, omit when already in classpath
   testImplementation(Kotlin.reflect)
+
+  // Testing assert framework
+  testImplementation(TestLibraries.assertj)
+
+  // JUnit 5
+  testRuntimeOnly(TestLibraries.JUnit5.engine)
+  testImplementation(TestLibraries.JUnit5.api)
+
+  // Jupiter API & Test Runner
+  androidTestImplementation(TestLibraries.androidTestRunner)
+  androidTestImplementation(TestLibraries.JUnit5.androidCore)
+  androidTestRuntimeOnly(TestLibraries.JUnit5.androidRunner)
 }
 
 internal fun DependencyHandler.implementation(dependencyNotation: Any) {

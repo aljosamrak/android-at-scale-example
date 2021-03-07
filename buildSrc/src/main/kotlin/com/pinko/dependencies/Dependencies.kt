@@ -135,17 +135,18 @@ object Logging {
 
 object TestLibraries {
     private object Versions {
-        const val testRunner = "1.2.0"
-        const val espresso = "3.2.0"
-        const val benchmark = "1.0.0"
         const val androidxJunit = "1.1.1"
         const val assertj = "3.19.0"
+        const val benchmark = "1.0.0"
+        const val espresso = "3.2.0"
         const val junit5 = "5.8.0"
+        const val junitAndroid = "1.2.2"
         const val spekVersion = "2.0.15"
+        const val androidTestRunner = "1.2.0"
     }
 
     const val instrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    const val testRunner            = "androidx.test:runner:${Versions.testRunner}"
+    const val androidTestRunner            = "androidx.test:runner:${Versions.androidTestRunner}"
     const val espresso              = "androidx.test.espresso:espresso-core:${Versions.espresso}"
     const val androidxBenchmark     = "androidx.benchmark:benchmark-junit4:${Versions.benchmark}"
     const val androidxJunit         = "androidx.test.ext:junit:${Versions.androidxJunit}"
@@ -154,6 +155,8 @@ object TestLibraries {
     object JUnit5 {
         const val engine = "org.junit.jupiter:junit-jupiter-engine:${Versions.junit5}"
         const val api = "org.junit.jupiter:junit-jupiter-api:${Versions.junit5}"
+        const val androidCore = "de.mannodermaus.junit5:android-test-core:${Versions.junitAndroid}"
+        const val androidRunner = "de.mannodermaus.junit5:android-test-runner:${Versions.junitAndroid}"
     }
 
     object Spek2 {
