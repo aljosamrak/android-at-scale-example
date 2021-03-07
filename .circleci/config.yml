@@ -88,13 +88,16 @@ references:
         - firebase
 
   ## Docker image configurations
-
   android_config: &android_config
     working_directory: *workspace
     docker:
       # This needs to be in line with the configuration from gradle file.
       # Otherwise an unnecessary platform update is performed on every build
       - image: circleci/android:api-29
+  java_config: &java_config
+    working_directory: *workspace
+    docker:
+      - image: cimg/openjdk:11.0.9
   gcloud_config: &gcloud_config
     working_directory: *workspace
     docker:
@@ -296,7 +299,7 @@ jobs:
           command: ./gradlew sonarqube
 
   documentation:
-    <<: *android_config
+    <<: *java_config
     description: Generates and publishes ducumentation to github using Orchid
     steps:
       - checkout
