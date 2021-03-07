@@ -10,11 +10,19 @@ import com.pinko.dependencies.Plugins.PluginSpec
  * needs to build Android app modules.
  */
 buildscript {
-    repositories {
-        google()
-        jcenter()
-        mavenCentral()
-        maven(Repositories.kotlinEap)
+
+  /**
+   * The repositories block configures the repositories Gradle uses to
+   * search or download the dependencies. Gradle pre-configures support for remote
+   * repositories such as Maven Central, and Ivy. You can also use local
+   * repositories or define your own remote repositories.
+   */
+
+  repositories {
+    google()
+    mavenCentral()
+    maven(com.pinko.dependencies.Repositories.gradle)
+    maven(com.pinko.dependencies.Repositories.androidAnalyzer)
   }
 
   dependencies {
@@ -24,7 +32,7 @@ buildscript {
         ScriptHandler.CLASSPATH_CONFIGURATION, pluginSpec.classPath
       ) { because(pluginSpec.because) }
 
-    classpath(com.pinko.dependencies.Plugins.AndroidPlugin.classPath)
+    classpathWithBecause(com.pinko.dependencies.Plugins.AndroidPlugin)
 
     classpathWithBecause(com.pinko.dependencies.Plugins.AndroidPlugin)
     classpathWithBecause(com.pinko.dependencies.Plugins.KotlinPlugin)
