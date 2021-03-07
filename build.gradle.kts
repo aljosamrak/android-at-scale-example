@@ -14,31 +14,38 @@ buildscript {
         jcenter()
         mavenCentral()
         maven(Repositories.kotlinEap)
-    }
-    dependencies {
-        classpath (BuildPlugins.androidGradlePlugin)
-        classpath (BuildPlugins.kotlinGradlePlugin)
+  }
 
-        // kotlin serialization
-        classpath(Plugins.KotlinSerialization.classPath) {
-            because(Plugins.KotlinSerialization.because)
-        }
+  dependencies {
+    /** Helper function to create a dependency with an explanation. */
+    fun DependencyHandler.classpathWithBecause(pluginSpec: com.pinko.dependencies.Plugins.PluginSpec): ExternalModuleDependency =
+      add(
+        ScriptHandler.CLASSPATH_CONFIGURATION, pluginSpec.classPath
+      ) { because(pluginSpec.because) }
 
-        // benchmark lock clock
-        classpath(Plugins.Benchmark.classPath) {
-            because(Plugins.Benchmark.because)
-        }
+    classpath(com.pinko.dependencies.Plugins.AndroidPlugin.classPath)
 
-        // check dependency vulnerability
-        classpath(Plugins.DependencyCheck.classPath) {
-            because(Plugins.DependencyCheck.because)
-        }
+    classpathWithBecause(com.pinko.dependencies.Plugins.AndroidPlugin)
+    classpathWithBecause(com.pinko.dependencies.Plugins.KotlinPlugin)
 
-        // check dependency version upgrade
-        classpath(Plugins.Versions.classPath) {
-            because(Plugins.Versions.because)
-        }
-    }
+    // Kotlin serialization
+    classpathWithBecause(com.pinko.dependencies.Plugins.KotlinSerialization)
+
+    // Junit5 for Android plugin
+    classpathWithBecause(com.pinko.dependencies.Plugins.Junit5Android)
+
+    // Benchmark lock clock
+    classpathWithBecause(com.pinko.dependencies.Plugins.Benchmark)
+
+    // Android code analyzer
+    classpathWithBecause(com.pinko.dependencies.Plugins.AndroidAnalyzer)
+
+    // check dependency vulnerability
+    classpathWithBecause(com.pinko.dependencies.Plugins.DependencyCheck)
+
+    // check dependency version upgrade
+    classpathWithBecause(com.pinko.dependencies.Plugins.Versions)
+  }
 }
 
 /**
