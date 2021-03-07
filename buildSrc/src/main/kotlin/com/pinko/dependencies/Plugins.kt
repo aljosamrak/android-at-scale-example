@@ -3,7 +3,7 @@ package com.pinko.dependencies
 import Kotlin
 
 /**
- * Created by Aljoša Mrak on 17.3.2020.
+ * Created by Pinko on 17.3.2020.
  */
 object Plugins {
 
@@ -23,7 +23,7 @@ object Plugins {
    * Kotlin serialization support
    */
   object AndroidPlugin : PluginSpec {
-    override val classPath = "com.android.tools.build:gradle:4.0.0"
+    override val classPath = "com.android.tools.build:gradle:7.0.0-alpha08"
     override val because = ""
 //      get() = TODO("Not yet implemented")
   }
@@ -110,7 +110,7 @@ object Plugins {
    * @see <a href="https://github.com/pinchbv/android-analyzer</a>
    */
   object AndroidAnalyzer : PluginSpec {
-    override val classPath = "com.justpinch:androidanalyzer:1.5.0"
+    override val classPath = "com.justpinch:androidanalyzer:1.4.1"
     override val because =
       "Gradle plugin for analyzing Android projects, integrating Sonarqube and Detekt for static code analysis and Jacoco for Kotlin and Java code coverage reports."
   }
