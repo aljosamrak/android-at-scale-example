@@ -24,13 +24,6 @@
             </intent-filter>
         </activity>
 
-<!--        TODO-->
-<!--        TODO https://developers.google.com/maps/documentation/android-sdk/get-api-key#restrict_key-->
-        <meta-data
-    android:name="com.google.android.geo.API_KEY"
-    android:value="AIzaSyDhUoNYKmRTJaGEw2g6N3bFVsMexutkvfo" />
-
-
     </application>
 
 </manifest>
